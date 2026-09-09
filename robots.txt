@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: reemplazar por el dominio real de producción antes del deploy.
+Sitemap: https://stardew-valley-journal.example/sitemap.xml

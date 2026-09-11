@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: reemplazar https://stardew-valley-journal.example por el dominio real antes del deploy. -->
+<!--
+    ⚠ PLACEHOLDER — NO DEPLOYAR TAL CUAL ⚠
+    El dominio de las URL de abajo es ficticio (TLD .invalid, reservado
+    por la IANA para que nunca resuelva a un sitio real — RFC 2606).
+    Reemplazar por el dominio real de producción antes de publicar.
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://stardew-valley-journal.example/</loc>
+        <loc>https://REEMPLAZAR-DOMINIO-ANTES-DE-DEPLOY.invalid/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://stardew-valley-journal.example/pages/valle.html</loc>
+        <loc>https://REEMPLAZAR-DOMINIO-ANTES-DE-DEPLOY.invalid/pages/valle.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://stardew-valley-journal.example/pages/estaciones.html</loc>
+        <loc>https://REEMPLAZAR-DOMINIO-ANTES-DE-DEPLOY.invalid/pages/estaciones.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://stardew-valley-journal.example/pages/cultivos.html</loc>
+        <loc>https://REEMPLAZAR-DOMINIO-ANTES-DE-DEPLOY.invalid/pages/cultivos.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://stardew-valley-journal.example/pages/habitantes.html</loc>
+        <loc>https://REEMPLAZAR-DOMINIO-ANTES-DE-DEPLOY.invalid/pages/habitantes.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://stardew-valley-journal.example/pages/exploracion.html</loc>
+        <loc>https://REEMPLAZAR-DOMINIO-ANTES-DE-DEPLOY.invalid/pages/exploracion.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://stardew-valley-journal.example/pages/sobre.html</loc>
+        <loc>https://REEMPLAZAR-DOMINIO-ANTES-DE-DEPLOY.invalid/pages/sobre.html</loc>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>

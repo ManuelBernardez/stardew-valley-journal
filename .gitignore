@@ -1,0 +1,14 @@
+# Sistema operativo / editor
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Herramientas locales usadas durante el desarrollo (no forman parte
+# del sitio estático final)
+node_modules/
+npm-debug.log*
+
+# Servidor local de pruebas
+*.local.log

@@ -1,18 +1,19 @@
-/**
- * menu.js
- *
- * Control del menú móvil / hamburguesa del Header global.
- * Implementación funcional pendiente de Fase 2 (Global UI), cuando
- * exista el componente Header con su botón y su <nav>.
- *
- * Contrato ya definido para que main.js pueda integrarlo desde ahora:
- * - toggle del estado abierto/cerrado sobre el botón del menú;
- * - refleja el estado en `aria-expanded` (nunca solo visualmente);
- * - cierra el menú con la tecla Escape y al hacer click fuera;
- * - no depende de JavaScript para que los enlaces del menú existan
- *   (el <nav> ya está en el HTML; JS solo controla su visibilidad).
- */
+export const initMenu = () => {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.main-nav');
+  if (!toggle || !nav) return;
 
-export const initMobileMenu = () => {
-    // TODO (Fase 2): implementar sobre GLOBAL-HEADER-001.
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.querySelector('.sr-only').textContent = open ? 'Cerrar menú' : 'Abrir menú';
+  });
+
+  document.addEventListener('click', (event) => {
+    if (!event.target.closest('.site-header')) {
+      nav.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.querySelector('.sr-only').textContent = 'Abrir menú';
+    }
+  });
 };

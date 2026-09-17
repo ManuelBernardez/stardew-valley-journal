@@ -1,37 +1,608 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitantes · Stardew Valley Journal</title>
-    <meta name="description" content="Conocé a los personajes que viven en el Valle: quiénes son y qué los hace parte de esta comunidad.">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Habitantes · Stardew Valley Journal">
-    <meta property="og:description" content="Conocé a los personajes que viven en el Valle: quiénes son y qué los hace parte de esta comunidad.">
-    <meta property="og:locale" content="es_ES">
-
-    <link rel="icon" href="../favicon/favicon.svg" type="image/svg+xml">
-
-    <link rel="preload" href="../assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../assets/fonts/cormorant-garamond-600.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <header class="site-header">
-        <!-- Header global (GLOBAL-HEADER-001) — se implementa en Fase 2 -->
-    </header>
-
-    <main id="main-content">
-        <h1>Habitantes</h1>
-        <p>Página en construcción — Fase 1: Foundation. El grid de personajes y los paneles de información ampliada (&lt;details&gt;) se implementan en Fase 4.</p>
-    </main>
-
-    <footer class="site-footer">
-        <!-- Footer global (GLOBAL-FOOTER-001) — se implementa en Fase 2 -->
-    </footer>
-
-    <script type="module" src="../js/main.js"></script>
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Habitantes &mdash; Stardew Journal
+  </title>
+  <meta content="Una selecci&oacute;n de habitantes de Stardew Valley con hogares, v&iacute;nculos y peque&ntilde;as pistas para conocerlos mejor." name="description"/>
+  <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <script src="../js/main.js" type="module">
+  </script>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Saltar al contenido
+  </a>
+  <div class="site-shell">
+   <header class="site-header">
+    <div class="container nav-wrap">
+     <a aria-label="Stardew Journal, inicio" class="brand" href="../index.html">
+      <span aria-hidden="true" class="brand-mark">
+       ✦
+      </span>
+      <span>
+       <strong>
+        stardew
+       </strong>
+       <small>
+        journal
+       </small>
+      </span>
+     </a>
+     <button aria-controls="main-menu" aria-expanded="false" class="menu-toggle" type="button">
+      <span class="sr-only">
+       Abrir men&uacute;
+      </span>
+      <span aria-hidden="true">
+       ☰
+      </span>
+     </button>
+     <nav aria-label="Navegaci&oacute;n principal" class="main-nav" id="main-menu">
+      <ul class="nav-list">
+       <li>
+        <a class="nav-link" href="../index.html">
+         Inicio
+        </a>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/valle.html">
+         El Valle
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/valle.html#pelican-town">
+           Pueblo Pel&iacute;cano
+          </a>
+         </li>
+         <li>
+          <a href="../pages/valle.html#granja">
+           La granja
+          </a>
+         </li>
+         <li>
+          <a href="../pages/valle.html#playa">
+           La playa
+          </a>
+         </li>
+         <li>
+          <a href="../pages/valle.html#montana">
+           La monta&ntilde;a
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/estaciones.html">
+         Estaciones
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/estaciones.html#primavera">
+           Primavera
+          </a>
+         </li>
+         <li>
+          <a href="../pages/estaciones.html#verano">
+           Verano
+          </a>
+         </li>
+         <li>
+          <a href="../pages/estaciones.html#otono">
+           Oto&ntilde;o
+          </a>
+         </li>
+         <li>
+          <a href="../pages/estaciones.html#invierno">
+           Invierno
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a class="nav-link" href="../pages/cultivos.html">
+         Cultivos
+        </a>
+       </li>
+       <li>
+        <a class="nav-link is-active" href="../pages/habitantes.html">
+         Habitantes
+        </a>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/exploracion.html">
+         Exploraci&oacute;n
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/exploracion.html#pesca">
+           Pesca
+          </a>
+         </li>
+         <li>
+          <a href="../pages/exploracion.html#mineria">
+           Miner&iacute;a
+          </a>
+         </li>
+         <li>
+          <a href="../pages/exploracion.html#lugares">
+           Lugares
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a class="nav-link" href="../pages/sobre.html">
+         Sobre
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </div>
+   </header>
+   <main id="main-content">
+    <section class="page-hero">
+     <div class="container">
+      <nav aria-label="Ruta" class="breadcrumb">
+       <ol>
+        <li>
+         <a href="../index.html">
+          Inicio
+         </a>
+        </li>
+        <li aria-current="page">
+         Habitantes
+        </li>
+       </ol>
+      </nav>
+      <p class="eyebrow">
+       La comunidad
+      </p>
+      <h1>
+       El Valle se vuelve hogar cuando empez&aacute;s a reconocer a su gente.
+      </h1>
+      <p>
+       En vez de una galer&iacute;a de retratos, una peque&ntilde;a colecci&oacute;n de personas, hogares, v&iacute;nculos y pistas para conocerlas mejor.
+      </p>
+     </div>
+    </section>
+    <section aria-labelledby="relations-title" class="section section-paper">
+     <div class="container">
+      <div class="section-header">
+       <div>
+        <p class="eyebrow">
+         Relaciones
+        </p>
+        <h2 id="relations-title">
+         Hay historias que no aparecen de inmediato.
+        </h2>
+       </div>
+       <p>
+        La amistad en Stardew Valley no se trata s&oacute;lo de llenar una barra: acercarte a cada habitante, recordar lo que le importa y volver a hablar con &eacute;l abre peque&ntilde;as puertas hacia su mundo.
+       </p>
+      </div>
+      <div class="relation-intro">
+       <p>
+        La amistad puede llevarte a nuevos di&aacute;logos, eventos y fragmentos de historia que no descubrir&iacute;as de otra manera. Por eso conocer a alguien es tambi&eacute;n aprender sus horarios, sus gustos, sus v&iacute;nculos y los lugares donde suele pasar el tiempo.
+       </p>
+       <p>
+        La idea no es coleccionar corazones, sino
+        <strong>
+         reconocer personas
+        </strong>
+        : descubrir qu&eacute; las hace particulares y c&oacute;mo sus historias se cruzan con la tuya y con el Valle.
+       </p>
+      </div>
+      <div class="relation-steps">
+       <article>
+        <span>
+         01
+        </span>
+        <p class="eyebrow">
+         Primer encuentro
+        </p>
+        <h3>
+         Acercarse
+        </h3>
+        <p>
+         Un saludo, una charla en la plaza o coincidir en un camino puede ser el principio de algo que todav&iacute;a no ves.
+        </p>
+       </article>
+       <article>
+        <span>
+         02
+        </span>
+        <p class="eyebrow">
+         Prestar atenci&oacute;n
+        </p>
+        <h3>
+         Recordar
+        </h3>
+        <p>
+         Sus gustos, cumplea&ntilde;os, rutinas y peque&ntilde;os detalles hacen que una relaci&oacute;n deje de sentirse gen&eacute;rica.
+        </p>
+       </article>
+       <article>
+        <span>
+         03
+        </span>
+        <p class="eyebrow">
+         Abrir la historia
+        </p>
+        <h3>
+         Descubrir
+        </h3>
+        <p>
+         Con el tiempo aparecen di&aacute;logos, eventos y momentos que dejan ver una parte m&aacute;s humana de cada habitante.
+        </p>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section class="section">
+     <div class="container">
+      <div class="character-grid">
+       <article class="character-card">
+        <div class="character-card__image">
+         <img alt="Retrato de Abigail" data-fallback="Abigail" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Abigail.png"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Aventurera &middot; Pueblo Pel&iacute;cano
+         </p>
+         <h2>
+          Abigail
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Amistad
+           </span>
+           <strong>
+            Candidata
+           </strong>
+          </div>
+          <div>
+           <span>
+            Vive en
+           </span>
+           <strong>
+            Pierre&rsquo;s
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Vive con Pierre y Caroline y mantiene una amistad cercana con Sam y Sebastian.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Le encantan la amatista, la anguila picante y la calabaza.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Abigail" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki &rarr;
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card">
+        <div class="character-card__image">
+         <img alt="Retrato de Leah" data-fallback="Leah" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Leah.png"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Artista &middot; Bosque Tiz&oacute;n
+         </p>
+         <h2>
+          Leah
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Amistad
+           </span>
+           <strong>
+            Candidata
+           </strong>
+          </div>
+          <div>
+           <span>
+            Vive en
+           </span>
+           <strong>
+            Caba&ntilde;a de Leah
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Se mud&oacute; al valle para perseguir su sue&ntilde;o art&iacute;stico y vive sola en una peque&ntilde;a caba&ntilde;a.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Le gustan especialmente la ensalada, el queso de cabra y la trufa.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Leah" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki &rarr;
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card">
+        <div class="character-card__image">
+         <img alt="Retrato de Sebastian" data-fallback="Sebastian" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Sebastian.png"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Programador &middot; La monta&ntilde;a
+         </p>
+         <h2>
+          Sebastian
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Amistad
+           </span>
+           <strong>
+            Candidato
+           </strong>
+          </div>
+          <div>
+           <span>
+            Vive en
+           </span>
+           <strong>
+            Casa de Robin
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Vive en el s&oacute;tano de Robin y est&aacute; muy vinculado a ordenadores, c&oacute;mics y ciencia ficci&oacute;n.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Le encantan la obsidiana, la l&aacute;grima helada y el sashimi.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Sebastian" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki &rarr;
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card">
+        <div class="character-card__image">
+         <img alt="Retrato de Robin" data-fallback="Robin" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Robin.png"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Carpintera &middot; La monta&ntilde;a
+         </p>
+         <h2>
+          Robin
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Amistad
+           </span>
+           <strong>
+            Aldeana
+           </strong>
+          </div>
+          <div>
+           <span>
+            Vive en
+           </span>
+           <strong>
+            Carpinter&iacute;a
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           La carpintera del pueblo. Su trabajo conecta directamente con las mejoras y construcciones de la granja.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Entre sus regalos favoritos est&aacute;n el espagueti y el melocot&oacute;n.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Robin" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki &rarr;
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card">
+        <div class="character-card__image">
+         <img alt="Retrato de Lewis" data-fallback="Lewis" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Lewis.png"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Alcalde &middot; Pueblo Pel&iacute;cano
+         </p>
+         <h2>
+          Lewis
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Amistad
+           </span>
+           <strong>
+            Aldeano
+           </strong>
+          </div>
+          <div>
+           <span>
+            Vive en
+           </span>
+           <strong>
+            Mansi&oacute;n del alcalde
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Una figura central en la organizaci&oacute;n del pueblo y en varios de sus acontecimientos.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Cumplea&ntilde;os: Primavera 7. Le encantan el chile y el estofado vegetal.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Lewis" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki &rarr;
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card">
+        <div class="character-card__image">
+         <img alt="Retrato de Willy" data-fallback="Willy" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Willy.png"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Pescador &middot; La playa
+         </p>
+         <h2>
+          Willy
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Amistad
+           </span>
+           <strong>
+            Aldeano
+           </strong>
+          </div>
+          <div>
+           <span>
+            Vive en
+           </span>
+           <strong>
+            Tienda de pesca
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Vive y trabaja frente al mar; es una de las primeras puertas de entrada a la pesca.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Cumplea&ntilde;os: Verano 24. Le encantan la calabaza, el diamante y el esturi&oacute;n.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Willy" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki &rarr;
+          </a>
+         </details>
+        </div>
+       </article>
+      </div>
+      <div class="callout">
+       <strong>
+        M&aacute;s que un retrato:
+       </strong>
+       la dimensi&oacute;n social de Stardew Valley se construye con horarios, cumplea&ntilde;os, preferencias, v&iacute;nculos y eventos. Esta selecci&oacute;n s&oacute;lo abre la puerta.
+      </div>
+     </div>
+    </section>
+   </main>
+   <footer class="site-footer">
+    <div class="container footer-grid">
+     <div>
+      <a class="brand brand--footer" href="../index.html">
+       <span aria-hidden="true" class="brand-mark">
+        ✦
+       </span>
+       <span>
+        <strong>
+         stardew
+        </strong>
+        <small>
+         journal
+        </small>
+       </span>
+      </a>
+      <p>
+       Fanpage acad&eacute;mica, no oficial, creada para Programaci&oacute;n 4.
+      </p>
+     </div>
+     <div>
+      <h2 class="footer-title">
+       Explorar
+      </h2>
+      <a href="../pages/valle.html">
+       El Valle
+      </a>
+      <a href="../pages/estaciones.html">
+       Estaciones
+      </a>
+      <a href="../pages/cultivos.html">
+       Cultivos
+      </a>
+     </div>
+     <div>
+      <h2 class="footer-title">
+       Proyecto
+      </h2>
+      <a href="../pages/habitantes.html">
+       Habitantes
+      </a>
+      <a href="../pages/exploracion.html">
+       Exploraci&oacute;n
+      </a>
+      <a href="../pages/sobre.html">
+       Fuentes y cr&eacute;ditos
+      </a>
+     </div>
+    </div>
+    <div class="container footer-bottom">
+     <span>
+      &copy; 2026 Stardew Journal
+     </span>
+     <span>
+      Stardew Valley &copy; ConcernedApe. Sitio no oficial.
+     </span>
+    </div>
+   </footer>
+  </div>
+ </body>
 </html>

@@ -10,13 +10,22 @@ UI page-by-page y wireframes). Este README no las reemplaza — es un
 **addendum vivo** con las decisiones tomadas en Fase 0 que no están
 en esos documentos, o que los ajustan, para no perder trazabilidad.
 
+9. **Menú móvil (Fase 2)**: se evaluó `<details>/<summary>` nativo
+   para que el botón funcionara sin JS, pero se descartó: Chromium
+   calcula el ancho intrínseco de `<details>` según su estado real
+   `[open]`, y ningún CSS logra mostrar el contenido mientras
+   `[open]` es `false` sin romper el layout en desktop (bug
+   reproducido, no teórico). Se usa el patrón botón + clase
+   controlada por JS. Costo aceptado: sin JavaScript el botón del
+   header queda inerte, pero la navegación completa del sitio sigue
+   disponible sin JS a través del Footer (mismos 6 destinos).
+
 ## Estado actual
 
-**Fase 1 — Foundation.** Estructura de carpetas, HTML base de las 7
-páginas, CSS global (variables, reset, tipografía, espaciado,
-container) y estructura inicial de JavaScript. Sin componentes
-visuales todavía (Header/Footer/Cards llegan en Fase 2) ni contenido
-completo de página (Fase 3/4).
+**Fase 2 — Global UI.** Header (con menú móvil), Footer, Button,
+Card, Section Header y Breadcrumb implementados y aplicados en las 7
+páginas. Contenido específico de cada página todavía pendiente
+(Fase 3 Home, Fase 4 resto).
 
 ## Decisiones de Fase 0 (addendum a la especificación)
 

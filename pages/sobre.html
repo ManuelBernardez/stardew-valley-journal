@@ -1,37 +1,332 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Stardew Valley Journal</title>
-    <meta name="description" content="Qué es este proyecto, por qué existe y qué decisiones de diseño, accesibilidad y tecnología lo sostienen.">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Sobre Stardew Valley Journal">
-    <meta property="og:description" content="Qué es este proyecto, por qué existe y qué decisiones de diseño, accesibilidad y tecnología lo sostienen.">
-    <meta property="og:locale" content="es_ES">
-
-    <link rel="icon" href="../favicon/favicon.svg" type="image/svg+xml">
-
-    <link rel="preload" href="../assets/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="../assets/fonts/cormorant-garamond-600.woff2" as="font" type="font/woff2" crossorigin>
-
-    <link rel="stylesheet" href="../css/style.css">
-</head>
-<body>
-    <header class="site-header">
-        <!-- Header global (GLOBAL-HEADER-001) — se implementa en Fase 2 -->
-    </header>
-
-    <main id="main-content">
-        <h1>Sobre Stardew Valley Journal</h1>
-        <p>Página en construcción — Fase 1: Foundation. El contenido (concepto, tecnologías, decisiones de diseño, accesibilidad, SEO/GEO, créditos y formulario de contacto) se implementa en Fase 4.</p>
-    </main>
-
-    <footer class="site-footer">
-        <!-- Footer global (GLOBAL-FOOTER-001) — se implementa en Fase 2 -->
-    </footer>
-
-    <script type="module" src="../js/main.js"></script>
-</body>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sobre el proyecto &mdash; Stardew Journal
+  </title>
+  <meta content="Objetivos, tecnolog&iacute;as, decisiones de dise&ntilde;o y referencias del proyecto acad&eacute;mico Stardew Journal." name="description"/>
+  <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <script src="../js/main.js" type="module">
+  </script>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Saltar al contenido
+  </a>
+  <div class="site-shell">
+   <header class="site-header">
+    <div class="container nav-wrap">
+     <a aria-label="Stardew Journal, inicio" class="brand" href="../index.html">
+      <span aria-hidden="true" class="brand-mark">
+       ✦
+      </span>
+      <span>
+       <strong>
+        stardew
+       </strong>
+       <small>
+        journal
+       </small>
+      </span>
+     </a>
+     <button aria-controls="main-menu" aria-expanded="false" class="menu-toggle" type="button">
+      <span class="sr-only">
+       Abrir men&uacute;
+      </span>
+      <span aria-hidden="true">
+       ☰
+      </span>
+     </button>
+     <nav aria-label="Navegaci&oacute;n principal" class="main-nav" id="main-menu">
+      <ul class="nav-list">
+       <li>
+        <a class="nav-link" href="../index.html">
+         Inicio
+        </a>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/valle.html">
+         El Valle
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/valle.html#pelican-town">
+           Pueblo Pel&iacute;cano
+          </a>
+         </li>
+         <li>
+          <a href="../pages/valle.html#granja">
+           La granja
+          </a>
+         </li>
+         <li>
+          <a href="../pages/valle.html#playa">
+           La playa
+          </a>
+         </li>
+         <li>
+          <a href="../pages/valle.html#montana">
+           La monta&ntilde;a
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/estaciones.html">
+         Estaciones
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/estaciones.html#primavera">
+           Primavera
+          </a>
+         </li>
+         <li>
+          <a href="../pages/estaciones.html#verano">
+           Verano
+          </a>
+         </li>
+         <li>
+          <a href="../pages/estaciones.html#otono">
+           Oto&ntilde;o
+          </a>
+         </li>
+         <li>
+          <a href="../pages/estaciones.html#invierno">
+           Invierno
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a class="nav-link" href="../pages/cultivos.html">
+         Cultivos
+        </a>
+       </li>
+       <li>
+        <a class="nav-link" href="../pages/habitantes.html">
+         Habitantes
+        </a>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/exploracion.html">
+         Exploraci&oacute;n
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/exploracion.html#pesca">
+           Pesca
+          </a>
+         </li>
+         <li>
+          <a href="../pages/exploracion.html#mineria">
+           Miner&iacute;a
+          </a>
+         </li>
+         <li>
+          <a href="../pages/exploracion.html#lugares">
+           Lugares
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a class="nav-link is-active" href="../pages/sobre.html">
+         Sobre
+        </a>
+       </li>
+      </ul>
+     </nav>
+    </div>
+   </header>
+   <main id="main-content">
+    <section class="page-hero">
+     <div class="container">
+      <nav aria-label="Ruta" class="breadcrumb">
+       <ol>
+        <li>
+         <a href="../index.html">
+          Inicio
+         </a>
+        </li>
+        <li aria-current="page">
+         Sobre
+        </li>
+       </ol>
+      </nav>
+      <p class="eyebrow">
+       Detr&aacute;s del proyecto
+      </p>
+      <h1>
+       Un fan page con forma de cuaderno.
+      </h1>
+      <p>
+       Stardew Journal es un ejercicio acad&eacute;mico de frontend que intenta capturar el esp&iacute;ritu rural y artesanal del juego sin copiar su HUD ni convertirse en una wiki.
+      </p>
+     </div>
+    </section>
+    <section class="section">
+     <div class="container">
+      <div class="editorial-grid">
+       <article class="journal-card">
+        <p class="eyebrow">
+         Qu&eacute; buscamos
+        </p>
+        <h2>
+         Entrar al Valle.
+        </h2>
+        <p>
+         La intenci&oacute;n es que la navegaci&oacute;n se sienta como recorrer un peque&ntilde;o almanaque: im&aacute;genes, etiquetas, fichas y notas cortas que invitan a seguir explorando.
+        </p>
+        <div class="callout">
+         <strong>
+          Regla:
+         </strong>
+         la est&eacute;tica debe acompa&ntilde;ar la informaci&oacute;n, nunca competir con ella.
+        </div>
+       </article>
+       <article class="journal-card">
+        <p class="eyebrow">
+         Tecnolog&iacute;as
+        </p>
+        <h2>
+         Fundamentos.
+        </h2>
+        <ul class="tech-list">
+         <li>
+          HTML5 sem&aacute;ntico
+         </li>
+         <li>
+          CSS3 moderno &middot; Grid + Flexbox
+         </li>
+         <li>
+          JavaScript vanilla
+         </li>
+         <li>
+          Responsive Mobile First
+         </li>
+         <li>
+          Accesibilidad + SEO b&aacute;sico
+         </li>
+        </ul>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section class="section section-paper">
+     <div class="container narrow">
+      <p class="eyebrow">
+       Fuentes y referencias
+      </p>
+      <h2>
+       Inspirado por el mundo, no por una copia literal.
+      </h2>
+      <p class="section-copy">
+       Para la direcci&oacute;n visual se revisaron capturas de la UI de Stardew Valley: sus paneles de inventario y di&aacute;logo usan marcos de madera, superficies c&aacute;lidas, bordes marcados e ilustraciones pixeladas. El propio blog del juego explica que los cuadros de di&aacute;logo fueron redise&ntilde;ados con un panel de madera y una &ldquo;name scroll&rdquo;, una pista clara sobre el lenguaje visual que usamos aqu&iacute; de forma reinterpretada.
+      </p>
+      <p class="section-copy">
+       Tambi&eacute;n se revis&oacute; el blog oficial de Stardew Valley: sus publicaciones combinan titulares editoriales, im&aacute;genes del juego, texto relativamente aireado y una presentaci&oacute;n sencilla que deja que las capturas lleven el peso visual.
+      </p>
+      <div class="source-list">
+       <a href="https://www.stardewvalley.net/blog/" rel="noreferrer" target="_blank">
+        Stardew Valley &mdash; Blog oficial &rarr;
+       </a>
+       <a href="https://www.stardewvalley.net/dev-update-27/" rel="noreferrer" target="_blank">
+        Dev Update #27 &mdash; redise&ntilde;o de los cuadros de di&aacute;logo &rarr;
+       </a>
+       <a href="https://es.stardewvalleywiki.com/Stardew_Valley" rel="noreferrer" target="_blank">
+        Stardew Valley Wiki en espa&ntilde;ol &rarr;
+       </a>
+       <a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki%3ACopyrights" rel="noreferrer" target="_blank">
+        Wiki &mdash; Copyrights y licencias &rarr;
+       </a>
+      </div>
+      <div class="callout">
+       <strong>
+        Nota:
+       </strong>
+       Stardew Journal es una fanpage acad&eacute;mica no oficial. Los materiales de Stardew Valley pertenecen a sus respectivos titulares. Revis&aacute; las licencias de cada asset antes de redistribuir el sitio fuera del contexto acad&eacute;mico.
+      </div>
+     </div>
+    </section>
+    <section class="section">
+     <div class="container narrow">
+      <p class="eyebrow">
+       Design System
+      </p>
+      <h2>
+       Calma, naturaleza, nostalgia y cuidado artesanal.
+      </h2>
+      <p class="section-copy">
+       La paleta mantiene verdes, crema, marrones y azules; la tipograf&iacute;a combina Cormorant Garamond para t&iacute;tulos con Inter para interfaz y cuerpo; y los componentes utilizan textura de papel, marcos dobles, peque&ntilde;os acentos de madera y detalles pixel-art como gui&ntilde;o al juego.
+      </p>
+     </div>
+    </section>
+   </main>
+   <footer class="site-footer">
+    <div class="container footer-grid">
+     <div>
+      <a class="brand brand--footer" href="../index.html">
+       <span aria-hidden="true" class="brand-mark">
+        ✦
+       </span>
+       <span>
+        <strong>
+         stardew
+        </strong>
+        <small>
+         journal
+        </small>
+       </span>
+      </a>
+      <p>
+       Fanpage acad&eacute;mica, no oficial, creada para Programaci&oacute;n 4.
+      </p>
+     </div>
+     <div>
+      <h2 class="footer-title">
+       Explorar
+      </h2>
+      <a href="../pages/valle.html">
+       El Valle
+      </a>
+      <a href="../pages/estaciones.html">
+       Estaciones
+      </a>
+      <a href="../pages/cultivos.html">
+       Cultivos
+      </a>
+     </div>
+     <div>
+      <h2 class="footer-title">
+       Proyecto
+      </h2>
+      <a href="../pages/habitantes.html">
+       Habitantes
+      </a>
+      <a href="../pages/exploracion.html">
+       Exploraci&oacute;n
+      </a>
+      <a href="../pages/sobre.html">
+       Fuentes y cr&eacute;ditos
+      </a>
+     </div>
+    </div>
+    <div class="container footer-bottom">
+     <span>
+      &copy; 2026 Stardew Journal
+     </span>
+     <span>
+      Stardew Valley &copy; ConcernedApe. Sitio no oficial.
+     </span>
+    </div>
+   </footer>
+  </div>
+ </body>
 </html>

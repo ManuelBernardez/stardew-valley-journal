@@ -1,352 +1,139 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Estaciones &mdash; Stardew Journal
-  </title>
-  <meta content="Primavera, verano, oto&ntilde;o e invierno: c&oacute;mo cambia el Valle con el paso de las estaciones." name="description"/>
-  <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="../css/style.css" rel="stylesheet"/>
-  <script src="../js/main.js" type="module">
-  </script>
- </head>
- <body>
-  <a class="skip-link" href="#main-content">
-   Saltar al contenido
-  </a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estaciones — Stardew Journal</title>
+  <meta name="description" content="Explora las cuatro estaciones de Stardew Valley: cultivos, pesca, forrajeo, festivales, clima y cambios en el paisaje.">
+  <link rel="icon" href="../favicon/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="../js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
   <div class="site-shell">
-   <header class="site-header">
-    <div class="container nav-wrap">
-     <a aria-label="Stardew Journal, inicio" class="brand" href="../index.html">
-      <span aria-hidden="true" class="brand-mark">
-       ✦
-      </span>
-      <span>
-       <strong>
-        stardew
-       </strong>
-       <small>
-        journal
-       </small>
-      </span>
-     </a>
-     <button aria-controls="main-menu" aria-expanded="false" class="menu-toggle" type="button">
-      <span class="sr-only">
-       Abrir men&uacute;
-      </span>
-      <span aria-hidden="true">
-       ☰
-      </span>
-     </button>
-     <nav aria-label="Navegaci&oacute;n principal" class="main-nav" id="main-menu">
-      <ul class="nav-list">
-       <li>
-        <a class="nav-link" href="../index.html">
-         Inicio
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html" aria-label="Stardew Journal, inicio">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span><strong>stardew</strong><small>journal</small></span>
         </a>
-       </li>
-       <li class="nav-item has-submenu">
-        <a class="nav-link" href="../pages/valle.html">
-         El Valle
-        </a>
-        <ul class="submenu">
-         <li>
-          <a href="../pages/valle.html#pelican-town">
-           Pueblo Pel&iacute;cano
-          </a>
-         </li>
-         <li>
-          <a href="../pages/valle.html#granja">
-           La granja
-          </a>
-         </li>
-         <li>
-          <a href="../pages/valle.html#playa">
-           La playa
-          </a>
-         </li>
-         <li>
-          <a href="../pages/valle.html#montana">
-           La monta&ntilde;a
-          </a>
-         </li>
-        </ul>
-       </li>
-       <li class="nav-item has-submenu">
-        <a class="nav-link is-active" href="../pages/estaciones.html">
-         Estaciones
-        </a>
-        <ul class="submenu">
-         <li>
-          <a href="../pages/estaciones.html#primavera">
-           Primavera
-          </a>
-         </li>
-         <li>
-          <a href="../pages/estaciones.html#verano">
-           Verano
-          </a>
-         </li>
-         <li>
-          <a href="../pages/estaciones.html#otono">
-           Oto&ntilde;o
-          </a>
-         </li>
-         <li>
-          <a href="../pages/estaciones.html#invierno">
-           Invierno
-          </a>
-         </li>
-        </ul>
-       </li>
-       <li>
-        <a class="nav-link" href="../pages/cultivos.html">
-         Cultivos
-        </a>
-       </li>
-       <li>
-        <a class="nav-link" href="../pages/habitantes.html">
-         Habitantes
-        </a>
-       </li>
-       <li class="nav-item has-submenu">
-        <a class="nav-link" href="../pages/exploracion.html">
-         Exploraci&oacute;n
-        </a>
-        <ul class="submenu">
-         <li>
-          <a href="../pages/exploracion.html#pesca">
-           Pesca
-          </a>
-         </li>
-         <li>
-          <a href="../pages/exploracion.html#mineria">
-           Miner&iacute;a
-          </a>
-         </li>
-         <li>
-          <a href="../pages/exploracion.html#lugares">
-           Lugares
-          </a>
-         </li>
-        </ul>
-       </li>
-       <li>
-        <a class="nav-link" href="../pages/sobre.html">
-         Sobre
-        </a>
-       </li>
-      </ul>
-     </nav>
-    </div>
-   </header>
-   <main id="main-content">
-    <section class="page-hero">
-     <div class="container">
-      <nav aria-label="Ruta" class="breadcrumb">
-       <ol>
-        <li>
-         <a href="../index.html">
-          Inicio
-         </a>
-        </li>
-        <li aria-current="page">
-         Estaciones
-        </li>
-       </ol>
-      </nav>
-      <p class="eyebrow">
-       El ciclo del a&ntilde;o
-      </p>
-      <h1>
-       Cuatro estaciones, cuatro maneras de mirar el mismo Valle.
-      </h1>
-      <p>
-       Cada estaci&oacute;n dura 28 d&iacute;as y modifica el paisaje, los cultivos, la recolecci&oacute;n y muchas de las oportunidades del d&iacute;a.
-      </p>
-     </div>
-    </section>
-    <section class="section">
-     <div class="container">
-      <article class="season-section theme-spring" id="primavera">
-       <img alt="Paisaje de Primavera en Stardew Valley" class="season-section__media" data-fallback="Primavera" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/CindersapForest.png"/>
-       <div class="season-section__body">
-        <span class="season-kicker">
-         Renacer
-        </span>
-        <h2>
-         Primavera
-        </h2>
-        <p>
-         El comienzo del ciclo y el momento de preparar la granja para el a&ntilde;o.
-        </p>
-        <ul>
-         <li>
-          Predominan verdes y flores.
-         </li>
-         <li>
-          Aparecen cultivos propios de la estaci&oacute;n.
-         </li>
-         <li>
-          Ideal para ordenar la rutina y explorar el pueblo.
-         </li>
-        </ul>
-       </div>
-      </article>
-      <article class="season-section theme-summer" id="verano">
-       <img alt="Una escena de Verano en Stardew Valley" class="season-section__media" data-fallback="Verano" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Dance%20Of%20The%20Moonlight%20Jellies%20-%202.jpg"/>
-       <div class="season-section__body">
-        <span class="season-kicker">
-         Abundancia
-        </span>
-        <h2>
-         Verano
-        </h2>
-        <p>
-         La producci&oacute;n aumenta y el Valle se siente m&aacute;s luminoso y abierto.
-        </p>
-        <ul>
-         <li>
-          Nuevos cultivos y peces.
-         </li>
-         <li>
-          M&aacute;s opciones para dedicar d&iacute;as completos a una actividad.
-         </li>
-         <li>
-          Los cultivos de verano marcan el ritmo de la granja.
-         </li>
-        </ul>
-       </div>
-      </article>
-      <article class="season-section theme-autumn" id="otono">
-       <img alt="Oto&ntilde;o en Stardew Valley" class="season-section__media" data-fallback="Oto&ntilde;o" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Spirits%20Eve.png"/>
-       <div class="season-section__body">
-        <span class="season-kicker">
-         Cosecha
-        </span>
-        <h2>
-         Oto&ntilde;o
-        </h2>
-        <p>
-         Una estaci&oacute;n m&aacute;s c&aacute;lida en color, con cultivos de alto valor y muchos recursos para recolectar.
-        </p>
-        <ul>
-         <li>
-          Paleta terrosa y amarilla.
-         </li>
-         <li>
-          Cosechas como calabaza y ar&aacute;ndano rojo.
-         </li>
-         <li>
-          La sensaci&oacute;n de cierre del a&ntilde;o empieza a aparecer.
-         </li>
-        </ul>
-       </div>
-      </article>
-      <article class="season-section theme-winter" id="invierno">
-       <img alt="Una escena de Invierno en Stardew Valley" class="season-section__media" data-fallback="Invierno" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Feast%20of%20the%20Winterstar.png"/>
-       <div class="season-section__body">
-        <span class="season-kicker">
-         Pausa
-        </span>
-        <h2>
-         Invierno
-        </h2>
-        <p>
-         La estaci&oacute;n que desacelera la granja y da espacio a otras actividades.
-        </p>
-        <ul>
-         <li>
-          La mayor&iacute;a de los cultivos estacionales no crecen.
-         </li>
-         <li>
-          Pesca, miner&iacute;a y organizaci&oacute;n ganan protagonismo.
-         </li>
-         <li>
-          El paisaje se convierte en una de las postales m&aacute;s reconocibles del juego.
-         </li>
-        </ul>
-       </div>
-      </article>
-     </div>
-    </section>
-    <section class="section section-paper">
-     <div class="narrow">
-      <p class="eyebrow">
-       Almanaque
-      </p>
-      <h2>
-       La estaci&oacute;n no es s&oacute;lo una paleta de color.
-      </h2>
-      <p class="section-copy">
-       Tambi&eacute;n decide qu&eacute; pod&eacute;s sembrar, qu&eacute; pod&eacute;s encontrar y qu&eacute; actividades tienen sentido para tu d&iacute;a. Por eso el calendario se vuelve parte de la estrategia y de la atm&oacute;sfera.
-      </p>
-     </div>
-    </section>
-   </main>
-   <footer class="site-footer">
-    <div class="container footer-grid">
-     <div>
-      <a class="brand brand--footer" href="../index.html">
-       <span aria-hidden="true" class="brand-mark">
-        ✦
-       </span>
-       <span>
-        <strong>
-         stardew
-        </strong>
-        <small>
-         journal
-        </small>
-       </span>
-      </a>
-      <p>
-       Fanpage acad&eacute;mica, no oficial, creada para Programaci&oacute;n 4.
-      </p>
-     </div>
-     <div>
-      <h2 class="footer-title">
-       Explorar
-      </h2>
-      <a href="../pages/valle.html">
-       El Valle
-      </a>
-      <a href="../pages/estaciones.html">
-       Estaciones
-      </a>
-      <a href="../pages/cultivos.html">
-       Cultivos
-      </a>
-     </div>
-     <div>
-      <h2 class="footer-title">
-       Proyecto
-      </h2>
-      <a href="../pages/habitantes.html">
-       Habitantes
-      </a>
-      <a href="../pages/exploracion.html">
-       Exploraci&oacute;n
-      </a>
-      <a href="../pages/sobre.html">
-       Fuentes y cr&eacute;ditos
-      </a>
-     </div>
-    </div>
-    <div class="container footer-bottom">
-     <span>
-      &copy; 2026 Stardew Journal
-     </span>
-     <span>
-      Stardew Valley &copy; ConcernedApe. Sitio no oficial.
-     </span>
-    </div>
-   </footer>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
+          <span class="sr-only">Abrir menú</span><span aria-hidden="true">☰</span>
+        </button>
+        <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
+          <ul class="nav-list">
+            <li><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item has-submenu">
+              <a class="nav-link" href="../pages/valle.html">El Valle</a>
+              <ul class="submenu">
+                <li><a href="../pages/valle.html#lugares">Lugares</a></li>
+                <li><a href="../pages/granja.html">La granja</a></li>
+                <li><a href="../pages/exploracion.html">Exploración</a></li>
+              </ul>
+            </li>
+            <li class="nav-item has-submenu">
+              <a class="nav-link is-active" href="../pages/estaciones.html" aria-current="page">Estaciones</a>
+              <ul class="submenu">
+                <li><a href="primavera.html">Primavera</a></li>
+                <li><a href="verano.html">Verano</a></li>
+                <li><a href="otono.html">Otoño</a></li>
+                <li><a href="invierno.html">Invierno</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link" href="../pages/cultivos.html">Cultivos</a></li>
+            <li><a class="nav-link" href="../pages/habitantes.html">Habitantes</a></li>
+            <li><a class="nav-link" href="../pages/sobre.html">Sobre</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="page-hero page-hero--season">
+        <div class="container">
+          <nav class="breadcrumb" aria-label="Ruta">
+            <ol><li><a href="../index.html">Inicio</a></li><li aria-current="page">Estaciones</li></ol>
+          </nav>
+          <p class="eyebrow">El ciclo del año</p>
+          <h1>Cuatro estaciones. Veintiocho días para hacerlos tuyos.</h1>
+          <p>
+            El año cambia de paisaje, de sonidos y de posibilidades. Cultivos, forrajeo, peces,
+            festivales y rutinas de los habitantes se mueven con las estaciones.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-paper" aria-labelledby="season-intro-title">
+        <div class="container season-intro">
+          <div>
+            <p class="eyebrow">Cómo funciona</p>
+            <h2 id="season-intro-title">El calendario también es parte del juego.</h2>
+          </div>
+          <p>
+            Cada estación dura <strong>28 días</strong>. Cuando termina el día 28, empieza la siguiente,
+            y con ella cambian muchas de las cosas que podés encontrar, plantar o hacer. Los festivales
+            reúnen a Pueblo Pelícano y las rutinas de algunos habitantes también se transforman.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="season-grid-title">
+        <div class="container">
+          <div class="section-header section-header--center">
+            <div>
+              <p class="eyebrow">Cuaderno de viaje</p>
+              <h2 id="season-grid-title">Elegí una estación para entrar en detalle.</h2>
+            </div>
+            <p>Dentro de cada página vas a encontrar lo más destacable de ese momento del año, ideas para aprovecharlo y conexiones con otras partes del Valle.</p>
+          </div>
+
+          <div class="season-card-grid">
+            <a class="season-card season-card--spring" href="primavera.html">
+              <img src="https://stardewvalleywiki.com/Special:FilePath/Egg%20Festival.png" alt="Festival del huevo en Primavera" loading="lazy">
+              <div class="season-card__body"><span class="season-kicker"><img class="hero-sprite" src="https://stardewvalleywiki.com/Special:FilePath/Strawberry.png" alt="" aria-hidden="true" loading="lazy">Renacer</span><h2>Primavera</h2><p>La estación que abre el año: siembra, primeras relaciones y un Valle que vuelve a florecer.</p><span class="text-link">Entrar en Primavera →</span></div>
+            </a>
+            <a class="season-card season-card--summer" href="verano.html">
+              <img src="https://stardewvalleywiki.com/Special:FilePath/Luau.png" alt="Luau de Verano" loading="lazy">
+              <div class="season-card__body"><span class="season-kicker"><img class="hero-sprite" src="https://stardewvalleywiki.com/Special:FilePath/Blueberry.png" alt="" aria-hidden="true" loading="lazy">Abundancia</span><h2>Verano</h2><p>Más calor, nuevas cosechas, pesca y noches especiales junto al mar.</p><span class="text-link">Entrar en Verano →</span></div>
+            </a>
+            <a class="season-card season-card--autumn" href="otono.html">
+              <img src="https://stardewvalleywiki.com/Special:FilePath/StardewValleyFair.png" alt="Feria de Stardew Valley en Otoño" loading="lazy">
+              <div class="season-card__body"><span class="season-kicker"><img class="hero-sprite" src="https://stardewvalleywiki.com/Special:FilePath/Pumpkin.png" alt="" aria-hidden="true" loading="lazy">Cosecha</span><h2>Otoño</h2><p>Una época de colores cálidos, cultivos valiosos y festivales memorables.</p><span class="text-link">Entrar en Otoño →</span></div>
+            </a>
+            <a class="season-card season-card--winter" href="invierno.html">
+              <img src="https://stardewvalleywiki.com/Special:FilePath/Festival_of_Ice.png" alt="Festival del hielo en Invierno" loading="lazy">
+              <div class="season-card__body"><span class="season-kicker"><img class="hero-sprite" src="https://stardewvalleywiki.com/Special:FilePath/Winter_Root.png" alt="" aria-hidden="true" loading="lazy">Pausa</span><h2>Invierno</h2><p>La granja se desacelera y aparecen nuevas razones para pescar, minar y recorrer.</p><span class="text-link">Entrar en Invierno →</span></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft">
+        <div class="container narrow">
+          <p class="eyebrow">Una regla simple</p>
+          <h2>Lo que hoy está disponible, mañana puede ser parte del recuerdo.</h2>
+          <p class="section-copy">
+            Vale la pena mirar el calendario antes de sembrar, pescar o salir a recolectar. Algunos cultivos,
+            peces, recursos y festivales sólo aparecen durante ciertas épocas del año.
+          </p>
+          <a class="button button--green" href="primavera.html">Empezar por Primavera →</a>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand brand--footer" href="../index.html"><span class="brand-mark" aria-hidden="true">✦</span><span><strong>stardew</strong><small>journal</small></span></a>
+          <p>Fanpage académica, no oficial, creada para Programación 4.</p>
+        </div>
+        <div><h2 class="footer-title">Explorar</h2><a href="valle.html">El Valle</a><a href="granja.html">La granja</a><a href="exploracion.html">Exploración</a></div>
+        <div><h2 class="footer-title">Estaciones</h2><a href="primavera.html">Primavera</a><a href="verano.html">Verano</a><a href="otono.html">Otoño</a><a href="invierno.html">Invierno</a></div>
+      </div>
+      <div class="container footer-bottom"><span>© 2026 Stardew Journal</span><span>Stardew Valley © ConcernedApe. Sitio no oficial.</span></div>
+    </footer>
   </div>
- </body>
+</body>
 </html>

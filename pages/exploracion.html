@@ -1,306 +1,408 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exploración — Stardew Journal</title>
-  <meta name="description" content="Descubre la pesca, la minería y los lugares del Valle como pequeñas aventuras paralelas a la vida en la granja.">
-  <link rel="icon" href="../favicon/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
-  <script type="module" src="../js/main.js"></script>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Saltar al contenido</a>
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Exploraci&oacute;n &mdash; Stardew Journal
+  </title>
+  <meta content="Pesca, miner&iacute;a, lugares y secretos de Stardew Valley: peque&ntilde;as pistas para descubrir cu&aacute;nto m&aacute;s hay detr&aacute;s del mapa." name="description"/>
+  <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <script src="../js/main.js" type="module">
+  </script>
+ </head>
+ <body>
+  <a class="skip-link" href="#main-content">
+   Saltar al contenido
+  </a>
   <div class="site-shell">
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="../index.html" aria-label="Stardew Journal, inicio">
-          <span class="brand-mark" aria-hidden="true">✦</span>
-          <span>
-            <strong>stardew</strong>
-            <small>journal</small>
-          </span>
-        </a>
-
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
-          <span class="sr-only">Abrir menú</span>
-          <span aria-hidden="true">☰</span>
-        </button>
-
-        <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
+   <header class="site-header">
+    <div class="container nav-wrap">
+     <a aria-label="Stardew Journal, inicio" class="brand" href="../index.html">
+      <span aria-hidden="true" class="brand-mark">
+       ✦
+      </span>
+      <span>
+       <strong>
+        stardew
+       </strong>
+       <small>
+        journal
+       </small>
+      </span>
+     </a>
+     <button aria-controls="main-menu" aria-expanded="false" class="menu-toggle" type="button">
+      <span class="sr-only">
+       Abrir men&uacute;
+      </span>
+      <span aria-hidden="true">
+       ☰
+      </span>
+     </button>
+     <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
           <ul class="nav-list">
-            <li>
-              <a class="nav-link" href="../index.html">Inicio</a>
-            </li>
+            <li><a class="nav-link" href="../index.html">Inicio</a></li>
             <li class="nav-item has-submenu">
-              <a class="nav-link" href="valle.html">El Valle</a>
+              <a class="nav-link" href="../pages/valle.html">El Valle</a>
               <ul class="submenu">
-                <li><a href="valle.html#pelican-town">Pueblo Pelícano</a></li>
-                <li><a href="valle.html#granja">La granja</a></li>
-                <li><a href="valle.html#playa">La playa</a></li>
-                <li><a href="valle.html#montana">La montaña</a></li>
+                <li><a href="../pages/valle.html#lugares">Lugares</a></li>
+                <li><a href="../pages/granja.html">La granja</a></li>
+                <li><a href="../pages/exploracion.html">Exploración</a></li>
               </ul>
             </li>
             <li class="nav-item has-submenu">
-              <a class="nav-link" href="estaciones.html">Estaciones</a>
+              <a class="nav-link" href="../pages/estaciones.html">Estaciones</a>
               <ul class="submenu">
-                <li><a href="estaciones.html#primavera">Primavera</a></li>
-                <li><a href="estaciones.html#verano">Verano</a></li>
-                <li><a href="estaciones.html#otono">Otoño</a></li>
-                <li><a href="estaciones.html#invierno">Invierno</a></li>
+                <li><a href="../pages/primavera.html">Primavera</a></li>
+                <li><a href="../pages/verano.html">Verano</a></li>
+                <li><a href="../pages/otono.html">Otoño</a></li>
+                <li><a href="../pages/invierno.html">Invierno</a></li>
               </ul>
             </li>
-            <li>
-              <a class="nav-link" href="cultivos.html">Cultivos</a>
-            </li>
-            <li>
-              <a class="nav-link" href="habitantes.html">Habitantes</a>
-            </li>
-            <li class="nav-item has-submenu">
-              <a class="nav-link is-active" href="exploracion.html" aria-current="page">Exploración</a>
-              <ul class="submenu">
-                <li><a href="#pesca">Pesca</a></li>
-                <li><a href="#mineria">Minería</a></li>
-                <li><a href="#lugares">Lugares</a></li>
-              </ul>
-            </li>
-            <li>
-              <a class="nav-link" href="sobre.html">Sobre</a>
-            </li>
+            <li><a class="nav-link" href="../pages/cultivos.html">Cultivos</a></li>
+            <li><a class="nav-link" href="../pages/habitantes.html">Habitantes</a></li>
+            <li><a class="nav-link" href="../pages/sobre.html">Sobre</a></li>
           </ul>
         </nav>
+    </div>
+   </header>
+   <main id="main-content">
+    <section class="page-hero">
+     <div class="container">
+      <nav aria-label="Ruta" class="breadcrumb">
+       <ol>
+        <li>
+         <a href="../index.html">
+          Inicio
+         </a>
+        </li>
+        <li>
+         <a href="valle.html">
+          El Valle
+         </a>
+        </li>
+        <li aria-current="page">
+         Exploraci&oacute;n
+        </li>
+       </ol>
+      </nav>
+      <p class="eyebrow">
+       M&aacute;s all&aacute; de la granja
+      </p>
+      <h1>
+       Hay mucho m&aacute;s en el Valle de lo que se ve a primera vista.
+      </h1>
+      <p>
+       Pescar en silencio, bajar a las minas o seguir un camino por curiosidad pueden parecer actividades peque&ntilde;as. Con el tiempo, cada una abre otra parte del mundo.
+      </p>
+     </div>
+    </section>
+    <section aria-labelledby="exploration-intro-title" class="section section-paper">
+     <div class="container exploration-intro">
+      <div>
+       <p class="eyebrow">
+        Una segunda capa
+       </p>
+       <h2 id="exploration-intro-title">
+        La granja te da un hogar. Explorar te da preguntas.
+       </h2>
       </div>
-    </header>
-
-    <main id="main-content">
-      <section class="page-hero">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="Ruta">
-            <ol>
-              <li><a href="../index.html">Inicio</a></li>
-              <li aria-current="page">Exploración</li>
-            </ol>
-          </nav>
-
-          <p class="eyebrow">Fuera de la granja</p>
-          <h1>Algunos días no piden una lista de tareas. Piden salir.</h1>
+      <p>
+       El juego no obliga a elegir entre ser granjero y aventurero. Tus actividades se cruzan: una captura puede completar una colecci&oacute;n, un mineral puede resolver una necesidad de la granja y una visita inesperada puede revelar una nueva curiosidad.
+      </p>
+     </div>
+    </section>
+    <section aria-labelledby="activities-title" class="section">
+     <div class="container">
+      <div class="section-header">
+       <div>
+        <p class="eyebrow">
+         Tres caminos
+        </p>
+        <h2 id="activities-title">
+         Donde empieza la curiosidad.
+        </h2>
+       </div>
+       <p>
+        No todo lo importante aparece en un objetivo. A veces basta con seguir una pista.
+       </p>
+      </div>
+      <div class="explore-grid explore-grid--journal">
+       <article class="explore-card explore-card--feature" id="pesca">
+        <div aria-hidden="true" class="explore-card__icon">
+         <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Fishing_Skill_Icon.png"/>
+        </div>
+        <p class="eyebrow">
+         Pesca
+        </p>
+        <h2>
+         Esperar tambi&eacute;n es explorar.
+        </h2>
+        <p>
+         El agua cambia la respuesta que obten&eacute;s: el lugar, la estaci&oacute;n, la hora y el clima pueden determinar qu&eacute; aparece en tu anzuelo.
+        </p>
+        <div class="clue-list">
+         <div class="clue-item">
+          <span class="clue-item__label">
+           Pista
+          </span>
+          <strong>
+           R&iacute;o, lago o mar
+          </strong>
           <p>
-            En el Valle siempre hay una actividad que puede cambiar el ritmo del día.
-            Una caña junto al río, una escalera hacia las minas o un camino que todavía
-            no conocías pueden terminar revelando algo inesperado.
+           Cada cuerpo de agua abre distintas posibilidades.
           </p>
-        </div>
-      </section>
-
-      <section class="section section-paper" aria-labelledby="exploration-intro-title">
-        <div class="container exploration-intro">
-          <div>
-            <p class="eyebrow">Otra forma de vivir el Valle</p>
-            <h2 id="exploration-intro-title">La agricultura es el punto de partida. La curiosidad hace el resto.</h2>
-          </div>
+         </div>
+         <div class="clue-item">
+          <span class="clue-item__label">
+           Pista
+          </span>
+          <strong>
+           El momento importa
+          </strong>
           <p>
-            Pescar, minar y recorrer el mapa no son simplemente formas alternativas de ganar recursos.
-            Cada actividad tiene sus propias reglas, lugares y pequeñas sorpresas. Y cuanto más avanzás,
-            más fácil es que una de ellas te lleve a otra.
+           Algunos peces s&oacute;lo aparecen bajo determinadas condiciones.
           </p>
+         </div>
         </div>
-      </section>
-
-      <section class="section" aria-labelledby="activities-title">
-        <div class="container">
-          <div class="section-header">
-            <div>
-              <p class="eyebrow">Tres puertas de entrada</p>
-              <h2 id="activities-title">¿Qué encontrarás ahí afuera?</h2>
-            </div>
-            <p>
-              No hace falta saber exactamente qué buscás. Parte del encanto está en descubrirlo mientras avanzás.
-            </p>
-          </div>
-
-          <div class="explore-grid explore-grid--journal">
-            <article class="explore-card explore-card--feature" id="pesca">
-              <div class="explore-card__icon" aria-hidden="true">
-                <img src="https://stardewvalleywiki.com/Special:FilePath/Fishing_Skill_Icon.png" alt="" loading="lazy">
-              </div>
-              <p class="eyebrow">Paciencia</p>
-              <h2>Pesca</h2>
-              <p>
-                La caña convierte cada orilla en una pequeña apuesta. El pez que puede aparecer
-                depende del cuerpo de agua, la estación, la hora y el clima.
-              </p>
-
-              <div class="clue-list">
-                <div class="clue-item">
-                  <span class="clue-item__label">Pista</span>
-                  <strong>El lugar importa</strong>
-                  <p>Río, lago y mar no ofrecen exactamente las mismas capturas.</p>
-                </div>
-                <div class="clue-item">
-                  <span class="clue-item__label">Pista</span>
-                  <strong>El momento también</strong>
-                  <p>Algunos peces aparecen sólo en determinadas estaciones, horarios o climas.</p>
-                </div>
-              </div>
-
-              <div class="activity-note">
-                <strong>Lo interesante:</strong>
-                una tarde de pesca puede convertirse en una búsqueda concreta cuando descubrís que todavía te falta un pez para completar una colección.
-              </div>
-
-              <a class="text-link" href="https://es.stardewvalleywiki.com/Pesca" target="_blank" rel="noreferrer">
-                Seguir la pista en la Wiki →
-              </a>
-            </article>
-
-            <article class="explore-card explore-card--feature" id="mineria">
-              <div class="explore-card__icon" aria-hidden="true">
-                <img src="https://stardewvalleywiki.com/Special:FilePath/Mining_Skill_Icon.png" alt="" loading="lazy">
-              </div>
-              <p class="eyebrow">Riesgo y recompensa</p>
-              <h2>Minería</h2>
-              <p>
-                Las minas funcionan como una expedición vertical: rompés rocas, buscás minerales,
-                encontrás geodas y decidís hasta dónde querés llegar antes de regresar.
-              </p>
-
-              <div class="clue-list">
-                <div class="clue-item">
-                  <span class="clue-item__label">Pista</span>
-                  <strong>No todo está a simple vista</strong>
-                  <p>Algunos minerales aparecen tras procesar geodas o al encontrar menas concretas.</p>
-                </div>
-                <div class="clue-item">
-                  <span class="clue-item__label">Pista</span>
-                  <strong>Explorar también colecciona</strong>
-                  <p>Los minerales pueden terminar en el Museo, además de servir para otras tareas.</p>
-                </div>
-              </div>
-
-              <div class="activity-note">
-                <strong>Lo interesante:</strong>
-                cada descenso mezcla recursos, combate y la sensación de no saber qué puede aparecer detrás de la próxima roca.
-              </div>
-
-              <a class="text-link" href="https://es.stardewvalleywiki.com/Minerales" target="_blank" rel="noreferrer">
-                Seguir la pista en la Wiki →
-              </a>
-            </article>
-
-            <article class="explore-card explore-card--feature" id="lugares">
-              <div class="explore-card__icon explore-card__icon--map" aria-hidden="true">
-                <img src="https://stardewvalleywiki.com/Special:FilePath/World_Map.png" alt="" loading="lazy">
-              </div>
-              <p class="eyebrow">Descubrimiento</p>
-              <h2>Lugares</h2>
-              <p>
-                El Valle recompensa desviarse del camino. Un horario, un edificio, un rincón del bosque
-                o una vista conocida pueden tener algo distinto para mostrarte según el momento.
-              </p>
-
-              <div class="clue-list">
-                <div class="clue-item">
-                  <span class="clue-item__label">Pista</span>
-                  <strong>El mapa está vivo</strong>
-                  <p>Los habitantes siguen rutinas y no todos los lugares se comportan igual durante el día.</p>
-                </div>
-                <div class="clue-item">
-                  <span class="clue-item__label">Pista</span>
-                  <strong>Volver puede ser parte del descubrimiento</strong>
-                  <p>La estación, el clima o una nueva relación pueden cambiar lo que encontrás.</p>
-                </div>
-              </div>
-
-              <div class="activity-note">
-                <strong>Lo interesante:</strong>
-                recorrer sin una misión concreta puede terminar revelando una nueva ruta, un personaje o una pequeña historia.
-              </div>
-
-              <a class="text-link" href="valle.html">
-                Recorrer los lugares del Valle →
-              </a>
-            </article>
-          </div>
+        <div class="activity-note">
+         <strong>
+          M&aacute;s adelante:
+         </strong>
+         colecciones, recetas, misiones y peces dif&iacute;ciles de encontrar convierten una tarde tranquila en una peque&ntilde;a b&uacute;squeda.
         </div>
-      </section>
-
-      <section class="section section-soft" aria-labelledby="collection-title">
-        <div class="container">
-          <div class="discovery-panel">
-            <div class="discovery-panel__heading">
-              <p class="eyebrow">Cuaderno de hallazgos</p>
-              <h2 id="collection-title">Cada actividad deja algo detrás.</h2>
-              <p>
-                Una captura, un mineral o un lugar descubierto puede convertirse en una pequeña pieza de colección.
-                Esa acumulación hace que explorar tenga un sentido propio incluso cuando no estás buscando dinero.
-              </p>
-            </div>
-
-            <div class="discovery-grid">
-              <article class="discovery-item">
-                <span class="discovery-item__number">01</span>
-                <h3>Una captura</h3>
-                <p>El pez que antes faltaba en tu colección deja de ser sólo un recurso.</p>
-              </article>
-              <article class="discovery-item">
-                <span class="discovery-item__number">02</span>
-                <h3>Una piedra abierta</h3>
-                <p>Una geoda puede revelar un mineral que todavía no habías visto.</p>
-              </article>
-              <article class="discovery-item">
-                <span class="discovery-item__number">03</span>
-                <h3>Un desvío</h3>
-                <p>Caminar por un lugar conocido en otro momento puede mostrarte algo nuevo.</p>
-              </article>
-            </div>
-          </div>
+        <a class="text-link" href="https://es.stardewvalleywiki.com/Pesca" rel="noreferrer" target="_blank">
+         Seguir la pista en la Wiki &rarr;
+        </a>
+       </article>
+       <article class="explore-card explore-card--feature" id="mineria">
+        <div aria-hidden="true" class="explore-card__icon">
+         <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Mining_Skill_Icon.png"/>
         </div>
-      </section>
-
-      <section class="section" aria-labelledby="exploration-closing-title">
-        <div class="container narrow">
-          <p class="eyebrow">Una idea del juego</p>
-          <h2 id="exploration-closing-title">A veces la recompensa es lo que todavía no sabías que estabas buscando.</h2>
-          <p class="section-copy">
-            Stardew Valley hace que agricultura y exploración se alimenten mutuamente. Una actividad puede darte
-            un recurso para otra, un personaje puede abrir una nueva curiosidad y una estación puede cambiar por completo
-            lo que vale la pena buscar.
+        <p class="eyebrow">
+         Miner&iacute;a
+        </p>
+        <h2>
+         Cuanto m&aacute;s baj&aacute;s, m&aacute;s aparece.
+        </h2>
+        <p>
+         Las minas mezclan minerales, geodas, monstruos y peque&ntilde;as decisiones sobre hasta d&oacute;nde avanzar antes de volver a casa.
+        </p>
+        <div class="clue-list">
+         <div class="clue-item">
+          <span class="clue-item__label">
+           Pista
+          </span>
+          <strong>
+           Lo visible no es todo
+          </strong>
+          <p>
+           Las rocas y geodas esconden recursos diferentes.
           </p>
+         </div>
+         <div class="clue-item">
+          <span class="clue-item__label">
+           Pista
+          </span>
+          <strong>
+           Cada descenso suma
+          </strong>
+          <p>
+           Avanzar abre nuevas capas de recursos y desaf&iacute;os.
+          </p>
+         </div>
         </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a class="brand brand--footer" href="../index.html">
-            <span class="brand-mark" aria-hidden="true">✦</span>
-            <span><strong>stardew</strong><small>journal</small></span>
-          </a>
-          <p>Fanpage académica, no oficial, creada para Programación 4.</p>
+        <div class="activity-note">
+         <strong>
+          M&aacute;s adelante:
+         </strong>
+         una mina tambi&eacute;n puede ser el camino hacia materiales, progreso y hallazgos que luego vuelven a tu granja.
         </div>
-        <div>
-          <h2 class="footer-title">Explorar</h2>
-          <a href="valle.html">El Valle</a>
-          <a href="estaciones.html">Estaciones</a>
-          <a href="cultivos.html">Cultivos</a>
+        <a class="text-link" href="https://es.stardewvalleywiki.com/Miner%C3%ADa" rel="noreferrer" target="_blank">
+         Seguir la pista en la Wiki &rarr;
+        </a>
+       </article>
+       <article class="explore-card explore-card--feature" id="lugares">
+        <div aria-hidden="true" class="explore-card__icon explore-card__icon--map">
+         <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/World_Map.png"/>
         </div>
-        <div>
-          <h2 class="footer-title">Proyecto</h2>
-          <a href="habitantes.html">Habitantes</a>
-          <a href="exploracion.html">Exploración</a>
-          <a href="sobre.html">Fuentes y créditos</a>
+        <p class="eyebrow">
+         Lugares y secretos
+        </p>
+        <h2>
+         Algunos caminos aparecen despu&eacute;s.
+        </h2>
+        <p>
+         El mapa tiene zonas cotidianas y otras que empiezan a tener sentido cuando avanz&aacute;s, complet&aacute;s ciertas tareas o descubr&iacute;s una pista.
+        </p>
+        <div class="clue-list">
+         <div class="clue-item">
+          <span class="clue-item__label">
+           Pista
+          </span>
+          <strong>
+           Lo cotidiano tambi&eacute;n esconde cosas
+          </strong>
+          <p>
+           Un edificio, una ruta o una conversaci&oacute;n pueden abrir una nueva b&uacute;squeda.
+          </p>
+         </div>
+         <div class="clue-item">
+          <span class="clue-item__label">
+           Pista
+          </span>
+          <strong>
+           Hay lugares que no parecen importantes&hellip; todav&iacute;a
+          </strong>
+          <p>
+           Algunas zonas ganan significado con el tiempo.
+          </p>
+         </div>
         </div>
+        <div class="activity-note">
+         <strong>
+          M&aacute;s adelante:
+         </strong>
+         el Valle conecta con secretos, misiones y rincones que ampl&iacute;an much&iacute;simo el mundo inicial.
+        </div>
+        <a class="text-link" href="valle.html">
+         Volver a recorrer el Valle &rarr;
+        </a>
+       </article>
       </div>
-      <div class="container footer-bottom">
-        <span>© 2026 Stardew Journal</span>
-        <span>Stardew Valley © ConcernedApe. Sitio no oficial.</span>
+     </div>
+    </section>
+    <section aria-labelledby="discovery-title" class="section section-soft">
+     <div class="container">
+      <div class="discovery-panel">
+       <div class="discovery-panel__heading">
+        <p class="eyebrow">
+         Cuaderno de hallazgos
+        </p>
+        <h2 id="discovery-title">
+         Lo que encontr&aacute;s puede cambiar de prop&oacute;sito.
+        </h2>
+        <p>
+         Un recurso puede ser dinero, material, ingrediente, pieza de colecci&oacute;n o una pista. Esa transformaci&oacute;n es parte de lo que hace que explorar alimente tambi&eacute;n la vida de la granja.
+        </p>
+       </div>
+       <div class="discovery-grid">
+        <article class="discovery-item">
+         <span class="discovery-item__number">
+          01
+         </span>
+         <h3>
+          Encontrar
+         </h3>
+         <p>
+          Ver algo por primera vez despierta la curiosidad.
+         </p>
+        </article>
+        <article class="discovery-item">
+         <span class="discovery-item__number">
+          02
+         </span>
+         <h3>
+          Entender
+         </h3>
+         <p>
+          Descubrir para qu&eacute; sirve conecta esa pieza con el resto del juego.
+         </p>
+        </article>
+        <article class="discovery-item">
+         <span class="discovery-item__number">
+          03
+         </span>
+         <h3>
+          Volver
+         </h3>
+         <p>
+          La pr&oacute;xima vez ya no explor&aacute;s a ciegas: busc&aacute;s algo concreto.
+         </p>
+        </article>
+       </div>
       </div>
-    </footer>
+     </div>
+    </section>
+    <section aria-labelledby="mystery-title" class="section section-paper">
+     <div class="container narrow">
+      <p class="eyebrow">
+       La verdadera escala del Valle
+      </p>
+      <h2 id="mystery-title">
+       Y cuando cre&eacute;s que ya viste todo, aparece otra puerta.
+      </h2>
+      <p class="section-copy">
+       Esta es s&oacute;lo la superficie: eventos, colecciones, misiones, &aacute;reas especiales y secretos hacen que el mapa crezca junto con tu partida. No hace falta conocerlos de antemano; parte del encanto est&aacute; en encontrarlos.
+      </p>
+      <a class="button button--green" href="https://es.stardewvalleywiki.com/Stardew_Valley" rel="noreferrer" target="_blank">
+       Descubrir m&aacute;s en la Wiki &rarr;
+      </a>
+     </div>
+    </section>
+   </main>
+   <footer class="site-footer">
+    <div class="container footer-grid">
+     <div>
+      <a class="brand brand--footer" href="../index.html">
+       <span aria-hidden="true" class="brand-mark">
+        ✦
+       </span>
+       <span>
+        <strong>
+         stardew
+        </strong>
+        <small>
+         journal
+        </small>
+       </span>
+      </a>
+      <p>
+       Fanpage acad&eacute;mica, no oficial, creada para Programaci&oacute;n 4.
+      </p>
+     </div>
+     <div>
+      <h2 class="footer-title">
+       Explorar
+      </h2>
+      <a href="valle.html">
+       El Valle
+      </a>
+      <a href="estaciones.html">
+       Estaciones
+      </a>
+      <a href="cultivos.html">
+       Cultivos
+      </a>
+     </div>
+     <div>
+      <h2 class="footer-title">
+       Proyecto
+      </h2>
+      <a href="habitantes.html">
+       Habitantes
+      </a>
+      <a href="exploracion.html">
+       Exploraci&oacute;n
+      </a>
+      <a href="sobre.html">
+       Fuentes y cr&eacute;ditos
+      </a>
+     </div>
+    </div>
+    <div class="container footer-bottom">
+     <span>
+      &copy; 2026 Stardew Journal
+     </span>
+     <span>
+      Stardew Valley &copy; ConcernedApe. Sitio no oficial.
+     </span>
+    </div>
+   </footer>
   </div>
-</body>
+ </body>
 </html>

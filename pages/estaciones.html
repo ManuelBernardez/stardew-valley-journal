@@ -10,9 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages/estaciones.css">
   <script type="module" src="../js/main.js"></script>
 </head>
-<body>
+<body class="page-estaciones">
   <a class="skip-link" href="#main-content">Saltar al contenido</a>
   <div class="site-shell">
     <header class="site-header">
@@ -51,38 +52,29 @@
         </nav>
       </div>
     </header>
+
     <main id="main-content">
-      <section class="page-hero page-hero--season">
-        <div class="container">
-          <nav class="breadcrumb" aria-label="Ruta">
-            <ol><li><a href="../index.html">Inicio</a></li><li aria-current="page">Estaciones</li></ol>
-          </nav>
-          <p class="eyebrow">El ciclo del año</p>
-          <h1>Cuatro estaciones. Veintiocho días para hacerlos tuyos.</h1>
-          <p>
-            El año cambia de paisaje, de sonidos y de posibilidades. Cultivos, forrajeo, peces,
-            festivales y rutinas de los habitantes se mueven con las estaciones.
-          </p>
+      <section class="page-hero page-hero--journal">
+        <div class="page-hero__overlay"></div>
+          <div class="container page-hero__content page-hero__content--centered">
+          <div class="journal-hero-plaque"><h1>Estaciones</h1></div>
+          <p class="journal-hero-subtitle">Cuatro momentos del año. Veintiocho días para sembrar, explorar y disfrutar el Valle.</p>
         </div>
       </section>
-
-      <section class="section section-paper" aria-labelledby="season-intro-title">
+      
+      <section class="section section-soft section-journal-intro" aria-labelledby="season-intro-title">
         <div class="container season-intro">
-          <div>
-            <p class="eyebrow">Cómo funciona</p>
-            <h2 id="season-intro-title">El calendario también es parte del juego.</h2>
-          </div>
           <p>
-            Cada estación dura <strong>28 días</strong>. Cuando termina el día 28, empieza la siguiente,
+            Cada estación dura <strong>28 días</strong>. Al día siguiente empieza una nueva,
             y con ella cambian muchas de las cosas que podés encontrar, plantar o hacer. Los festivales
             reúnen a Pueblo Pelícano y las rutinas de algunos habitantes también se transforman.
           </p>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="season-grid-title">
+      <section class="section section-journal card-surface" aria-labelledby="season-grid-title">
         <div class="container">
-          <div class="section-header section-header--center">
+          <div class="section-header section-header--center section-header--journal">
             <div>
               <p class="eyebrow">Cuaderno de viaje</p>
               <h2 id="season-grid-title">Elegí una estación para entrar en detalle.</h2>
@@ -90,21 +82,21 @@
             <p>Dentro de cada página vas a encontrar lo más destacable de ese momento del año, ideas para aprovecharlo y conexiones con otras partes del Valle.</p>
           </div>
 
-          <div class="season-card-grid">
-            <a class="season-card season-card--spring" href="primavera.html">
-              <img src="https://stardewvalleywiki.com/Special:FilePath/Egg%20Festival.png" alt="Festival del huevo en Primavera" loading="lazy">
+          <div class="season-card-grid journal-season-grid">
+            <a class="season-card card-surface" href="primavera.html">
+              <img src="../assets/images/cards/Egg_Festival.png" alt="Festival del huevo en Primavera" loading="lazy">
               <div class="season-card__body"><span class="season-kicker"><img class="hero-sprite" src="https://stardewvalleywiki.com/Special:FilePath/Strawberry.png" alt="" aria-hidden="true" loading="lazy">Renacer</span><h2>Primavera</h2><p>La estación que abre el año: siembra, primeras relaciones y un Valle que vuelve a florecer.</p><span class="text-link">Entrar en Primavera →</span></div>
             </a>
-            <a class="season-card season-card--summer" href="verano.html">
-              <img src="https://stardewvalleywiki.com/Special:FilePath/Luau.png" alt="Luau de Verano" loading="lazy">
+            <a class="season-card card-surface" href="verano.html">
+              <img src="../assets/images/cards/Luau.png" alt="Luau de Verano" loading="lazy">
               <div class="season-card__body"><span class="season-kicker"><img class="hero-sprite" src="https://stardewvalleywiki.com/Special:FilePath/Blueberry.png" alt="" aria-hidden="true" loading="lazy">Abundancia</span><h2>Verano</h2><p>Más calor, nuevas cosechas, pesca y noches especiales junto al mar.</p><span class="text-link">Entrar en Verano →</span></div>
             </a>
-            <a class="season-card season-card--autumn" href="otono.html">
-              <img src="https://stardewvalleywiki.com/Special:FilePath/StardewValleyFair.png" alt="Feria de Stardew Valley en Otoño" loading="lazy">
+            <a class="season-card card-surface" href="otono.html">
+              <img src="../assets/images/cards/StardewValleyFair.png" alt="Feria de Stardew Valley en Otoño" loading="lazy">
               <div class="season-card__body"><span class="season-kicker"><img class="hero-sprite" src="https://stardewvalleywiki.com/Special:FilePath/Pumpkin.png" alt="" aria-hidden="true" loading="lazy">Cosecha</span><h2>Otoño</h2><p>Una época de colores cálidos, cultivos valiosos y festivales memorables.</p><span class="text-link">Entrar en Otoño →</span></div>
             </a>
-            <a class="season-card season-card--winter" href="invierno.html">
-              <img src="https://stardewvalleywiki.com/Special:FilePath/Festival_of_Ice.png" alt="Festival del hielo en Invierno" loading="lazy">
+            <a class="season-card card-surface" href="invierno.html">
+              <img src="../assets/images/cards/Festival_of_Ice.png" alt="Festival del hielo en Invierno" loading="lazy">
               <div class="season-card__body"><span class="season-kicker"><img class="hero-sprite" src="https://stardewvalleywiki.com/Special:FilePath/Winter_Root.png" alt="" aria-hidden="true" loading="lazy">Pausa</span><h2>Invierno</h2><p>La granja se desacelera y aparecen nuevas razones para pescar, minar y recorrer.</p><span class="text-link">Entrar en Invierno →</span></div>
             </a>
           </div>
@@ -112,7 +104,9 @@
       </section>
 
       <section class="section section-soft">
-        <div class="container narrow">
+        <div class="container narrow journal-rule-note">
+          <span class="journal-rule-note__stamp">28</span>
+          <div>
           <p class="eyebrow">Una regla simple</p>
           <h2>Lo que hoy está disponible, mañana puede ser parte del recuerdo.</h2>
           <p class="section-copy">
@@ -120,6 +114,7 @@
             peces, recursos y festivales sólo aparecen durante ciertas épocas del año.
           </p>
           <a class="button button--green" href="primavera.html">Empezar por Primavera →</a>
+          </div>
         </div>
       </section>
     </main>

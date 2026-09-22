@@ -12,10 +12,11 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+15&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/pages/exploracion.css" rel="stylesheet"/>
   <script src="../js/main.js" type="module">
   </script>
  </head>
- <body>
+ <body class="page-exploracion">
   <a class="skip-link" href="#main-content">
    Saltar al contenido
   </a>
@@ -71,36 +72,24 @@
     </div>
    </header>
    <main id="main-content">
-    <section class="page-hero">
-     <div class="container">
-      <nav aria-label="Ruta" class="breadcrumb">
-       <ol>
-        <li>
-         <a href="../index.html">
-          Inicio
-         </a>
-        </li>
-        <li>
-         <a href="valle.html">
-          El Valle
-         </a>
-        </li>
-        <li aria-current="page">
-         Exploraci&oacute;n
-        </li>
-       </ol>
-      </nav>
-      <p class="eyebrow">
-       M&aacute;s all&aacute; de la granja
-      </p>
-      <h1>
-       Hay mucho m&aacute;s en el Valle de lo que se ve a primera vista.
-      </h1>
-      <p>
-       Pescar en silencio, bajar a las minas o seguir un camino por curiosidad pueden parecer actividades peque&ntilde;as. Con el tiempo, cada una abre otra parte del mundo.
-      </p>
-     </div>
-    </section>
+    <section class="page-hero page-hero--journal">
+  <div class="page-hero__overlay"></div>
+  <div class="container page-hero__content page-hero__content--centered">
+   <nav class="breadcrumb breadcrumb--on-image" aria-label="Ruta">
+    <ol>
+      <li>
+        <a href="../index.html">Inicio</a>
+      </li>
+      <li>
+        <a href="valle.html">El valle</a>
+      </li>
+      <li aria-current="page">Exploración</li>
+    </ol>
+  </nav>
+   <div class="journal-hero-plaque"><span class="journal-hero-plaque__kicker">Más allá de la granja</span><h1>Exploración</h1></div>
+   <p class="journal-hero-subtitle">Pesca, minería y rincones donde el Valle guarda algo más.</p>
+  </div>
+ </section>
     <section aria-labelledby="exploration-intro-title" class="section section-paper">
      <div class="container exploration-intro">
       <div>
@@ -132,7 +121,7 @@
        </p>
       </div>
       <div class="explore-grid explore-grid--journal">
-       <article class="explore-card explore-card--feature" id="pesca">
+       <article class="explore-card explore-card--feature card-surface" id="pesca">
         <div aria-hidden="true" class="explore-card__icon">
          <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Fishing_Skill_Icon.png"/>
         </div>
@@ -179,7 +168,7 @@
          Seguir la pista en la Wiki &rarr;
         </a>
        </article>
-       <article class="explore-card explore-card--feature" id="mineria">
+       <article class="explore-card explore-card--feature card-surface" id="mineria">
         <div aria-hidden="true" class="explore-card__icon">
          <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Mining_Skill_Icon.png"/>
         </div>
@@ -226,7 +215,7 @@
          Seguir la pista en la Wiki &rarr;
         </a>
        </article>
-       <article class="explore-card explore-card--feature" id="lugares">
+       <article class="explore-card explore-card--feature card-surface" id="lugares">
         <div aria-hidden="true" class="explore-card__icon explore-card__icon--map">
          <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/World_Map.png"/>
         </div>

@@ -1,0 +1,141 @@
+.exploration-intro {
+  display:grid;
+  gap:1.5rem;
+  align-items:end
+}
+.exploration-intro>p {
+  max-width:650px
+}
+.explore-grid--journal {
+  align-items:stretch
+}
+.explore-card {
+  padding:1.45rem
+}
+.explore-card--feature {
+  display:flex;
+  flex-direction:column;
+  min-height:100%;
+  padding:1.6rem
+}
+.explore-card--feature>.text-link {
+  margin-top:auto;
+  padding-top:1.1rem
+}
+.explore-card__icon {
+  display:grid;
+  place-items:center;
+  width:3.2rem;
+  height:3.2rem;
+  border-radius:.5rem;
+  background:var(--paper-deep);
+  font-size:1.6rem
+}
+.explore-card__icon img {
+  width:46px;
+  height:46px;
+  object-fit:contain;
+  image-rendering:pixelated
+}
+.explore-card__icon--map {
+  overflow:hidden
+}
+.explore-card__icon--map img {
+  width:100%;
+  height:100%;
+  object-fit:contain
+}
+.explore-card h2 {
+  margin-top:.8rem;
+  font-size:clamp(2rem,3vw,3rem)
+}
+.explore-card p {
+  margin-top:.5rem;
+  font-size:.86rem
+}
+.activity-note {
+  margin-top:1rem;
+  padding:.75rem .85rem;
+  background:var(--paper-deep);
+  border-left:3px solid var(--gold);
+  border-radius:.3rem;
+  font-size:.76rem;
+  color:var(--ink-soft)
+}
+.activity-note strong {
+  color:var(--green-deep)
+}
+.clue-list {
+  display:grid;
+  gap:.65rem;
+  margin-top:1.15rem
+}
+.clue-item {
+  padding:.8rem .85rem;
+  background:rgba(235,225,203,.58);
+  border:1px dashed var(--line);
+  border-radius:.45rem
+}
+.clue-item__label {
+  display:block;
+  margin-bottom:.2rem;
+  color:var(--brown);
+  font-size:.64rem;
+  font-weight:700;
+  letter-spacing:.12em;
+  text-transform:uppercase
+}
+.clue-item strong {
+  color:var(--green-deep);
+  font-size:.88rem
+}
+.clue-item p {
+  margin-top:.15rem;
+  font-size:.77rem
+}
+.discovery-panel {
+  padding:clamp(1.6rem,4vw,2.8rem)
+}
+.discovery-panel__heading {
+  max-width:720px
+}
+.discovery-panel__heading p:last-child {
+  margin-top:.8rem
+}
+.discovery-grid {
+  margin-top:1.75rem;
+  grid-template-columns:1fr
+}
+.discovery-item {
+  position:relative;
+  min-height:160px;
+  padding:1.35rem;
+  background:var(--paper-deep);
+  border:1px solid rgba(141,92,58,.18);
+  border-radius:.55rem
+}
+.discovery-item__number {
+  display:block;
+  margin-bottom:1rem;
+  color:var(--brown);
+  font-size:1.5rem
+}
+.discovery-item h3 {
+  font-size:1.45rem
+}
+.discovery-item p {
+  margin-top:.4rem;
+  font-size:.82rem
+}
+.explore-card:hover {
+  transform:translateY(-5px);
+  box-shadow:0 7px 0 rgba(121,83,46,.11),0 18px 30px rgba(61,45,29,.10)
+}
+@media(min-width:768px) {
+  .exploration-intro {
+    grid-template-columns:1.1fr .9fr
+  }
+  .discovery-grid {
+    grid-template-columns:repeat(3,1fr)
+  }
+}

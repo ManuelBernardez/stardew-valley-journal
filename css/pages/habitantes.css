@@ -1,0 +1,215 @@
+.card__meta {
+  color: var(--ink-muted);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.character-grid {
+  max-width: 1060px;
+  margin-inline: auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.character-card {
+  overflow: hidden;
+  background: #fbf2dc;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: 0 8px 18px rgba(40,35,25,.09);
+  transition: transform .22s ease,box-shadow .22s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 26px rgba(40,35,25,.13);
+}
+
+.character-card__image {
+  padding: .7rem .8rem 0;
+  background: linear-gradient(180deg,#e7e0d0,#f3ecdd);
+}
+
+.character-card__image img {
+  width: 100%;
+  aspect-ratio: 5/3;
+  max-height: 160px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.character-card__body {
+  padding: 1rem 1.05rem 1.1rem;
+}
+
+.character-card h2 {
+  margin-top: .45rem;
+  color: var(--brown-deep);
+  font-size: 1.85rem;
+}
+
+.character-card__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .5rem;
+  margin-top: .8rem;
+}
+
+.character-card__info div {
+  padding: .55rem .65rem;
+  background: var(--paper-deep);
+  border-radius: .35rem;
+}
+
+.character-card__info span {
+  display: block;
+  color: var(--ink-muted);
+  font-size: .58rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.character-card__info strong {
+  display: block;
+  margin-top: .1rem;
+  color: var(--green-deep);
+  font-size: .78rem;
+}
+
+.character-card details {
+  margin-top: .7rem;
+  padding-top: .65rem;
+  border-top: 1px dashed var(--line);
+}
+
+.character-card summary,
+.character-card .text-link {
+  color: var(--green-deep);
+  font-family: "Space Mono",sans-serif;
+  font-size: .76rem;
+  font-weight: 700;
+}
+
+.character-card summary {
+  cursor: pointer;
+}
+
+.character-card details p {
+  margin-top: .5rem;
+  font-size: .78rem;
+  line-height: 1.5;
+}
+
+.character-card .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .65rem;
+  padding-bottom: .1rem;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(70,98,67,.4);
+}
+
+.character-likes {
+  margin-top: .6rem;
+  color: var(--ink-muted) !important;
+  font-size: .72rem;
+}
+
+/* =========================================
+   SECCIÓN: INTRODUCCIÓN DE RELACIONES
+   ========================================= */
+/* =========================================
+   INTRODUCCIÓN: ESTILO "CITA DE DIARIO"
+   ========================================= */
+.relation-intro-block {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  border-left: 6px solid var(--green-deep, #466243); /* Un acento visual fuerte a la izquierda */
+  border-bottom: 1px dashed var(--line); /* Cierre sutil abajo */
+}
+
+.relation-intro-block p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--brown-deep);
+  margin-bottom: 0.75rem;
+}
+
+/* =========================================
+   PASOS: DISEÑO EN TARJETAS
+   ========================================= */
+.relation-steps-grid {
+  max-width: 1060px;
+  margin-inline: auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.step-card {
+  background: #fbf2dc; /* Mismo fondo que tus character-cards */
+  border: 1px solid var(--line);
+  border-radius: var(--r, 8px);
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 12px rgba(40,35,25,.06);
+  text-align: center; /* Centramos el texto para darle impacto de "pilar" */
+}
+
+.step-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  background: var(--paper-deep, #e7e0d0);
+  border-radius: 4px;
+  color: #b85d19; /* NUEVO COLOR: Un tono terracota/cobre que resalta */
+  font-family: "Space Mono", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.step-card h3 {
+  color: var(--brown-deep);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.step-card p {
+  color: var(--ink-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  max-width: 30ch;
+  margin: 0 auto; /* Mantiene el párrafo centrado y sin desbordar */
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .relation-steps-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .character-grid,
+  .relation-steps {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .character-grid {
+    grid-template-columns: repeat(4,minmax(0,1fr));
+  }
+
+  .relation-steps {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 2.5rem;
+  }
+}
+

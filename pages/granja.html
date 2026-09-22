@@ -6,16 +6,17 @@
   <title>
    La granja &mdash; Stardew Journal
   </title>
-  <meta content="Descubre c&oacute;mo la granja puede convertirse en un hogar propio: cultivos, animales, edificios, dise&ntilde;o y distintos mapas." name="description"/>
+  <meta content="Descubre cómo la granja puede convertirse en un hogar propio: cultivos, animales, edificios, dise&ntilde;o y distintos mapas." name="description"/>
   <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+15&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/pages/granja.css" rel="stylesheet"/>
   <script src="../js/main.js" type="module">
   </script>
  </head>
- <body>
+ <body class="page-granja">
   <a class="skip-link" href="#main-content">
    Saltar al contenido
   </a>
@@ -71,57 +72,44 @@
     </div>
    </header>
    <main id="main-content">
-    <section class="page-hero">
-     <div class="container">
-      <nav aria-label="Ruta" class="breadcrumb">
-       <ol>
-        <li>
-         <a href="../index.html">
-          Inicio
-         </a>
-        </li>
-        <li>
-         <a href="valle.html">
-          El Valle
-         </a>
-        </li>
-        <li aria-current="page">
-         La granja
-        </li>
-       </ol>
-      </nav>
-      <p class="eyebrow">
-       Tu espacio
-      </p>
-      <h1>
-       Una parcela puede convertirse en un hogar.
-      </h1>
-      <p>
-       La granja es donde la partida empieza a dejar una huella personal: primero una tierra que limpiar y, con el tiempo, un lugar que parece hecho a tu medida.
-      </p>
-     </div>
+    <section class="page-hero page-hero--journal">
+      <div class="page-hero__overlay"></div>
+        <div class="container page-hero__content page-hero__content--centered">
+        <nav class="breadcrumb breadcrumb--on-image" aria-label="Ruta">
+          <ol>
+            <li>
+              <a href="../index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="valle.html">El valle</a>
+            </li>
+            <li aria-current="page">La granja</li>
+          </ol>
+        </nav>
+        <div class="journal-hero-plaque"><span class="journal-hero-plaque__kicker">Tu punto de partida</span><h1>La granja</h1></div>
+        <p class="journal-hero-subtitle">La tierra es el comienzo, pero también una forma de jugar a tu manera.</p>
+        </div>
     </section>
     <section aria-labelledby="farm-story-title" class="section section-farm-story">
      <div class="container farm-story">
       <div class="farm-story__image">
-       <img alt="Granja est&aacute;ndar de Stardew Valley" data-fallback="La granja" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Standard%20Farm.png"/>
+        <img alt="Granja estándar de Stardew Valley" data-fallback="La granja" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Standard%20Farm.png"/>
       </div>
       <div class="farm-story__content">
-       <p class="eyebrow">
-        Construir un hogar
-       </p>
        <h2 id="farm-story-title">
-        No s&oacute;lo cultiv&aacute;s la tierra. Decid&iacute;s c&oacute;mo quer&eacute;s vivir en ella.
+        Un lienzo en blanco
        </h2>
        <p>
-        Pod&eacute;s despejar el terreno, ordenar parcelas, criar animales, construir edificios, instalar m&aacute;quinas y llenar los espacios con caminos y detalles. La granja termina contando una historia distinta en cada partida.
-       </p>
+        Al principio un poco descuidada, pero acá no sólo podes trabajar la tierra: decidís qué forma tendrá tu nuevo hogar.
+        </p>
+        
+        <p>Se suele empezar despejando el terreno y con un par de cultivos, después aparece la posibilidad de construir edificios, 
+        instalar máquinas, criar animales y llenar los espacios con caminos y detalles. 
+        La granja termina contando una historia distinta en cada partida.</p>
+
        <p>
-        Lo importante no es alcanzar una granja perfecta. Es que poco a poco se vuelva reconocible como
-        <strong>
-         tu
-        </strong>
-        lugar dentro del Valle.
+        Lo importante no es alcanzar una granja perfecta. Es que poco a poco se vuelva reconocible 
+        como <strong> tu lugar </strong> dentro del Valle.
        </p>
       </div>
      </div>
@@ -134,15 +122,15 @@
          Todo puede cambiar
         </p>
         <h2 id="farm-possibilities-title">
-         &iquest;Qu&eacute; puede crecer ac&aacute;?
+         &iquest;Qué puede crecer acá?
         </h2>
        </div>
        <p>
-        Cultivar es s&oacute;lo el comienzo. La granja mezcla producci&oacute;n, cuidado y dise&ntilde;o en un mismo espacio.
+        Cultivar es sólo el comienzo. La granja mezcla producción, cuidado y dise&ntilde;o en un mismo espacio.
        </p>
       </div>
       <div class="farm-options-grid farm-options-grid--journal">
-       <article class="farm-option">
+       <article class="farm-option card-surface">
         <div aria-hidden="true" class="farm-option__icon">
          <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Farming_Skill_Icon.png"/>
         </div>
@@ -150,10 +138,10 @@
          Cultivar
         </h3>
         <p>
-         Sembrar seg&uacute;n la estaci&oacute;n, cosechar y convertir el terreno en una fuente de recursos.
+         Sembrar seg&uacute;n la estación, cosechar y convertir el terreno en una fuente de recursos.
         </p>
        </article>
-       <article class="farm-option">
+       <article class="farm-option card-surface">
         <div aria-hidden="true" class="farm-option__icon">
          <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Chicken.png"/>
         </div>
@@ -161,10 +149,10 @@
          Cuidar animales
         </h3>
         <p>
-         Construir establos y gallineros, alimentar animales y sumar nuevas rutinas a tus d&iacute;as.
+         Construir establos y gallineros, alimentar animales y sumar nuevas rutinas a tus días.
         </p>
        </article>
-       <article class="farm-option">
+       <article class="farm-option card-surface">
         <div aria-hidden="true" class="farm-option__icon">
          <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Keg.png"/>
         </div>
@@ -172,10 +160,10 @@
          Transformar
         </h3>
         <p>
-         Usar m&aacute;quinas para convertir cosechas y recursos en productos con nuevos usos y valor.
+         Usar máquinas para convertir cosechas y recursos en productos con nuevos usos y valor.
         </p>
        </article>
-       <article class="farm-option">
+       <article class="farm-option card-surface">
         <div aria-hidden="true" class="farm-option__icon">
          <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/House.png"/>
         </div>
@@ -183,21 +171,21 @@
          Ampliar el hogar
         </h3>
         <p>
-         Mejorar la casa y convertirla poco a poco en un espacio vivido, no s&oacute;lo funcional.
+         Mejorar la casa y convertirla poco a poco en un espacio vivido, no sólo funcional.
         </p>
        </article>
-       <article class="farm-option">
+       <article class="farm-option card-surface">
         <div aria-hidden="true" class="farm-option__icon">
          <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Fence.png"/>
         </div>
         <h3>
-         Dise&ntilde;ar
+         Diseñar
         </h3>
         <p>
-         Distribuir cercas, caminos, &aacute;rboles y edificios para que el terreno tenga identidad.
+         Distribuir cercas, caminos, árboles y edificios para que el terreno tenga identidad.
         </p>
        </article>
-       <article class="farm-option">
+       <article class="farm-option card-surface">
         <div aria-hidden="true" class="farm-option__icon">
          <img alt="" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Greenhouse.png"/>
         </div>
@@ -205,7 +193,7 @@
          Preparar el futuro
         </h3>
         <p>
-         El invernadero permite cultivar fuera de las restricciones normales de estaci&oacute;n una vez restaurado.
+         El invernadero permite cultivar fuera de las restricciones normales de estación una vez restaurado.
         </p>
        </article>
       </div>
@@ -220,7 +208,7 @@
        Incluso el terreno puede cambiar la experiencia.
       </h2>
       <p class="section-copy">
-       Stardew Valley ofrece ocho mapas de granja. Algunos favorecen la pesca, la recolecci&oacute;n, la miner&iacute;a, el combate, el multijugador o la crianza de animales, mientras la Granja Est&aacute;ndar prioriza el espacio agr&iacute;cola. Elegir uno es tambi&eacute;n elegir una peque&ntilde;a personalidad para tu partida.
+       Stardew Valley ofrece ocho mapas de granja. Algunos favorecen la pesca, la recolección, la minería, el combate, el multijugador o la crianza de animales, mientras la Granja Estándar prioriza el espacio agrícola. Elegir uno es también elegir una peque&ntilde;a personalidad para tu partida.
       </p>
       <a class="text-link" href="https://es.stardewvalleywiki.com/Tipos_de_Granja" rel="noreferrer" target="_blank">
        Ver los tipos de granja en la Wiki &rarr;
@@ -233,10 +221,10 @@
        Tu punto de partida
       </p>
       <h2 id="farm-closing-title">
-       El hogar crece mientras vos tambi&eacute;n.
+       El hogar crece mientras vos también.
       </h2>
       <p class="section-copy">
-       Con cada mejora, cosecha, animal o peque&ntilde;a decoraci&oacute;n, la granja se vuelve menos una parcela heredada y m&aacute;s un reflejo de la vida que elegiste construir en el Valle.
+       Con cada mejora, cosecha, animal o peque&ntilde;a decoración, la granja se vuelve menos una parcela heredada y más un reflejo de la vida que elegiste construir en el Valle.
       </p>
       <div class="farm-links">
        <a class="button button--green" href="cultivos.html">
@@ -266,7 +254,7 @@
        </span>
       </a>
       <p>
-       Fanpage acad&eacute;mica, no oficial, creada para Programaci&oacute;n 4.
+       Fanpage académica, no oficial, creada para Programación 4.
       </p>
      </div>
      <div>
@@ -291,10 +279,10 @@
        Habitantes
       </a>
       <a href="../pages/exploracion.html">
-       Exploraci&oacute;n
+       Exploración
       </a>
       <a href="../pages/sobre.html">
-       Fuentes y cr&eacute;ditos
+       Fuentes y créditos
       </a>
      </div>
     </div>

@@ -1,0 +1,163 @@
+.section-journal-intro .season-intro {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 1.7rem 1.8rem;
+  background: rgba(251, 242, 220, 0.95);
+  border: 1px solid #c4aa7c;
+  box-shadow:
+    inset 0 0 0 4px rgba(255, 255, 255, 0.36),
+    0 7px 18px rgba(56, 42, 27, 0.08);
+}
+
+.section-journal-intro .season-intro h2 {
+  color: var(--brown-deep);
+  background: rgba(251, 242, 220, 0.95);
+}
+
+.journal-season-grid {
+  max-width: 1000px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+}
+
+.journal-season-grid .season-card {
+  position: relative;
+  overflow: hidden;
+  background: #fbf2dc;
+}
+
+.journal-season-grid .season-card::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid rgba(132, 93, 53, 0.16);
+  pointer-events: none;
+}
+
+.journal-season-grid .season-card > img {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+  filter: saturate(0.96) contrast(1.03);
+}
+
+.journal-season-grid .season-card__body {
+  position: relative;
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.journal-season-grid .season-kicker {
+  position: absolute;
+  left: 0.7rem;
+  top: -1.02rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 34px;
+  padding: 0.28rem 0.7rem;
+  background: #fff2cf;
+  color: #473224;
+  border: 1px solid #a98052;
+  border-radius: 0.08rem 0.35rem 0.08rem 0.35rem;
+  box-shadow: 0 3px 7px rgba(61, 45, 29, 0.18);
+  font: 1.18rem/1 "Jersey 15", sans-serif;
+  letter-spacing: 0;
+}
+
+.journal-season-grid .season-kicker .hero-sprite {
+  width: 20px;
+  height: 20px;
+}
+
+.journal-season-grid .season-card__body h2 {
+  color: var(--brown-deep);
+  font-size: 2rem;
+  margin-bottom: 0.45rem;
+}
+
+.journal-season-grid .season-card__body p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.journal-season-grid .season-card__body .text-link {
+  color: var(--green-deep);
+  font-size: 0.78rem;
+}
+
+.journal-rule-note {
+  position: relative;
+  max-width: 900px;
+  padding: 1.6rem 1.6rem 1.75rem 6rem;
+  background: rgba(251, 242, 220, 0.95);
+  border: 1px solid #c4aa7c;
+  box-shadow:
+    0 4px 0 rgba(121, 83, 46, 0.12),
+    0 14px 26px rgba(61, 45, 29, 0.07);
+}
+
+.journal-rule-note__stamp {
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 2px solid #9a6b42;
+  border-radius: 50%;
+  color: #6d4932;
+  font: 2.3rem/1 "Jersey 15", sans-serif;
+  background: #f7e5b8;
+  box-shadow: 0 3px 0 rgba(92, 61, 38, 0.18);
+}
+
+@media (min-width: 700px) {
+  .journal-season-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .journal-season-grid .season-card:nth-child(1) {
+    transform: rotate(-0.35deg);
+  }
+
+  .journal-season-grid .season-card:nth-child(2) {
+    transform: rotate(0.28deg);
+  }
+
+  .journal-season-grid .season-card:nth-child(3) {
+    transform: rotate(0.28deg);
+  }
+
+  .journal-season-grid .season-card:nth-child(4) {
+    transform: rotate(-0.35deg);
+  }
+
+  .journal-season-grid .season-card:hover {
+    transform: translateY(-5px) rotate(0);
+  }
+
+  .section-journal-intro .season-intro {
+    padding: 1.7rem 1.8rem;
+  }
+}
+
+@media (max-width: 699px) {
+  .journal-season-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journal-rule-note {
+    padding: 4.7rem 1.15rem 1.3rem;
+    text-align: center;
+  }
+
+  .journal-rule-note__stamp {
+    left: 50%;
+    top: 1.15rem;
+    transform: translateX(-50%);
+  }
+}

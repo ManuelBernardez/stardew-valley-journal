@@ -12,10 +12,11 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+15&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/pages/sobre.css" rel="stylesheet"/>
   <script src="../js/main.js" type="module">
   </script>
  </head>
- <body>
+ <body class="page-sobre">
   <a class="skip-link" href="#main-content">
    Saltar al contenido
   </a>
@@ -71,61 +72,43 @@
     </div>
    </header>
    <main id="main-content">
-    <section class="page-hero">
-     <div class="container">
-      <nav aria-label="Ruta" class="breadcrumb">
-       <ol>
-        <li>
-         <a href="../index.html">
-          Inicio
-         </a>
-        </li>
-        <li aria-current="page">
-         Sobre
-        </li>
-       </ol>
-      </nav>
-      <p class="eyebrow">
-       Detr&aacute;s del proyecto
-      </p>
-      <h1>
-       Un fan page con forma de cuaderno.
-      </h1>
-      <p>
-       Stardew Journal es un ejercicio acad&eacute;mico de frontend que intenta capturar el esp&iacute;ritu rural y artesanal del juego sin copiar su HUD ni convertirse en una wiki.
-      </p>
-     </div>
-    </section>
-    <section class="section">
+    <section class="page-hero page-hero--journal">
+<div class="page-hero__overlay"></div>
+  <div class="container page-hero__content page-hero__content--centered">
+   <div class="journal-hero-plaque"><h1>Sobre Stardew Journal</h1></div>
+   <p class="journal-hero-subtitle">Una web académica inspirada en la obra de ConcernedApe</p>
+  </div>
+ </section>
+    <section class="section section-header">
      <div class="container">
       <div class="editorial-grid">
-       <article class="journal-card">
+       <article class="journal-card card-surface">
         <p class="eyebrow">
-         Qu&eacute; buscamos
+         Intención de diseño
         </p>
         <h2>
-         Entrar al Valle.
+         Diario de campo
         </h2>
         <p>
-         La intenci&oacute;n es que la navegaci&oacute;n se sienta como recorrer un peque&ntilde;o almanaque: im&aacute;genes, etiquetas, fichas y notas cortas que invitan a seguir explorando.
+         Se buscó que la navegación se sienta como recorrer un pequeño almanaque: imágenes, etiquetas, fichas y notas cortas que invitan a seguir explorando.
         </p>
         <div class="callout">
          <strong>
           Regla:
          </strong>
-         la est&eacute;tica debe acompa&ntilde;ar la informaci&oacute;n, nunca competir con ella.
+         la estética debe acompañar la información, nunca competir con ella.
         </div>
        </article>
-       <article class="journal-card">
+       <article class="journal-card card-surface">
         <p class="eyebrow">
-         Tecnolog&iacute;as
+         Tecnologías
         </p>
         <h2>
-         Fundamentos.
+         Fundamentos
         </h2>
         <ul class="tech-list">
          <li>
-          HTML5 sem&aacute;ntico
+          HTML5 semántico
          </li>
          <li>
           CSS3 moderno &middot; Grid + Flexbox
@@ -137,7 +120,7 @@
           Responsive Mobile First
          </li>
          <li>
-          Accesibilidad + SEO b&aacute;sico
+          Accesibilidad + SEO básico
          </li>
         </ul>
        </article>
@@ -150,23 +133,22 @@
        Fuentes y referencias
       </p>
       <h2>
-       Inspirado por el mundo, no por una copia literal.
+       Estilo artístico y fuentes
       </h2>
-      <p class="section-copy">
-       Para la direcci&oacute;n visual se revisaron capturas de la UI de Stardew Valley: sus paneles de inventario y di&aacute;logo usan marcos de madera, superficies c&aacute;lidas, bordes marcados e ilustraciones pixeladas. El propio blog del juego explica que los cuadros de di&aacute;logo fueron redise&ntilde;ados con un panel de madera y una &ldquo;name scroll&rdquo;, una pista clara sobre el lenguaje visual que usamos aqu&iacute; de forma reinterpretada.
+      <p class="section-copy"> Marcos de madera, superficies c&aacute;lidas, bordes marcados e ilustraciones pixeladas. El propio blog del juego explica que los cuadros de di&aacute;logo fueron redise&ntilde;ados con un panel de madera y una &ldquo;name scroll&rdquo;, una pista clara sobre el lenguaje visual que usamos aqu&iacute; de forma reinterpretada.
       </p>
       <p class="section-copy">
-       Tambi&eacute;n se revis&oacute; el blog oficial de Stardew Valley: sus publicaciones combinan titulares editoriales, im&aacute;genes del juego, texto relativamente aireado y una presentaci&oacute;n sencilla que deja que las capturas lleven el peso visual.
+       También se revisó el blog oficial de Stardew Valley: sus publicaciones combinan titulares editoriales, imágenes del juego, texto relativamente aireado y una presentaci&oacute;n sencilla que deja que las capturas lleven el peso visual.
       </p>
       <div class="source-list">
        <a href="https://www.stardewvalley.net/blog/" rel="noreferrer" target="_blank">
         Stardew Valley &mdash; Blog oficial &rarr;
        </a>
        <a href="https://www.stardewvalley.net/dev-update-27/" rel="noreferrer" target="_blank">
-        Dev Update #27 &mdash; redise&ntilde;o de los cuadros de di&aacute;logo &rarr;
+        Dev Update #27 &mdash; rediseño de los cuadros de diálogo &rarr;
        </a>
        <a href="https://es.stardewvalleywiki.com/Stardew_Valley" rel="noreferrer" target="_blank">
-        Stardew Valley Wiki en espa&ntilde;ol &rarr;
+        Stardew Valley Wiki en español &rarr;
        </a>
        <a href="https://stardewvalleywiki.com/Stardew_Valley_Wiki%3ACopyrights" rel="noreferrer" target="_blank">
         Wiki &mdash; Copyrights y licencias &rarr;
@@ -179,23 +161,11 @@
        <strong>
         Nota:
        </strong>
-       Stardew Journal es una fanpage acad&eacute;mica no oficial. Los materiales de Stardew Valley pertenecen a sus respectivos titulares. Revis&aacute; las licencias de cada asset antes de redistribuir el sitio fuera del contexto acad&eacute;mico.
+       Stardew Journal es una fanpage académica no oficial. Los materiales de Stardew Valley pertenecen a sus respectivos titulares.
       </div>
      </div>
     </section>
-    <section class="section">
-     <div class="container narrow">
-      <p class="eyebrow">
-       Design System
-      </p>
-      <h2>
-       Calma, naturaleza, nostalgia y cuidado artesanal.
-      </h2>
-      <p class="section-copy">
-       La paleta mantiene verdes, crema, marrones y azules; la tipograf&iacute;a combina Jersey 15 para t&iacute;tulos y Space Mono para interfaz y cuerpo; y los componentes utilizan textura de papel, marcos dobles, peque&ntilde;os acentos de madera y detalles pixel-art como gui&ntilde;o al juego.
-      </p>
-     </div>
-    </section>
+    
    </main>
    <footer class="site-footer">
     <div class="container footer-grid">
@@ -214,7 +184,7 @@
        </span>
       </a>
       <p>
-       Fanpage acad&eacute;mica, no oficial, creada para Programaci&oacute;n 4.
+       Fanpage académica, no oficial, creada para Programación 4.
       </p>
      </div>
      <div>

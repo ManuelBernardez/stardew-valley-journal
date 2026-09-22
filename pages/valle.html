@@ -6,16 +6,17 @@
   <title>
    El Valle &mdash; Stardew Journal
   </title>
-  <meta content="Pueblo Pel&iacute;cano, la playa, la monta&ntilde;a y el Bosque Tiz&oacute;n: una lectura visual y narrativa del Valle." name="description"/>
+  <meta content="Pueblo Pelícano, la playa, la montaña y el Bosque Tizón: una lectura visual y narrativa del Valle." name="description"/>
   <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+15&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/pages/valle.css" rel="stylesheet"/>
   <script src="../js/main.js" type="module">
   </script>
  </head>
- <body>
+ <body class="page-valle">
   <a class="skip-link" href="#main-content">
    Saltar al contenido
   </a>
@@ -37,7 +38,7 @@
      </a>
      <button aria-controls="main-menu" aria-expanded="false" class="menu-toggle" type="button">
       <span class="sr-only">
-       Abrir men&uacute;
+       Abrir menú;
       </span>
       <span aria-hidden="true">
        ☰
@@ -71,109 +72,74 @@
     </div>
    </header>
    <main id="main-content">
-    <section class="page-hero page-hero--image page-hero--valle">
-     <img alt="Vista amplia del Valle con granjas, r&iacute;o, bosque y monta&ntilde;as" class="page-hero__image" loading="eager" src="../assets/images/backgrounds/valle-hero.jpg"/>
-     <div class="page-hero__overlay">
-     </div>
+    <section class="page-hero page-hero--journal">
+<div class="page-hero__overlay"></div>
      <div class="container page-hero__content page-hero__content--centered">
-      <nav aria-label="Ruta" class="breadcrumb">
-       <ol>
-        <li>
-         <a href="../index.html">
-          Inicio
-         </a>
-        </li>
-        <li aria-current="page">
-         El Valle
-        </li>
-       </ol>
-      </nav>
-      <p class="eyebrow">
-       El escenario
-      </p>
-      <h1>
-       El Valle se entiende mejor camin&aacute;ndolo.
-      </h1>
-      <p>
-       Un peque&ntilde;o mundo de caminos, casas, agua, bosque y monta&ntilde;a. Cada lugar tiene algo que hacer, alguien que conocer y una raz&oacute;n para volver.
-      </p>
+
+      <div class="journal-hero-plaque">
+       <h1>El Valle</h1>
+      </div>
+      <p class="journal-hero-subtitle">Cada lugar ofrece algo que hacer y una razón para volver</p>
      </div>
     </section>
-    <section aria-labelledby="places-title" class="section">
+    <section aria-labelledby="places-title" class="section section-journal section-journal--places">
      <div class="container">
-      <div class="section-header section-header--center">
-       <div>
-        <p class="eyebrow">
-         Un peque&ntilde;o recorrido
-        </p>
-        <h2 id="places-title">
-         Lugares para perderse un rato.
-        </h2>
-       </div>
+      <div class="section-header section-header--center section-header--journal">
        <p>
-        Cuatro postales para empezar. El resto del Valle aparece a medida que aprend&eacute;s a mirarlo.
+        Cuatro postales para empezar, puede que haya más por recorrer...
        </p>
       </div>
-      <div class="section-grid section-grid--places" id="lugares">
-       <article class="image-card" id="pelican-town">
-        <img alt="Pueblo Pel&iacute;cano" data-fallback="Pueblo Pel&iacute;cano" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Pelican%20Town.png"/>
-        <div class="image-card__body">
+      <div class="section-grid section-grid--places journal-postcard-grid" id="lugares">
+       <article class="image-card journal-postcard" id="pelican-town">
+        <img alt="Pueblo Pelícano" data-fallback="Pueblo Pelícano" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Pelican%20Town.png"/>
+        <div class="image-card__body journal-postcard__body">
          <h3>
-          Pueblo Pel&iacute;cano
+          Pueblo Pelícano
          </h3>
          <p>
-          La plaza, las tiendas y las casas hacen del pueblo el punto de encuentro de la comunidad y el coraz&oacute;n social del Valle.
+          La plaza, las tiendas y las casas hacen del pueblo el punto de encuentro de la comunidad y el corazón social del Valle.
          </p>
          <a class="text-link" href="habitantes.html">
           Conocer a sus habitantes &rarr;
          </a>
         </div>
        </article>
-       <article class="image-card" id="playa">
+       <article class="image-card journal-postcard" id="playa">
         <img alt="La playa" data-fallback="La playa" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Beach%20Overview.jpg"/>
-        <div class="image-card__body">
-         <p class="eyebrow">
-          Otra orilla
-         </p>
+        <div class="image-card__body journal-postcard__body">
          <h3>
           La playa
          </h3>
          <p>
-          Un lugar para pescar, recolectar y cambiar el ritmo del d&iacute;a junto al mar.
+          Un lugar para pescar, recolectar y cambiar el ritmo del día junto al mar.
          </p>
          <a class="text-link" href="exploracion.html#pesca">
           Seguir hacia la pesca &rarr;
          </a>
         </div>
        </article>
-       <article class="image-card" id="montana">
-        <img alt="La monta&ntilde;a" data-fallback="La monta&ntilde;a" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/The%20Mountain.png"/>
-        <div class="image-card__body">
-         <p class="eyebrow">
-          Hacia arriba
-         </p>
+       <article class="image-card journal-postcard" id="montana">
+        <img alt="La montaña" data-fallback="La montaña" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/The%20Mountain.png"/>
+        <div class="image-card__body journal-postcard__body">
          <h3>
-          La monta&ntilde;a
+          La montaña
          </h3>
          <p>
-          El lago, la carpinter&iacute;a y el camino hacia las minas hacen de esta zona una puerta natural a la aventura.
+          El lago, la carpintería y el camino hacia las minas hacen de esta zona una puerta natural a la aventura.
          </p>
          <a class="text-link" href="exploracion.html#mineria">
           Seguir el camino &rarr;
          </a>
         </div>
        </article>
-       <article class="image-card" id="bosque">
-        <img alt="Bosque Tiz&oacute;n" data-fallback="Bosque Tiz&oacute;n" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/CindersapForest.png"/>
-        <div class="image-card__body">
-         <p class="eyebrow">
-          Entre &aacute;rboles
-         </p>
+       <article class="image-card journal-postcard" id="bosque">
+        <img alt="Bosque Tizón" data-fallback="Bosque Tizón" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/CindersapForest.png"/>
+        <div class="image-card__body journal-postcard__body">
          <h3>
-          Bosque Tiz&oacute;n
+          Bosque Tizón
          </h3>
          <p>
-          Un desv&iacute;o de recolecci&oacute;n, agua y caminos donde muchas veces el paseo empieza a convertirse en descubrimiento.
+          Un desvío de recolección, agua y caminos donde muchas veces el paseo empieza a convertirse en descubrimiento.
          </p>
          <a class="text-link" href="exploracion.html#lugares">
           Seguir explorando &rarr;
@@ -186,79 +152,69 @@
         ?
        </span>
        <div>
-        <p class="eyebrow">
-         Una &uacute;ltima pista
-        </p>
         <h3>
-         Y esto es s&oacute;lo lo que aparece en el mapa.
+         Y esto es sólo lo que aparece en el mapa
         </h3>
         <p>
-         Hay caminos que no se explican solos, puertas que esperan el momento adecuado y rincones que s&oacute;lo empiezan a tener sentido cuando avanz&aacute;s.
+         Hay caminos que no se explican solos, puertas que esperan el momento adecuado y rincones que sólo empiezan a tener sentido cuando avanz&aacute;s.
         </p>
        </div>
       </div>
      </div>
     </section>
-    <section aria-labelledby="exploration-title" class="section section-valley-exploration">
-     <div class="container valley-exploration">
-      <div class="valley-exploration__heading">
-       <p class="eyebrow">
-        M&aacute;s all&aacute; de los caminos
-       </p>
-       <h2 id="exploration-title">
-        Lo que ves es s&oacute;lo una parte del Valle.
-       </h2>
-      </div>
-      <div class="valley-exploration__body">
-       <p>
-        Mientras constru&iacute;s tu granja, acumul&aacute;s recursos, recolect&aacute;s y contribu&iacute;s a la comunidad, el mundo va dejando nuevas pistas. Algunas aparecen en la vida cotidiana; otras se esconden detr&aacute;s de una misi&oacute;n, un lugar o una peque&ntilde;a decisi&oacute;n.
-       </p>
-       <p>
-        Pesca, miner&iacute;a, combate, recolecci&oacute;n y los secretos que rodean al Valle forman una aventura paralela a la agricultura: cuanto m&aacute;s avanz&aacute;s, m&aacute;s grande parece el mundo.
-       </p>
-       <a class="button button--green" href="exploracion.html">
-        Entrar en Exploraci&oacute;n &rarr;
-       </a>
-      </div>
-     </div>
-    </section>
+
     <section aria-labelledby="farm-title" class="section section-farm-preview">
-     <div class="container farm-preview">
-      <div class="farm-preview__image">
-       <img alt="Granja est&aacute;ndar de Stardew Valley" data-fallback="La granja" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Standard%20Farm.png"/>
+      <div class="container farm-preview">
+        <div class="farm-preview__image">
+          <img
+            src="../assets/images/backgrounds/granja-hero.jpg"
+            alt="Representación visual de la granja de Stardew Valley"
+            loading="lazy"
+          />
+        </div>
+
+        <div class="farm-preview__content">
+          <h2 id="farm-title">
+            Un terreno con potencial
+          </h2>
+
+          <p>
+            La granja es el punto de partida de tu nueva vida en el Valle. Lo que
+            al principio parece un terreno inmanejable puede transformarse en un espacio 
+            lleno de cultivos, animales, edificios y caminos, construido a partir de 
+            las decisiones que tomás cada día.
+          </p>
+
+          <a class="button button--green" href="granja.html">
+            Conocer la granja →
+          </a>
+        </div>
       </div>
-      <div class="farm-preview__content">
-       <p class="eyebrow">
-        Tu espacio
-       </p>
-       <h2 id="farm-title">
-        La granja puede terminar pareci&eacute;ndose a vos.
-       </h2>
-       <p>
-        Tu granja es el punto de partida desde el que todo lo dem&aacute;s comienza a crecer. Con el tiempo se llena de cultivos, animales, edificios, caminos, m&aacute;quinas y peque&ntilde;as decisiones que hablan de c&oacute;mo quer&eacute;s vivir.
-       </p>
-       <a class="button button--green" href="granja.html">
-        Conocer la granja &rarr;
-       </a>
+    </section>
+
+    <section aria-labelledby="exploration-title" class="section section-valley-exploration">
+      <div class="container valley-exploration">
+        <div class="valley-exploration__heading">
+          <h2 id="exploration-title">
+            Explorar abre puertas
+          </h2>
+        </div>
+        
+        <div class="valley-exploration__body">
+          <p>
+            Más allá de los cultivos y de la vida cotidiana de Pueblo Pelícano,
+            aparecen lugares inesperados. El lago, el bosque,
+            las minas y la costa ofrecen recursos, desafíos y pequeñas sorpresas
+            que hacen que cada recorrido pueda llevarte a algo nuevo.
+          </p>
+
+          <a class="button button--green" href="exploracion.html">
+            Explorar el Valle →
+          </a>
+        </div>
       </div>
-     </div>
     </section>
-    <section aria-labelledby="season-title" class="section section-paper section-related-season">
-     <div class="container narrow">
-      <p class="eyebrow">
-       El Valle cambia
-      </p>
-      <h2 id="season-title">
-       El mismo lugar nunca se siente exactamente igual durante todo el a&ntilde;o.
-      </h2>
-      <p class="section-copy">
-       El paso del tiempo transforma el paisaje, las actividades y las cosas que pod&eacute;s encontrar. La estaci&oacute;n tambi&eacute;n cambia qu&eacute; vale la pena sembrar, pescar o salir a buscar. Conocer el Valle es, en parte, aprender a leer esos cambios.
-      </p>
-      <a class="button button--paper" href="estaciones.html">
-       Seguir hacia las estaciones &rarr;
-      </a>
-     </div>
-    </section>
+
    </main>
    <footer class="site-footer">
     <div class="container footer-grid">
@@ -277,7 +233,7 @@
        </span>
       </a>
       <p>
-       Fanpage acad&eacute;mica, no oficial, creada para Programaci&oacute;n 4.
+       Fanpage académica, no oficial, creada para Programación 4.
       </p>
      </div>
      <div>
@@ -302,10 +258,10 @@
        Habitantes
       </a>
       <a href="../pages/exploracion.html">
-       Exploraci&oacute;n
+       Exploración
       </a>
       <a href="../pages/sobre.html">
-       Fuentes y cr&eacute;ditos
+       Fuentes y créditos
       </a>
      </div>
     </div>

@@ -1,49 +1,37 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Cultivos &mdash; Stardew Journal
-  </title>
-  <meta content="Selecci&oacute;n visual de cultivos de Stardew Valley con estaci&oacute;n, crecimiento, precio base y usos." name="description"/>
-  <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
-  <link href="../css/style.css" rel="stylesheet"/>
-  <script src="../js/main.js" type="module">
-  </script>
- </head>
- <body>
-  <a class="skip-link" href="#main-content">
-   Saltar al contenido
-  </a>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cultivos — Stardew Journal</title>
+  <meta name="description" content="Selección visual de cultivos de Stardew Valley con estación, crecimiento, precio base y usos.">
+  <link rel="icon" href="../favicon/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pages/cultivos.css">
+  <script src="../js/main.js" type="module"></script>
+</head>
+
+<body class="page-cultivos">
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
   <div class="site-shell">
-   <header class="site-header">
-    <div class="container nav-wrap">
-     <a aria-label="Stardew Journal, inicio" class="brand" href="../index.html">
-      <span aria-hidden="true" class="brand-mark">
-       ✦
-      </span>
-      <span>
-       <strong>
-        stardew
-       </strong>
-       <small>
-        journal
-       </small>
-      </span>
-     </a>
-     <button aria-controls="main-menu" aria-expanded="false" class="menu-toggle" type="button">
-      <span class="sr-only">
-       Abrir men&uacute;
-      </span>
-      <span aria-hidden="true">
-       ☰
-      </span>
-     </button>
-     <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="../index.html" aria-label="Stardew Journal, inicio">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span><strong>stardew</strong><small>journal</small></span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-controls="main-menu" aria-expanded="false">
+          <span class="sr-only">Abrir menú</span>
+          <span aria-hidden="true">☰</span>
+        </button>
+
+        <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
           <ul class="nav-list">
             <li><a class="nav-link" href="../index.html">Inicio</a></li>
             <li class="nav-item has-submenu">
@@ -68,526 +56,239 @@
             <li><a class="nav-link" href="../pages/sobre.html">Sobre</a></li>
           </ul>
         </nav>
-    </div>
-   </header>
-   <main id="main-content">
-    <section class="page-hero">
-     <div class="container">
-      <nav aria-label="Ruta" class="breadcrumb">
-       <ol>
-        <li>
-         <a href="../index.html">
-          Inicio
-         </a>
-        </li>
-        <li aria-current="page">
-         Cultivos
-        </li>
-       </ol>
-      </nav>
-      <p class="eyebrow">
-       Almanaque de la granja
-      </p>
-      <h1>
-       Sembrar, cuidar, cosechar.
-      </h1>
-      <p>
-       Ocho cultivos para consultar de un vistazo: estaci&oacute;n, crecimiento, valor y una idea r&aacute;pida de para qu&eacute; pueden servir.
-      </p>
-     </div>
-    </section>
-    <section class="section">
-     <div class="container">
-      <div class="section-header">
-       <div>
-        <p class="eyebrow">
-         Selecci&oacute;n del Valle
-        </p>
-        <h2>
-         Cultivos y utilidad
-        </h2>
-       </div>
-       <p>
-        La Wiki tiene mucha m&aacute;s profundidad. Ac&aacute; elegimos s&oacute;lo lo que ayuda a orientarse r&aacute;pidamente.
-       </p>
       </div>
-      <div class="crop-grid">
-       <article class="crop-card">
-        <div class="crop-card__image">
-         <img alt="Chiriv&iacute;a" data-fallback="Chiriv&iacute;a" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Parsnip.png"/>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero page-hero--journal">
+        <div class="page-hero__overlay"></div>
+        <div class="container page-hero__content page-hero__content--centered">
+          <div class="journal-hero-plaque">
+            <h1>Cultivos</h1>
+          </div>
+          <p class="journal-hero-subtitle">Sembrar, cuidar y cosechar: una pequeña selección para orientarte rápido.</p>
         </div>
-        <div class="crop-card__body">
-         <span class="badge">
-          Primavera
-         </span>
-         <h3>
-          Chiriv&iacute;a
-         </h3>
-         <div class="crop-card__meta">
-          <div>
-           <span>
-            Crecimiento
-           </span>
-           <strong>
-            4 d&iacute;as
-           </strong>
+      </section>
+
+      <section class="section section-paper">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Selección del Valle</p>
+              <h2>Cultivos y utilidad</h2>
+            </div>
+            <p>La Wiki tiene mucha más profundidad. Acá elegimos sólo lo que ayuda a orientarse rápidamente.</p>
           </div>
-          <div>
-           <span>
-            Venta base
-           </span>
-           <strong>
-            35g
-           </strong>
+
+          <div class="crop-grid">
+            <article class="crop-card card-surface">
+              <div class="crop-card__image">
+                <img src="https://stardewvalleywiki.com/Special:FilePath/Parsnip.png" alt="Chirivía" data-fallback="Chirivía" loading="lazy">
+              </div>
+              <div class="crop-card__body">
+                <span class="badge">Primavera</span>
+                <h3>Chirivía</h3>
+                <div class="crop-card__meta">
+                  <div><span>Crecimiento</span><strong>4 días</strong></div>
+                  <div><span>Venta base</span><strong>35g</strong></div>
+                </div>
+                <p class="crop-card__utility"><strong>Utilidad:</strong> Lote de Cultivos de Primavera; también se usa en cocina, regalos y misiones.</p>
+                <p>Una opción sencilla para empezar.</p>
+                <details>
+                  <summary>Ver cultivo</summary>
+                  <p>Lote de Cultivos de Primavera; también se usa en cocina, regalos y misiones.</p>
+                  <a class="text-link" href="https://es.stardewvalleywiki.com/Chirivía" target="_blank" rel="noreferrer">Abrir ficha en la Wiki →</a>
+                </details>
+              </div>
+            </article>
+
+            <article class="crop-card card-surface">
+              <div class="crop-card__image">
+                <img src="https://stardewvalleywiki.com/Special:FilePath/Cauliflower.png" alt="Coliflor" data-fallback="Coliflor" loading="lazy">
+              </div>
+              <div class="crop-card__body">
+                <span class="badge">Primavera</span>
+                <h3>Coliflor</h3>
+                <div class="crop-card__meta">
+                  <div><span>Crecimiento</span><strong>12 días</strong></div>
+                  <div><span>Venta base</span><strong>175g</strong></div>
+                </div>
+                <p class="crop-card__utility"><strong>Utilidad:</strong> Lote de Primavera, cocina y posibilidad de convertirse en cultivo gigante.</p>
+                <p>Más lenta, pero bastante más valiosa.</p>
+                <details>
+                  <summary>Ver cultivo</summary>
+                  <p>Lote de Primavera, cocina y posibilidad de convertirse en cultivo gigante.</p>
+                  <a class="text-link" href="https://es.stardewvalleywiki.com/Coliflor" target="_blank" rel="noreferrer">Abrir ficha en la Wiki →</a>
+                </details>
+              </div>
+            </article>
+
+            <article class="crop-card card-surface">
+              <div class="crop-card__image">
+                <img src="https://stardewvalleywiki.com/Special:FilePath/Strawberry.png" alt="Fresa" data-fallback="Fresa" loading="lazy">
+              </div>
+              <div class="crop-card__body">
+                <span class="badge">Primavera</span>
+                <h3>Fresa</h3>
+                <div class="crop-card__meta">
+                  <div><span>Crecimiento</span><strong>8 días</strong></div>
+                  <div><span>Venta base</span><strong>120g</strong></div>
+                </div>
+                <p class="crop-card__utility"><strong>Utilidad:</strong> Producción repetible cada 4 días; también sirve para productos artesanales.</p>
+                <p>Una vez madura, vuelve a producir.</p>
+                <details>
+                  <summary>Ver cultivo</summary>
+                  <p>Producción repetible cada 4 días; también sirve para productos artesanales.</p>
+                  <a class="text-link" href="https://es.stardewvalleywiki.com/Fresa" target="_blank" rel="noreferrer">Abrir ficha en la Wiki →</a>
+                </details>
+              </div>
+            </article>
+
+            <article class="crop-card card-surface">
+              <div class="crop-card__image">
+                <img src="https://stardewvalleywiki.com/Special:FilePath/Blueberry.png" alt="Arándano" data-fallback="Arándano" loading="lazy">
+              </div>
+              <div class="crop-card__body">
+                <span class="badge">Verano</span>
+                <h3>Arándano</h3>
+                <div class="crop-card__meta">
+                  <div><span>Crecimiento</span><strong>13 días</strong></div>
+                  <div><span>Venta base</span><strong>50g</strong></div>
+                </div>
+                <p class="crop-card__utility"><strong>Utilidad:</strong> Produce varios frutos y puede destinarse a cocina y productos artesanales.</p>
+                <p>Una planta pensada para varias cosechas.</p>
+                <details>
+                  <summary>Ver cultivo</summary>
+                  <p>Produce varios frutos y puede destinarse a cocina y productos artesanales.</p>
+                  <a class="text-link" href="https://es.stardewvalleywiki.com/Arándano" target="_blank" rel="noreferrer">Abrir ficha en la Wiki →</a>
+                </details>
+              </div>
+            </article>
+
+            <article class="crop-card card-surface">
+              <div class="crop-card__image">
+                <img src="https://stardewvalleywiki.com/Special:FilePath/Melon.png" alt="Melón" data-fallback="Melón" loading="lazy">
+              </div>
+              <div class="crop-card__body">
+                <span class="badge">Verano</span>
+                <h3>Melón</h3>
+                <div class="crop-card__meta">
+                  <div><span>Crecimiento</span><strong>12 días</strong></div>
+                  <div><span>Venta base</span><strong>250g</strong></div>
+                </div>
+                <p class="crop-card__utility"><strong>Utilidad:</strong> Lote de Verano, recetas, productos artesanales y posibilidad de cultivo gigante.</p>
+                <p>Una apuesta de alto valor.</p>
+                <details>
+                  <summary>Ver cultivo</summary>
+                  <p>Lote de Verano, recetas, productos artesanales y posibilidad de cultivo gigante.</p>
+                  <a class="text-link" href="https://es.stardewvalleywiki.com/Melón" target="_blank" rel="noreferrer">Abrir ficha en la Wiki →</a>
+                </details>
+              </div>
+            </article>
+
+            <article class="crop-card card-surface">
+              <div class="crop-card__image">
+                <img src="https://stardewvalleywiki.com/Special:FilePath/Pumpkin.png" alt="Calabaza" data-fallback="Calabaza" loading="lazy">
+              </div>
+              <div class="crop-card__body">
+                <span class="badge">Otoño</span>
+                <h3>Calabaza</h3>
+                <div class="crop-card__meta">
+                  <div><span>Crecimiento</span><strong>13 días</strong></div>
+                  <div><span>Venta base</span><strong>320g</strong></div>
+                </div>
+                <p class="crop-card__utility"><strong>Utilidad:</strong> Lote de Otoño, cocina, productos artesanales y posibilidad de cultivo gigante.</p>
+                <p>Una de las grandes cosechas del otoño.</p>
+                <details>
+                  <summary>Ver cultivo</summary>
+                  <p>Lote de Otoño, cocina, productos artesanales y posibilidad de cultivo gigante.</p>
+                  <a class="text-link" href="https://es.stardewvalleywiki.com/Calabaza" target="_blank" rel="noreferrer">Abrir ficha en la Wiki →</a>
+                </details>
+              </div>
+            </article>
+
+            <article class="crop-card card-surface">
+              <div class="crop-card__image">
+                <img src="https://stardewvalleywiki.com/Special:FilePath/Cranberries.png" alt="Arándano rojo" data-fallback="Arándano rojo" loading="lazy">
+              </div>
+              <div class="crop-card__body">
+                <span class="badge">Otoño</span>
+                <h3>Arándano rojo</h3>
+                <div class="crop-card__meta">
+                  <div><span>Crecimiento</span><strong>7 días</strong></div>
+                  <div><span>Venta base</span><strong>75g</strong></div>
+                </div>
+                <p class="crop-card__utility"><strong>Utilidad:</strong> Produce de nuevo después de la primera cosecha y puede procesarse.</p>
+                <p>Rápido y repetible dentro de la estación.</p>
+                <details>
+                  <summary>Ver cultivo</summary>
+                  <p>Produce de nuevo después de la primera cosecha y puede procesarse.</p>
+                  <a class="text-link" href="https://es.stardewvalleywiki.com/Arándano_rojo" target="_blank" rel="noreferrer">Abrir ficha en la Wiki →</a>
+                </details>
+              </div>
+            </article>
+
+            <article class="crop-card card-surface">
+              <div class="crop-card__image">
+                <img src="https://stardewvalleywiki.com/Special:FilePath/Wheat.png" alt="Trigo" data-fallback="Trigo" loading="lazy">
+              </div>
+              <div class="crop-card__body">
+                <span class="badge">Verano / Otoño</span>
+                <h3>Trigo</h3>
+                <div class="crop-card__meta">
+                  <div><span>Crecimiento</span><strong>4 días</strong></div>
+                  <div><span>Venta base</span><strong>25g</strong></div>
+                </div>
+                <p class="crop-card__utility"><strong>Utilidad:</strong> Puede convertirse en harina y cerveza; además puede aportar heno.</p>
+                <p>Rápido y multiestacional.</p>
+                <details>
+                  <summary>Ver cultivo</summary>
+                  <p>Puede convertirse en harina y cerveza; además puede aportar heno.</p>
+                  <a class="text-link" href="https://es.stardewvalleywiki.com/Trigo" target="_blank" rel="noreferrer">Abrir ficha en la Wiki →</a>
+                </details>
+              </div>
+            </article>
           </div>
-         </div>
-         <p class="crop-card__utility">
-          <strong>
-           Utilidad:
-          </strong>
-          Lote de Cultivos de Primavera; tambi&eacute;n se usa en cocina, regalos y misiones.
-         </p>
-         <p>
-          Una opci&oacute;n sencilla para empezar.
-         </p>
-         <details>
-          <summary>
-           Ver cultivo
-          </summary>
-          <p>
-           Lote de Cultivos de Primavera; tambi&eacute;n se usa en cocina, regalos y misiones.
-          </p>
-          <a class="text-link" href="https://es.stardewvalleywiki.com/Chiriv&iacute;a" rel="noreferrer" target="_blank">
-           Abrir ficha en la Wiki &rarr;
+
+          <div class="callout">
+            <strong>Enfoque:</strong> esta página es una referencia rápida, no una réplica de la Wiki.
+            Allí podés consultar costos de semillas, regrowth, rendimientos, recetas, regalos y el resto de los datos.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="brand brand--footer" href="../index.html">
+            <span class="brand-mark" aria-hidden="true">✦</span>
+            <span><strong>stardew</strong><small>journal</small></span>
           </a>
-         </details>
+          <p>Fanpage académica, no oficial, creada para Programación 4.</p>
         </div>
-       </article>
-       <article class="crop-card">
-        <div class="crop-card__image">
-         <img alt="Coliflor" data-fallback="Coliflor" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Cauliflower.png"/>
+
+        <div>
+          <h2 class="footer-title">Explorar</h2>
+          <a href="../pages/valle.html">El Valle</a>
+          <a href="../pages/estaciones.html">Estaciones</a>
+          <a href="../pages/cultivos.html">Cultivos</a>
         </div>
-        <div class="crop-card__body">
-         <span class="badge">
-          Primavera
-         </span>
-         <h3>
-          Coliflor
-         </h3>
-         <div class="crop-card__meta">
-          <div>
-           <span>
-            Crecimiento
-           </span>
-           <strong>
-            12 d&iacute;as
-           </strong>
-          </div>
-          <div>
-           <span>
-            Venta base
-           </span>
-           <strong>
-            175g
-           </strong>
-          </div>
-         </div>
-         <p class="crop-card__utility">
-          <strong>
-           Utilidad:
-          </strong>
-          Lote de Primavera, cocina y posibilidad de convertirse en cultivo gigante.
-         </p>
-         <p>
-          M&aacute;s lenta, pero bastante m&aacute;s valiosa.
-         </p>
-         <details>
-          <summary>
-           Ver cultivo
-          </summary>
-          <p>
-           Lote de Primavera, cocina y posibilidad de convertirse en cultivo gigante.
-          </p>
-          <a class="text-link" href="https://es.stardewvalleywiki.com/Coliflor" rel="noreferrer" target="_blank">
-           Abrir ficha en la Wiki &rarr;
-          </a>
-         </details>
+
+        <div>
+          <h2 class="footer-title">Proyecto</h2>
+          <a href="../pages/habitantes.html">Habitantes</a>
+          <a href="../pages/exploracion.html">Exploración</a>
+          <a href="../pages/sobre.html">Fuentes y créditos</a>
         </div>
-       </article>
-       <article class="crop-card">
-        <div class="crop-card__image">
-         <img alt="Fresa" data-fallback="Fresa" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Strawberry.png"/>
-        </div>
-        <div class="crop-card__body">
-         <span class="badge">
-          Primavera
-         </span>
-         <h3>
-          Fresa
-         </h3>
-         <div class="crop-card__meta">
-          <div>
-           <span>
-            Crecimiento
-           </span>
-           <strong>
-            8 d&iacute;as
-           </strong>
-          </div>
-          <div>
-           <span>
-            Venta base
-           </span>
-           <strong>
-            120g
-           </strong>
-          </div>
-         </div>
-         <p class="crop-card__utility">
-          <strong>
-           Utilidad:
-          </strong>
-          Producci&oacute;n repetible cada 4 d&iacute;as; tambi&eacute;n sirve para productos artesanales.
-         </p>
-         <p>
-          Una vez madura, vuelve a producir.
-         </p>
-         <details>
-          <summary>
-           Ver cultivo
-          </summary>
-          <p>
-           Producci&oacute;n repetible cada 4 d&iacute;as; tambi&eacute;n sirve para productos artesanales.
-          </p>
-          <a class="text-link" href="https://es.stardewvalleywiki.com/Fresa" rel="noreferrer" target="_blank">
-           Abrir ficha en la Wiki &rarr;
-          </a>
-         </details>
-        </div>
-       </article>
-       <article class="crop-card">
-        <div class="crop-card__image">
-         <img alt="Ar&aacute;ndano" data-fallback="Ar&aacute;ndano" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Blueberry.png"/>
-        </div>
-        <div class="crop-card__body">
-         <span class="badge">
-          Verano
-         </span>
-         <h3>
-          Ar&aacute;ndano
-         </h3>
-         <div class="crop-card__meta">
-          <div>
-           <span>
-            Crecimiento
-           </span>
-           <strong>
-            13 d&iacute;as
-           </strong>
-          </div>
-          <div>
-           <span>
-            Venta base
-           </span>
-           <strong>
-            50g
-           </strong>
-          </div>
-         </div>
-         <p class="crop-card__utility">
-          <strong>
-           Utilidad:
-          </strong>
-          Produce varios frutos y puede destinarse a cocina y productos artesanales.
-         </p>
-         <p>
-          Una planta pensada para varias cosechas.
-         </p>
-         <details>
-          <summary>
-           Ver cultivo
-          </summary>
-          <p>
-           Produce varios frutos y puede destinarse a cocina y productos artesanales.
-          </p>
-          <a class="text-link" href="https://es.stardewvalleywiki.com/Ar&aacute;ndano" rel="noreferrer" target="_blank">
-           Abrir ficha en la Wiki &rarr;
-          </a>
-         </details>
-        </div>
-       </article>
-       <article class="crop-card">
-        <div class="crop-card__image">
-         <img alt="Mel&oacute;n" data-fallback="Mel&oacute;n" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Melon.png"/>
-        </div>
-        <div class="crop-card__body">
-         <span class="badge">
-          Verano
-         </span>
-         <h3>
-          Mel&oacute;n
-         </h3>
-         <div class="crop-card__meta">
-          <div>
-           <span>
-            Crecimiento
-           </span>
-           <strong>
-            12 d&iacute;as
-           </strong>
-          </div>
-          <div>
-           <span>
-            Venta base
-           </span>
-           <strong>
-            250g
-           </strong>
-          </div>
-         </div>
-         <p class="crop-card__utility">
-          <strong>
-           Utilidad:
-          </strong>
-          Lote de Verano, recetas, productos artesanales y posibilidad de cultivo gigante.
-         </p>
-         <p>
-          Una apuesta de alto valor.
-         </p>
-         <details>
-          <summary>
-           Ver cultivo
-          </summary>
-          <p>
-           Lote de Verano, recetas, productos artesanales y posibilidad de cultivo gigante.
-          </p>
-          <a class="text-link" href="https://es.stardewvalleywiki.com/Mel&oacute;n" rel="noreferrer" target="_blank">
-           Abrir ficha en la Wiki &rarr;
-          </a>
-         </details>
-        </div>
-       </article>
-       <article class="crop-card">
-        <div class="crop-card__image">
-         <img alt="Calabaza" data-fallback="Calabaza" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Pumpkin.png"/>
-        </div>
-        <div class="crop-card__body">
-         <span class="badge">
-          Oto&ntilde;o
-         </span>
-         <h3>
-          Calabaza
-         </h3>
-         <div class="crop-card__meta">
-          <div>
-           <span>
-            Crecimiento
-           </span>
-           <strong>
-            13 d&iacute;as
-           </strong>
-          </div>
-          <div>
-           <span>
-            Venta base
-           </span>
-           <strong>
-            320g
-           </strong>
-          </div>
-         </div>
-         <p class="crop-card__utility">
-          <strong>
-           Utilidad:
-          </strong>
-          Lote de Oto&ntilde;o, cocina, productos artesanales y posibilidad de cultivo gigante.
-         </p>
-         <p>
-          Una de las grandes cosechas del oto&ntilde;o.
-         </p>
-         <details>
-          <summary>
-           Ver cultivo
-          </summary>
-          <p>
-           Lote de Oto&ntilde;o, cocina, productos artesanales y posibilidad de cultivo gigante.
-          </p>
-          <a class="text-link" href="https://es.stardewvalleywiki.com/Calabaza" rel="noreferrer" target="_blank">
-           Abrir ficha en la Wiki &rarr;
-          </a>
-         </details>
-        </div>
-       </article>
-       <article class="crop-card">
-        <div class="crop-card__image">
-         <img alt="Ar&aacute;ndano rojo" data-fallback="Ar&aacute;ndano rojo" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Cranberries.png"/>
-        </div>
-        <div class="crop-card__body">
-         <span class="badge">
-          Oto&ntilde;o
-         </span>
-         <h3>
-          Ar&aacute;ndano rojo
-         </h3>
-         <div class="crop-card__meta">
-          <div>
-           <span>
-            Crecimiento
-           </span>
-           <strong>
-            7 d&iacute;as
-           </strong>
-          </div>
-          <div>
-           <span>
-            Venta base
-           </span>
-           <strong>
-            75g
-           </strong>
-          </div>
-         </div>
-         <p class="crop-card__utility">
-          <strong>
-           Utilidad:
-          </strong>
-          Produce de nuevo despu&eacute;s de la primera cosecha y puede procesarse.
-         </p>
-         <p>
-          R&aacute;pido y repetible dentro de la estaci&oacute;n.
-         </p>
-         <details>
-          <summary>
-           Ver cultivo
-          </summary>
-          <p>
-           Produce de nuevo despu&eacute;s de la primera cosecha y puede procesarse.
-          </p>
-          <a class="text-link" href="https://es.stardewvalleywiki.com/Ar&aacute;ndano_rojo" rel="noreferrer" target="_blank">
-           Abrir ficha en la Wiki &rarr;
-          </a>
-         </details>
-        </div>
-       </article>
-       <article class="crop-card">
-        <div class="crop-card__image">
-         <img alt="Trigo" data-fallback="Trigo" loading="lazy" src="https://stardewvalleywiki.com/Special:FilePath/Wheat.png"/>
-        </div>
-        <div class="crop-card__body">
-         <span class="badge">
-          Verano / Oto&ntilde;o
-         </span>
-         <h3>
-          Trigo
-         </h3>
-         <div class="crop-card__meta">
-          <div>
-           <span>
-            Crecimiento
-           </span>
-           <strong>
-            4 d&iacute;as
-           </strong>
-          </div>
-          <div>
-           <span>
-            Venta base
-           </span>
-           <strong>
-            25g
-           </strong>
-          </div>
-         </div>
-         <p class="crop-card__utility">
-          <strong>
-           Utilidad:
-          </strong>
-          Puede convertirse en harina y cerveza; adem&aacute;s puede aportar heno.
-         </p>
-         <p>
-          R&aacute;pido y multiestacional.
-         </p>
-         <details>
-          <summary>
-           Ver cultivo
-          </summary>
-          <p>
-           Puede convertirse en harina y cerveza; adem&aacute;s puede aportar heno.
-          </p>
-          <a class="text-link" href="https://es.stardewvalleywiki.com/Trigo" rel="noreferrer" target="_blank">
-           Abrir ficha en la Wiki &rarr;
-          </a>
-         </details>
-        </div>
-       </article>
       </div>
-      <div class="callout">
-       <strong>
-        Enfoque:
-       </strong>
-       esta p&aacute;gina es una referencia r&aacute;pida, no una r&eacute;plica de la Wiki. All&iacute; pod&eacute;s consultar costos de semillas, regrowth, rendimientos, recetas, regalos y el resto de los datos.
+
+      <div class="container footer-bottom">
+        <span>© 2026 Stardew Journal</span>
+        <span>Stardew Valley © ConcernedApe. Sitio no oficial.</span>
       </div>
-     </div>
-    </section>
-   </main>
-   <footer class="site-footer">
-    <div class="container footer-grid">
-     <div>
-      <a class="brand brand--footer" href="../index.html">
-       <span aria-hidden="true" class="brand-mark">
-        ✦
-       </span>
-       <span>
-        <strong>
-         stardew
-        </strong>
-        <small>
-         journal
-        </small>
-       </span>
-      </a>
-      <p>
-       Fanpage acad&eacute;mica, no oficial, creada para Programaci&oacute;n 4.
-      </p>
-     </div>
-     <div>
-      <h2 class="footer-title">
-       Explorar
-      </h2>
-      <a href="../pages/valle.html">
-       El Valle
-      </a>
-      <a href="../pages/estaciones.html">
-       Estaciones
-      </a>
-      <a href="../pages/cultivos.html">
-       Cultivos
-      </a>
-     </div>
-     <div>
-      <h2 class="footer-title">
-       Proyecto
-      </h2>
-      <a href="../pages/habitantes.html">
-       Habitantes
-      </a>
-      <a href="../pages/exploracion.html">
-       Exploraci&oacute;n
-      </a>
-      <a href="../pages/sobre.html">
-       Fuentes y cr&eacute;ditos
-      </a>
-     </div>
-    </div>
-    <div class="container footer-bottom">
-     <span>
-      &copy; 2026 Stardew Journal
-     </span>
-     <span>
-      Stardew Valley &copy; ConcernedApe. Sitio no oficial.
-     </span>
-    </div>
-   </footer>
+    </footer>
   </div>
- </body>
+</body>
 </html>
+```   

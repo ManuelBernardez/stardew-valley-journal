@@ -1,27 +1,30 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stardew Journal</title>
   <meta name="description" content="Un pequeño almanaque cozy y no oficial sobre Stardew Valley: estaciones, cultivos, lugares, habitantes y exploración.">
-  <!-- <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@^6.10.0/dist/maplibre-gl.css" /> -->
   <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages/index.css">
   <script type="module" src="js/main.js"></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Saltar al contenido</a>
 
   <div class="site-shell">
+
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html" aria-label="Stardew Journal, inicio">
           <span class="brand-mark" aria-hidden="true">✿</span>
-          <span><strong>Stardew</strong><small>Journal</small></span>
+          <span><strong>stardew</strong><small>journal</small></span>
         </a>
 
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">
@@ -35,9 +38,9 @@
             <li class="nav-item has-submenu">
               <a class="nav-link" href="pages/valle.html">El Valle</a>
               <ul class="submenu">
-                <li><a href="pages/valle.html#lugares">Lugares</a></li>
                 <li><a href="pages/granja.html">La granja</a></li>
                 <li><a href="pages/exploracion.html">Exploración</a></li>
+                <li><a href="pages/habitantes.html">Habitantes</a></li>
               </ul>
             </li>
             <li class="nav-item has-submenu">
@@ -50,8 +53,7 @@
               </ul>
             </li>
             <li><a class="nav-link" href="pages/cultivos.html">Cultivos</a></li>
-            <li><a class="nav-link" href="pages/habitantes.html">Habitantes</a></li>
-            <li><a class="nav-link" href="pages/sobre.html">Sobre</a></li>
+            <li><a class="nav-link" href="pages/sobre.html">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -69,238 +71,181 @@
         <div class="hero__overlay"></div>
 
         <div class="hero-particles" aria-hidden="true">
-          <span style="--x:12%;--y:28%;--delay:0s">✦</span>
-          <span style="--x:82%;--y:20%;--delay:1.2s">·</span>
-          <span style="--x:73%;--y:58%;--delay:2.4s">✦</span>
-          <span style="--x:25%;--y:66%;--delay:.7s">·</span>
+          <span>✦</span>
+          <span>·</span>
+          <span>✦</span>
+          <span>·</span>
         </div>
 
         <div class="container hero__content hero__content--centered">
           <h1 id="hero-title"><span>Stardew</span> journal</h1>
-
+          <p class="hero__lead">Una guía para descubrir Stardew Valley</p>
           <a class="button button--primary hero__cta" href="pages/valle.html">
-            Explorar el almanaque <span aria-hidden="true">→</span>
+            Explorar almanaque
           </a>
         </div>
       </section>
 
-      <section class="section home-intro" id="sobre-el-juego">
-        <div class="narrow">
+      <section class="section home-intro" aria-labelledby="intro-title">
+        <div class="narrow home-intro__inner reveal">
           <p class="section-copy">
-          Todo empieza con una granja descuidada y una decisi&oacute;n: dejar atr&aacute;s la rutina y empezar de nuevo. A partir de ah&iacute;, el mundo se abre entre cultivos, personajes, estaciones, pesca, miner&iacute;a y descubrimientos
+            Todo empieza con una granja descuidada y una decisión: dejar atrás la rutina y empezar de nuevo. 
+            A medida que pasan los días, aparecen nuevos lugares, actividades, personajes y secretos por descubrir
           </p>
         </div>
       </section>
 
+      <section aria-labelledby="story-title" class="section section-letter">
+      <div class="container home-content">
 
-  <!-- <div id="map" style="height: 400px"></div>
-  <script type="module">
-      import * as maplibregl from 'https://unpkg.com/maplibre-gl@^6.10.0/dist/maplibre-gl.mjs';
-
-      const map = new maplibregl.Map({
-          container: 'map', // container id
-          style: 'https://demotiles.maplibre.org/globe.json', // style URL
-          center: [0, 0], // starting position [lng, lat]
-          zoom: 2 // starting zoom
-      });
-  </script> -->
-
-
-<section aria-labelledby="story-title" class="section section-letter">
-     <div class="container">
       <article class="field-letter">
-       <div class="field-letter__top">
-        <span aria-hidden="true" class="stamp">
-         SV
-        </span>
+      <div class="field-letter__top">
         <span class="field-letter__label">
-         Carta encontrada &middot; Primavera, a&ntilde;o 1
+          Carta del abuelo &middot; Primavera, año 1
         </span>
-       </div>
-       <div class="field-letter__rule">
-       </div>
-       <p class="eyebrow">
-        Nuestra historia
-       </p>
-       <h2 id="story-title">
+      </div>
+
+      <div class="field-letter__rule"></div>
+
+      <h2 id="story-title">
         El legado de Pelican Town
-       </h2>
-       <blockquote>
+      </h2>
+
+      <blockquote>
         <p>
-         &ldquo;Si est&aacute;s leyendo esto, es que necesitas desesperadamente un cambio. Lo mismo me ocurri&oacute; a m&iacute; hace mucho. Hab&iacute;a perdido la vista de lo que m&aacute;s importaba en la vida... Conexiones reales con otras personas y con la naturaleza. As&iacute; que lo dej&eacute; todo y me fui al lugar al que pertenec&iacute;a.&rdquo;
+          &ldquo;Si estás leyendo esto, seguro necesitas un cambio urgente.
+          A mí me pasó lo mismo hace mucho tiempo, había perdido la vista de lo
+          que más importaba en la vida... Conexiones reales con otras personas
+          y la naturaleza
         </p>
-        <cite>
-         &mdash; Tu abuelo
-        </cite>
-       </blockquote>
-       <div class="letter-copy">
+      </blockquote>
+
+      <div class="letter-copy">
         <p>
-         Todo comienza con un sobre sellado y una decisi&oacute;n. Agobiado por la monoton&iacute;a y las luces artificiales de la moderna Corporaci&oacute;n Joja, decides abrir la carta que tu abuelo te dej&oacute; en su lecho de muerte. En su interior, encuentras las escrituras de una vieja parcela en un lugar llamado Stardew Valley.
+          Agobiado por la monotonía y las luces artificiales de la Corporación Joja,
+          decidís abrir la carta que tu abuelo te dejó en su lecho de muerte.
+          En su interior, encontrás las escrituras de una vieja parcela en un lugar
+          llamado Stardew Valley.
         </p>
+
         <p>
-         Ubicado en la costa sur de la Rep&uacute;blica Ferngill, Pelican Town es el coraz&oacute;n palpitante del valle. Un pueblo pintoresco donde el tiempo parece dictarse por el cambio de las estaciones y el ritmo de la naturaleza en lugar del tictac de un reloj. Sus habitantes, cada uno con sus propias rutinas y peque&ntilde;os mundos, son parte esencial de ese paisaje.
+          Pelican Town es el corazón del valle, un pueblo pintoresco donde la vida
+          parece dictarse por el ritmo de la naturaleza. Sus habitantes, cada uno
+          con sus propias rutinas y pequeños mundos, son parte esencial de ese paisaje.
         </p>
+
         <p>
-         Desde las profundidades de las minas locales hasta las tranquilas aguas del r&iacute;o que cruza el Bosque Tiz&oacute;n, el valle te ofrece una segunda oportunidad. No s&oacute;lo para cultivar la tierra y restaurar la granja, sino para echar ra&iacute;ces, forjar amistades duraderas y reconstruir una vida con verdadero significado.
+          Este lugar ofrece una segunda oportunidad para echar raíces, forjar vínculos
+          y reconstruir una vida con verdadero significado.
         </p>
-       </div>
-       <div class="letter-signature">
-        Con cari&ntilde;o,
-        <br/>
-        <strong>
-         Abuelo
-        </strong>
-       </div>
-      </article>
-     </div>
-    </section>
+      </div>
+    </article>
 
-      <section class="section season-preview section-paper" id="estaciones" aria-labelledby="season-preview-title">
-        <div class="container">
-          <div class="section-header section-header--center reveal">
-            <div>
-              <p class="eyebrow">El ciclo del año</p>
-              <h2 id="season-preview-title">Las estaciones cambian el Valle.</h2>
-            </div>
-            <p>Veintiocho días. Nuevas cosechas, festivales, paisajes y razones para salir a recorrer.</p>
-          </div>
+    <article class="section-header--center">
+      <div class="collection-heading">
+        <h2 id="collection-title">
+          Tesoros del Valle
+        </h2>
+      </div>
 
-          <div class="season-preview-grid">
-            <a class="season-preview-card theme-spring reveal" href="pages/primavera.html">
-              <div class="season-preview-card__media">
-                <img src="https://stardewvalleywiki.com/Special:FilePath/Egg%20Festival.png" alt="Festival del Huevo en Primavera" loading="lazy">
-                <span class="season-preview-card__badge"><img src="https://stardewvalleywiki.com/Special:FilePath/Strawberry.png" alt="" aria-hidden="true"> Primavera</span>
-              </div>
-              <div class="season-preview-card__body">
-                <p>Renacer</p>
-                <h3>Primavera</h3>
-                <span>Descubrir la estación <span aria-hidden="true">→</span></span>
-              </div>
-            </a>
+      <div class="collection-strip">
 
-            <a class="season-preview-card theme-summer reveal" href="pages/verano.html">
-              <div class="season-preview-card__media">
-                <img src="https://stardewvalleywiki.com/Special:FilePath/Luau.png" alt="Luau de Verano" loading="lazy">
-                <span class="season-preview-card__badge"><img src="https://stardewvalleywiki.com/Special:FilePath/Blueberry.png" alt="" aria-hidden="true"> Verano</span>
-              </div>
-              <div class="season-preview-card__body">
-                <p>Abundancia</p>
-                <h3>Verano</h3>
-                <span>Descubrir la estación <span aria-hidden="true">→</span></span>
-              </div>
-            </a>
+        <a class="collection-item" href="pages/cultivos.html">
+          <img
+            alt="Icono de habilidad de Agricultura"
+            loading="lazy"
+            src="https://stardewvalleywiki.com/Special:FilePath/Farming_Skill_Icon.png"
+          >
+          <span>La tierra</span>
+          <small>Cultivos</small>
+        </a>
 
-            <a class="season-preview-card theme-autumn reveal" href="pages/otono.html">
-              <div class="season-preview-card__media">
-                <img src="https://stardewvalleywiki.com/Special:FilePath/StardewValleyFair.png" alt="Feria de Stardew Valley en Otoño" loading="lazy">
-                <span class="season-preview-card__badge"><img src="https://stardewvalleywiki.com/Special:FilePath/Pumpkin.png" alt="" aria-hidden="true"> Otoño</span>
-              </div>
-              <div class="season-preview-card__body">
-                <p>Cosecha</p>
-                <h3>Otoño</h3>
-                <span>Descubrir la estación <span aria-hidden="true">→</span></span>
-              </div>
-            </a>
+        <a class="collection-item" href="pages/exploracion.html">
+          <img
+            alt="Icono de habilidad de Pesca"
+            loading="lazy"
+            src="https://stardewvalleywiki.com/Special:FilePath/Fishing_Skill_Icon.png"
+          >
+          <span>Los recursos</span>
+          <small>Pesca, minería y recolección</small>
+        </a>
 
-            <a class="season-preview-card theme-winter reveal" href="pages/invierno.html">
-              <div class="season-preview-card__media">
-                <img src="https://stardewvalleywiki.com/Special:FilePath/Festival_of_Ice.png" alt="Festival del Hielo en Invierno" loading="lazy">
-                <span class="season-preview-card__badge"><img src="https://stardewvalleywiki.com/Special:FilePath/Winter_Root.png" alt="" aria-hidden="true"> Invierno</span>
-              </div>
-              <div class="season-preview-card__body">
-                <p>Pausa</p>
-                <h3>Invierno</h3>
-                <span>Descubrir la estación <span aria-hidden="true">→</span></span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+        <a class="collection-item" href="pages/habitantes.html">
+          <img
+            alt="Icono de diálogo"
+            loading="lazy"
+            src="https://stardewvalleywiki.com/Special:FilePath/DialogueBubbleLove.png"
+          >
+          <span>Los vínculos</span>
+          <small>Habitantes</small>
+        </a>
 
-      <section class="section section-valley-preview" aria-labelledby="valley-preview-title">
-        <div class="container">
-          <div class="section-header section-header--center reveal">
-            <div>
-              <p class="eyebrow">Un pequeño recorrido</p>
-              <h2 id="valley-preview-title">Hay algo para cada día.</h2>
-            </div>
-            <p>Elegí una puerta de entrada y seguí la curiosidad.</p>
-          </div>
+        <a class="collection-item" href="pages/valle.html">
+          <img
+            alt="Mapa del mundo de Stardew Valley"
+            class="collection-map-icon"
+            loading="lazy"
+            src="https://stardewvalleywiki.com/Special:FilePath/World_Map.png"
+          >
+          <span>Lugares de interés</span>
+          <small>El Valle</small>
+        </a>
 
-          <div class="journal-feature-grid">
-            <a class="journal-feature journal-feature--large reveal" href="pages/valle.html">
-              <img src="assets/images/backgrounds/valle-hero.jpg" alt="Paisaje del Valle" loading="lazy">
-              <div class="journal-feature__overlay"></div>
-              <div class="journal-feature__content">
-                <p class="eyebrow eyebrow--light">El escenario</p>
-                <h3>El Valle</h3>
-                <p>Plaza, bosque, montaña, playa y caminos para perderse un rato.</p>
-                <span>Recorrer el Valle <span aria-hidden="true">→</span></span>
-              </div>
-            </a>
+      </div>
+    </article>
 
-            <a class="journal-feature reveal" href="pages/cultivos.html">
-              <img src="https://stardewvalleywiki.com/Special:FilePath/Ancient%20Fruit.png" alt="Fruta ancestral, uno de los cultivos del Valle" loading="lazy">
-              <div class="journal-feature__overlay"></div>
-              <div class="journal-feature__content">
-                <p class="eyebrow eyebrow--light">La tierra</p>
-                <h3>Cultivos</h3>
-                <p>Sembrar, cuidar y esperar el momento justo para cosechar.</p>
-                <span>Ver cultivos <span aria-hidden="true">→</span></span>
-              </div>
-            </a>
 
-            <a class="journal-feature reveal" href="pages/exploracion.html">
-              <img src="https://stardewvalleywiki.com/Special:FilePath/Mines.png" alt="Las minas del Valle" loading="lazy">
-              <div class="journal-feature__overlay"></div>
-              <div class="journal-feature__content">
-                <p class="eyebrow eyebrow--light">Más allá</p>
-                <h3>Exploración</h3>
-                <p>Pesca, minería y pequeños secretos que aparecen cuando salís de la granja.</p>
-                <span>Salir a explorar <span aria-hidden="true">→</span></span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+    <article class="field-note reveal">
+      <div class="field-note__mark" aria-hidden="true">✿</div>
 
-      <section class="section section-paper home-note" aria-labelledby="home-note-title">
-        <div class="container">
-          <article class="field-note reveal">
-            <div class="field-note__mark" aria-hidden="true">✿</div>
-            <div>
-              <p class="eyebrow">Apunte del día</p>
-              <h2 id="home-note-title">No hay una sola forma de vivir el Valle.</h2>
-              <p>Podés cultivar, conocer a la gente, pescar al atardecer o bajar a la mina. El encanto está en decidir qué hacer hoy.</p>
-            </div>
-            <a class="button button--green" href="pages/habitantes.html">Conocer a sus habitantes <span aria-hidden="true">→</span></a>
-          </article>
-        </div>
-      </section>
+      <div>
+        <p class="eyebrow">#Apunte del día</p>
+
+        <h2 id="home-note-title">
+          No hay una forma correcta de vivir Stardew
+        </h2>
+
+        <p>
+          Podés cultivar, conocer a la gente, pescar al atardecer o bajar a la mina.
+          El encanto está en decidir qué hacer hoy.
+        </p>
+      </div>
+
+      <a class="button button--green" href="pages/habitantes.html">
+        Conocer a sus habitantes
+        <span aria-hidden="true">→</span>
+      </a>
+    </article>
+
+  </div>
+</section>
+
     </main>
 
-    <footer class="site-footer">
+<footer class="site-footer">
       <div class="container footer-grid">
         <div>
           <a class="brand brand--footer" href="index.html">
             <span class="brand-mark" aria-hidden="true">✿</span>
             <span><strong>stardew</strong><small>journal</small></span>
           </a>
-          <p>Fanpage académica, no oficial, creada para Programación 4.</p>
-        </div>
-        <div>
+      </div>
+
+      <div>
           <h2 class="footer-title">Explorar</h2>
           <a href="pages/valle.html">El Valle</a>
           <a href="pages/granja.html">La granja</a>
           <a href="pages/exploracion.html">Exploración</a>
-        </div>
-        <div>
+      </div>
+
+      <div>
           <h2 class="footer-title">Estaciones</h2>
           <a href="pages/primavera.html">Primavera</a>
           <a href="pages/verano.html">Verano</a>
           <a href="pages/otono.html">Otoño</a>
           <a href="pages/invierno.html">Invierno</a>
-        </div>
+      </div>
+
       </div>
       <div class="container footer-bottom">
         <span>© 2026 Stardew Journal</span>

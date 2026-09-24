@@ -173,3 +173,140 @@
   display:block;
 }
 
+/* ================================
+   Interacción del formulario
+   ================================ */
+
+.contact-form__field {
+  min-width: 0;
+}
+
+.contact-form__label-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-bottom: .2rem;
+}
+
+.contact-form__label-row label {
+  color: var(--green-deep);
+  font-size: .67rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.contact-form__counter {
+  color: var(--ink-muted);
+  font-size: .68rem;
+  white-space: nowrap;
+}
+
+.contact-form__error {
+  display: block;
+  min-height: 1.1rem;
+  margin-top: .35rem;
+  color: #8a4034;
+  font-size: .72rem;
+  line-height: 1.4;
+}
+
+.contact-form__error[hidden] {
+  display: none;
+}
+
+/* Estado de error */
+
+.contact-form__field.has-error input,
+.contact-form__field.has-error textarea {
+  border-color: #a85748;
+  background: rgba(255, 242, 238, .95);
+  box-shadow: 0 0 0 3px rgba(168, 87, 72, .10);
+}
+
+.contact-form__field.has-error input:focus,
+.contact-form__field.has-error textarea:focus {
+  border-color: #8a4034;
+  box-shadow: 0 0 0 3px rgba(138, 64, 52, .13);
+}
+
+/* Estado de carga */
+
+.contact-form.is-submitting {
+  cursor: progress;
+}
+
+.contact-form__submit:disabled {
+  cursor: wait;
+  opacity: .78;
+}
+
+.contact-form__submit.is-loading {
+  position: relative;
+}
+
+.contact-form__submit.is-loading::after {
+  content: " …";
+  display: inline-block;
+  animation: contact-loading 1s steps(3, end) infinite;
+}
+
+@keyframes contact-loading {
+  0%,
+  100% {
+    opacity: .3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Feedback */
+
+.contact-form__status {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: .8rem .95rem;
+  border: 1px solid transparent;
+  border-radius: .3rem;
+  font-size: .8rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateY(4px);
+  transition:
+    opacity .18s ease,
+    transform .18s ease,
+    background .18s ease,
+    border-color .18s ease;
+}
+
+.contact-form__status.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-form__status.is-success {
+  border-color: rgba(73, 109, 67, .25);
+  background: rgba(231, 241, 222, .82);
+  color: var(--green-deep);
+}
+
+.contact-form__status.is-error {
+  border-color: rgba(138, 64, 52, .25);
+  background: rgba(250, 232, 226, .88);
+  color: #7b382f;
+}
+
+/* Accesibilidad: menos movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-form__status {
+    transition: none;
+  }
+
+  .contact-form__submit.is-loading::after {
+    animation: none;
+  }
+}

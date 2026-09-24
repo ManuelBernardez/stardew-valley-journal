@@ -2,6 +2,7 @@
 """Genera sitemap.xml para la publicación final en GitHub Pages.
 
 Uso:
+    python tools/make_sitemap.py
     python tools/make_sitemap.py https://USUARIO.github.io/REPOSITORIO/
 """
 from __future__ import annotations
@@ -12,6 +13,7 @@ from urllib.parse import urljoin
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = [ROOT / "index.html", *sorted((ROOT / "pages").glob("*.html"))]
+DEFAULT_BASE = "https://manuelbernardez.github.io/stardew-valley-journal/"
 
 
 def page_url(base: str, page: Path) -> str:
@@ -20,11 +22,11 @@ def page_url(base: str, page: Path) -> str:
 
 
 def main() -> int:
-    if len(sys.argv) != 2:
-        print("Uso: python tools/make_sitemap.py https://USUARIO.github.io/REPOSITORIO/")
+    if len(sys.argv) > 2:
+        print("Uso: python tools/make_sitemap.py [https://USUARIO.github.io/REPOSITORIO/]")
         return 2
 
-    base = sys.argv[1].strip()
+    base = (sys.argv[1].strip() if len(sys.argv) == 2 else DEFAULT_BASE)
     if not base.startswith(("https://", "http://")):
         print("La URL base debe comenzar con http:// o https://")
         return 2
@@ -39,7 +41,7 @@ def main() -> int:
     output = ROOT / "sitemap.xml"
     output.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"Generado: {output.relative_to(ROOT)} ({len(urls)} URLs)")
-    print("Actualizá robots.txt si querés declarar el sitemap públicamente.")
+    print(f"Base: {base}")
     return 0
 
 

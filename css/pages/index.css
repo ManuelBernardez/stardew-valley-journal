@@ -247,16 +247,7 @@
   grid-auto-rows:260px;
   gap:1rem
 }
-.journal-feature {
-  position:relative;
-  min-height:260px;
-  overflow:hidden;
-  border:1px solid #c7b28b;
-  border-radius:.65rem;
-  background:#4e5e47;
-  box-shadow:var(--shadow-small);
-  transition:transform .25s ease,box-shadow .25s ease
-}
+
 .journal-feature:hover {
   transform:translateY(-4px);
   box-shadow:var(--shadow)
@@ -333,12 +324,17 @@
   font:1.8rem/1 "Jersey 15",sans-serif
 }
 .field-note h2 {
-  color:var(--green);
+  color:var(--gold);
   font-size:clamp(1.9rem,4vw,3rem)
 }
 .field-note .button {
   grid-column:1/-1;
   justify-self:start
+}
+
+#collection-title{
+  color:var(--brown);
+  text-shadow:0 3px 0 var(--gold),0 7px 18px;
 }
 @keyframes scrollHint {
   0%,100% {

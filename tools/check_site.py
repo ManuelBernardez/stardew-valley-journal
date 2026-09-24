@@ -3,9 +3,10 @@
 
 No requiere dependencias externas. Comprueba:
 - index.html y .nojekyll en la raíz.
-- title, meta description y un único H1 por página.
+- title, meta description, canonical y un único H1 por página.
 - alt en todas las imágenes.
 - rutas locales de imágenes, scripts, hojas de estilo y enlaces.
+- sitemap.xml y robots.txt con su referencia.
 - balance básico de llaves en CSS y sintaxis de JS con Node cuando está disponible.
 
 Uso: python tools/check_site.py
@@ -52,6 +53,8 @@ def check_local_target(page: Path, url: str, kind: str) -> None:
 def main() -> int:
     check_file(ROOT / "index.html")
     check_file(ROOT / ".nojekyll")
+    check_file(ROOT / "sitemap.xml")
+    check_file(ROOT / "robots.txt")
 
     if not PAGES:
         errors.append("No se encontraron páginas HTML.")
@@ -65,6 +68,10 @@ def main() -> int:
         description = soup.find("meta", attrs={"name": "description"})
         if not description or not description.get("content", "").strip():
             errors.append(f"{rel}: falta meta description")
+        if page.name != "404.html":
+            canonical = soup.find("link", attrs={"rel": "canonical"})
+            if not canonical or not canonical.get("href", "").strip():
+                errors.append(f"{rel}: falta canonical")
         h1_count = len(soup.find_all("h1"))
         if h1_count != 1:
             errors.append(f"{rel}: se esperaba exactamente un H1 y hay {h1_count}")
@@ -72,6 +79,17 @@ def main() -> int:
         for image in soup.find_all("img"):
             if "alt" not in image.attrs:
                 errors.append(f"{rel}: imagen sin atributo alt -> {image.get('src', '')}")
+
+        for control in soup.find_all(["input", "textarea", "select"]):
+            if control.get("type") == "hidden":
+                continue
+            named = bool(control.get("aria-label") or control.get("aria-labelledby"))
+            if control.get("id") and soup.find("label", attrs={"for": control["id"]}):
+                named = True
+            if control.find_parent("label"):
+                named = True
+            if not named:
+                warnings.append(f"{rel}: control de formulario sin label/ARIA -> {control.name}#{control.get('id', '')}")
 
         for tag, attr in (("a", "href"), ("img", "src"), ("script", "src"), ("link", "href")):
             for element in soup.find_all(tag):
@@ -87,6 +105,17 @@ def main() -> int:
         for image in soup.find_all("img", src=True):
             if is_external(image["src"]):
                 warnings.append(f"{rel}: imagen externa -> {image['src']}")
+
+    sitemap = ROOT / "sitemap.xml"
+    if sitemap.exists():
+        sitemap_text = sitemap.read_text(encoding="utf-8")
+        if "https://manuelbernardez.github.io/stardew-valley-journal/" not in sitemap_text:
+            errors.append("sitemap.xml: falta la URL base definitiva")
+        if sitemap_text.count("<loc>") != 13:
+            errors.append(f"sitemap.xml: se esperaban 13 URLs y hay {sitemap_text.count('<loc>')}")
+    robots = ROOT / "robots.txt"
+    if robots.exists() and "Sitemap: https://manuelbernardez.github.io/stardew-valley-journal/sitemap.xml" not in robots.read_text(encoding="utf-8"):
+        errors.append("robots.txt: falta referencia al sitemap definitivo")
 
     # CSS: detectar llaves desbalanceadas y reglas extremadamente anómalas.
     for css in sorted((ROOT / "css").rglob("*.css")):

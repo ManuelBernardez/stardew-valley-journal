@@ -1,18 +1,36 @@
 # Stardew Journal
 
-Fanpage académica, no oficial, sobre **Stardew Valley**, desarrollada con HTML5, CSS3 y JavaScript vanilla para Programación 4. La propuesta visual combina almanaque rural, pixel art y una lectura editorial del Valle.
+> Una guía visual y académica no oficial de **Stardew Valley**, pensada como proyecto de portfolio frontend con HTML5, CSS3 y JavaScript vanilla.
 
-## Estado
+[![HTML5](https://img.shields.io/badge/HTML5-vanilla-e76f00?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-responsive-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/es/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-f7df1e?style=flat-square&logo=javascript&logoColor=111111)](https://developer.mozilla.org/es/docs/Web/JavaScript)
+[![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-222222?style=flat-square&logo=github)](https://pages.github.com/)
 
-Sitio estático preparado para GitHub Pages. No necesita build, servidor propio ni dependencias para la versión publicada. Incluye navegación responsive, buscador editorial, calendarios interactivos, seguimiento del Centro Cívico, páginas estacionales, formulario de contacto de demostración y una página 404.
+## ✦ Vista visual
 
-## Estructura
+La interfaz busca parecer un **cuaderno de campo del Valle**: papel envejecido, verdes de bosque, marrones de madera, detalles dorados y tipografía inspirada en pixel art.
+
+![Documentación visual de Stardew Journal](docs/visual-preview.png)
+
+## ✦ Qué es
+
+Stardew Journal es un sitio estático multipágina con navegación responsive, buscador editorial, calendario interactivo, seguimiento del Centro Cívico, páginas de estaciones, galería de habitantes y formulario de contacto de demostración.
+
+No requiere framework, build, base de datos ni servidor propio para su versión publicada.
+
+## ✦ Estructura
 
 ```text
 stardew-valley-journal/
 ├── index.html
 ├── 404.html
+├── sitemap.xml
+├── robots.txt
+├── .nojekyll
 ├── assets/
+│   ├── images/
+│   └── favicon/
 ├── css/
 │   ├── style.css
 │   └── pages/
@@ -23,55 +41,101 @@ stardew-valley-journal/
 │   └── tools.js
 ├── pages/
 ├── tools/
-├── favicon/
-├── robots.txt
-├── .nojekyll
-└── README.md
+│   ├── check_site.py
+│   └── make_sitemap.py
+├── docs/
+└── CREDITS.md
 ```
 
-Los estilos específicos de cada página están en `css/pages/`; `css/style.css` contiene estilos globales.
+## ✦ Funcionalidades principales
 
-## Funcionalidades
+| Módulo | Qué hace |
+|---|---|
+| **Navegación** | Navbar responsive, menú hamburguesa y submenús por categoría. |
+| **Buscador** | Índice editorial local, sin API ni backend. En mobile el panel se adapta al viewport. |
+| **Calendario** | 4 estaciones, 28 días, cumpleaños y festivales con hotspots interactivos. |
+| **Centro Cívico** | Salas y lotes con progreso persistido en `localStorage`. |
+| **Habitantes** | Galería de personajes con imágenes locales y estilo rústico unificado. |
+| **Contacto** | Validación HTML5 + confirmación visual de demostración. |
+| **Responsive** | Layouts adaptativos para desktop, tablet y mobile. |
 
-### Calendario
+## ✦ Sistema visual
 
-`pages/calendario.html` usa imágenes locales de las cuatro estaciones y coloca botones transparentes sobre las fechas con cumpleaños o eventos. La información aparece al seleccionar cada casilla.
+**Paleta:**
 
-### Centro Cívico
+`#2e4b31` Verde bosque · `#5f3927` Marrón profundo · `#d7ab54` Dorado · `#f4eddc` Papel · `#cbb995` Línea
 
-Permite marcar los objetos de los lotes estándar, consultar el progreso por lote/sala/general, buscar y filtrar. El estado se guarda en `localStorage` cuando el navegador lo permite.
+**Tipografía:**
 
-### Buscador
+- **Jersey 15** para títulos, marca y elementos con identidad pixel-art.
+- **Space Mono** para lectura, navegación, labels y datos.
 
-El buscador del navbar consulta un pequeño índice editorial definido en `js/main.js`. No necesita API ni backend.
+**Componentes compartidos:**
 
-### Contacto
+`site-header` · `main-nav` · `nav-search` · `page-hero` · `journal-hero-plaque` · `card-surface` · `section` · `site-footer`
 
-El formulario valida los campos desde HTML5 y muestra una confirmación de demostración en el cliente. GitHub Pages no ejecuta código de servidor, así que para recibir mensajes reales hace falta un servicio de formularios o backend.
+## ✦ Accesibilidad y responsive
 
-## SEO y accesibilidad
+La última pasada incluye:
 
-Cada página tiene `lang="es"`, título y descripción propios, `meta robots`, metadatos básicos para compartir, favicon, headings jerárquicos, HTML semántico, `alt`, `aria-current`, skip link, foco visible y soporte para `prefers-reduced-motion`. Google recomienda títulos descriptivos y únicos por página, enlaces rastreables y metadatos claros.
+- `lang="es"`, títulos y descriptions únicos.
+- Un único `h1` por página.
+- `alt` en imágenes y contenido decorativo marcado con `aria-hidden`.
+- Skip link y foco visible.
+- Controles interactivos con nombres accesibles y estados ARIA.
+- Soporte para `prefers-reduced-motion`.
+- Navbar mobile con buscador y menú alineados al borde derecho.
+- Panel de búsqueda limitado al viewport para evitar desbordes horizontales.
+- Grillas que colapsan progresivamente sin anchos rígidos.
 
-No se fija todavía un `rel="canonical"` ni un `sitemap.xml` con URL absoluta porque esta instalación se publicará como **GitHub Pages Project Site** y la URL depende del usuario y del nombre final del repositorio. Google recomienda que el canonical apunte a la URL canónica real y que el sitemap sea consistente con ella.
+## ✦ SEO y publicación
 
-## Recursos visuales
+La publicación definitiva está configurada para:
 
-Los sprites de cultivos incluidos en el paquete se sirven desde `assets/images/crops/` y su procedencia figura en `assets/images/crops/SOURCES.md`. Para los cultivos que no estaban disponibles localmente se agregaron SVG ilustrativos de respaldo, evitando 404 en el sitio. Siete imágenes auxiliares de exploración/granja todavía usan URLs externas de la Wiki; conviene localizarlas en una siguiente pasada si querés que el repositorio sea completamente autosuficiente respecto de imágenes.
+```text
+https://manuelbernardez.github.io/stardew-valley-journal/
+```
 
-## Prueba local
+Cada página pública tiene `rel="canonical"` con su URL definitiva. El proyecto también incluye:
+
+- `sitemap.xml` con las 13 URLs públicas.
+- `robots.txt` apuntando al sitemap.
+- `.nojekyll` para publicación estática desde GitHub Pages.
+- `404.html` para rutas inexistentes.
+
+Para regenerar el sitemap con la URL definitiva:
 
 ```bash
-python -m http.server 8000
+python tools/make_sitemap.py
 ```
 
-Abrir `http://localhost:8000/`.
+También acepta otra URL base cuando se necesita reutilizar el proyecto:
 
-## GitHub Pages
+```bash
+python tools/make_sitemap.py https://USUARIO.github.io/REPOSITORIO/
+```
 
-Dejar `index.html` en la raíz del repositorio. En **Settings → Pages** se puede seleccionar **Deploy from a branch**, rama `main` y carpeta `/(root)`. GitHub Pages publica archivos estáticos y busca el `index.html` en la parte superior de la fuente de publicación.
+## ✦ Pruebas
 
-Para actualizar el sitio después del primer despliegue:
+Auditoría estática:
+
+```bash
+python tools/check_site.py
+```
+
+La comprobación valida rutas locales, imágenes, `title`, `description`, cantidad de `h1`, CSS y sintaxis JavaScript cuando Node está disponible.
+
+> Los siete PNG auxiliares de exploración/granja que faltan en el paquete están preparados para colocarse en las rutas locales ya definidas. Una vez copiados, la auditoría vuelve a `Errores: 0`.
+
+## ✦ GitHub Pages
+
+1. Crear un repositorio público y mantener `index.html` en la raíz.
+2. Copiar el contenido del proyecto al repositorio.
+3. Hacer `git add .`, `git commit` y `git push` sobre `main`.
+4. En **Settings → Pages**, elegir **Deploy from a branch → main → /(root)**.
+5. Abrir la URL publicada y comprobar navegación, buscador, calendario, Centro Cívico, formulario e imágenes.
+
+Después de cambios:
 
 ```bash
 git add .
@@ -79,31 +143,6 @@ git commit -m "Actualizar Stardew Journal"
 git push
 ```
 
-## Antes de la versión pública
+## ✦ Créditos y uso
 
-Una vez creado el repositorio y conocida su URL final, agregar un `sitemap.xml` con las URLs reales, definir canonicals coherentes y, como mejora de robustez, descargar localmente las imágenes auxiliares que todavía dependen de la Wiki.
-
-## Nota legal
-
-Stardew Journal es una fanpage académica, no oficial y no está afiliada ni respaldada por ConcernedApe. Stardew Valley y sus materiales pertenecen a sus respectivos titulares. Las fuentes y atribuciones utilizadas por el proyecto se documentan en `CREDITS.md` y en los archivos `SOURCES.md` correspondientes a los recursos locales.
-
-
-## Auditoría antes de publicar
-
-El proyecto incluye una comprobación estática sin dependencias externas:
-
-```bash
-python tools/check_site.py
-```
-
-Debe terminar con `Errores: 0`. Las advertencias sobre imágenes externas son intencionales y sirven para recordar qué recursos todavía dependen de la Wiki.
-
-## Sitemap
-
-La URL final depende del usuario y del nombre del repositorio, por lo que `sitemap.xml` no se genera hasta conocer esa dirección. Una vez creado el repositorio, ejecutá:
-
-```bash
-python tools/make_sitemap.py https://USUARIO.github.io/REPOSITORIO/
-```
-
-Luego revisá `robots.txt`, hacé commit del sitemap y, si querés, agregá las etiquetas `rel=canonical` con esa misma URL base.
+Stardew Journal es un proyecto académico no oficial. **Stardew Valley** y sus materiales pertenecen a sus respectivos titulares. Las fuentes y atribuciones del material visual se detallan en `CREDITS.md` y en los `SOURCES.md` correspondientes.

@@ -1,30 +1,167 @@
-.farm-story {
-  display:grid;
-  gap:1.5rem;
-  align-items:center;
+/* =========================================================
+   FARM STORY
+   ========================================================= */
+.section-farm-story {
+  color:var(--green);
+  overflow: hidden;
   background:var(--paper-light);
 }
+
+.farm-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
 .farm-story__image {
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:var(--paper-deep);
-  box-shadow:var(--shadow-small)
+  width: 100%;
+  min-width: 0;
 }
+
 .farm-story__image img {
-  width:100%;
-  aspect-ratio:16/10;
-  object-fit:cover
+  display: block;
+
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+
+  border-radius: var(--radius, 0);
+  border: 1px solid var(--line);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12);
 }
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.farm-story__content {
+  width: 100%;
+  min-width: 0;
+}
+
+.farm-story__eyebrow {
+  margin: 0 0 0.5rem;
+
+  font-family: "Space Mono", monospace;
+  font-size: 0.7rem;
+  line-height: 1.4;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: var(--green);
+}
+
 .farm-story__content h2 {
-  max-width:650px
+  margin: 0 0 1rem;
+
+  font-family: "Jersey 15", sans-serif;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 0.95;
+
+  color: var(--green);
 }
+
 .farm-story__content p {
-  max-width:680px;
-  margin-top:.8rem
+  margin: 0 0 1rem;
+
+  max-width: 62ch;
+
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
-.farm-story__content p+p {
-  margin-top:.9rem
+
+.farm-story__content p:last-child {
+  margin-bottom: 0;
 }
+
+.farm-story__content strong {
+  color: var(--green);
+}
+
+.farm-possibilities-title {
+  color: var(--paper);
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .farm-story {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .farm-story__image {
+    order: 1;
+  }
+
+  .farm-story__content {
+    order: 2;
+  }
+
+  .farm-story__image img {
+    max-height: 520px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .farm-story {
+    gap: 1.5rem;
+  }
+
+  .farm-story__image img {
+    aspect-ratio: 16 / 10;
+    max-height: none;
+  }
+
+  .farm-story__eyebrow {
+    font-size: 0.65rem;
+  }
+
+  .farm-story__content h2 {
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
+  }
+
+  .farm-story__content p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 400px) {
+  .farm-story__content h2 {
+    font-size: 2.1rem;
+  }
+
+  .farm-story__content p {
+    font-size: 0.84rem;
+  }
+}
+
 .farm-options-grid--journal {
   display:grid;
   gap:1rem
@@ -67,9 +204,6 @@
   flex-wrap:wrap;
   gap:.7rem;
   margin-top:1.5rem
-}
-.section-farm-types {
-  background:rgba(235,225,203,.52)
 }
 @media(min-width:768px) {
   .farm-story {

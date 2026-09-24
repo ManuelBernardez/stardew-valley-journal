@@ -165,20 +165,172 @@ initNavSearch();
 const initDemoContactForm = () => {
   const form = document.querySelector('[data-contact-form]');
   const status = document.querySelector('[data-contact-status]');
+
   if (!form || !status) return;
+
+  const fields = [...form.querySelectorAll('input, textarea')];
+  const submit = form.querySelector('.contact-form__submit');
+  const messageField = form.querySelector('[name="message"]');
+  const messageCount = form.querySelector('[data-message-count]');
+
+  const errors = {
+    name: form.querySelector('[data-contact-error="name"]'),
+    email: form.querySelector('[data-contact-error="email"]'),
+    message: form.querySelector('[data-contact-error="message"]')
+  };
+
+  const setStatus = (message, type = 'success') => {
+    status.hidden = false;
+    status.textContent = message;
+    status.className = `contact-form__status is-visible is-${type}`;
+
+    requestAnimationFrame(() => {
+      status.focus({ preventScroll: true });
+    });
+  };
+
+  const clearStatus = () => {
+    status.hidden = true;
+    status.textContent = '';
+    status.className = 'contact-form__status';
+  };
+
+  const validateField = (field) => {
+    const value = field.value.trim();
+    let message = '';
+
+    if (!value) {
+      message = 'Este campo es obligatorio.';
+    } else if (field.name === 'name' && value.length < 2) {
+      message = 'Ingresá al menos 2 caracteres.';
+    } else if (field.name === 'email' && field.validity.typeMismatch) {
+      message = 'Ingresá un correo válido.';
+    } else if (field.name === 'message' && value.length < 10) {
+      message = 'El mensaje debe tener al menos 10 caracteres.';
+    }
+
+    const error = errors[field.name];
+    const wrapper = field.closest('.contact-form__field');
+
+    field.setAttribute('aria-invalid', String(Boolean(message)));
+
+    if (message) {
+      field.setCustomValidity(message);
+      wrapper?.classList.add('has-error');
+
+      if (error) {
+        error.textContent = message;
+        error.hidden = false;
+      }
+    } else {
+      field.setCustomValidity('');
+      wrapper?.classList.remove('has-error');
+
+      if (error) {
+        error.textContent = '';
+        error.hidden = true;
+      }
+    }
+
+    return !message;
+  };
+
+  const updateMessageCount = () => {
+    if (!messageField || !messageCount) return;
+    messageCount.textContent = messageField.value.length;
+  };
+
+  const resetFieldStates = () => {
+    fields.forEach((field) => {
+      field.setCustomValidity('');
+      field.setAttribute('aria-invalid', 'false');
+
+      const wrapper = field.closest('.contact-form__field');
+      wrapper?.classList.remove('has-error');
+
+      const error = errors[field.name];
+
+      if (error) {
+        error.textContent = '';
+        error.hidden = true;
+      }
+    });
+
+    updateMessageCount();
+  };
+
+  fields.forEach((field) => {
+    field.addEventListener('blur', () => {
+      validateField(field);
+    });
+
+    field.addEventListener('input', () => {
+      if (!status.hidden) clearStatus();
+
+      if (field.value.trim()) {
+        validateField(field);
+      } else {
+        field.setCustomValidity('');
+        field.setAttribute('aria-invalid', 'false');
+
+        const wrapper = field.closest('.contact-form__field');
+        wrapper?.classList.remove('has-error');
+
+        const error = errors[field.name];
+
+        if (error) {
+          error.textContent = '';
+          error.hidden = true;
+        }
+      }
+
+      if (field === messageField) {
+        updateMessageCount();
+      }
+    });
+  });
+
+  updateMessageCount();
 
   form.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (!form.checkValidity()) {
-      form.reportValidity();
+
+    clearStatus();
+
+    const isValid = fields.every((field) => validateField(field));
+
+    if (!isValid) {
+      setStatus(
+        'Revisá los campos marcados antes de continuar.',
+        'error'
+      );
+
+      const firstInvalid = fields.find(
+        (field) => field.getAttribute('aria-invalid') === 'true'
+      );
+
+      firstInvalid?.focus();
       return;
     }
 
-    form.reset();
-    status.hidden = false;
-    status.textContent = '¡Mensaje enviado! Esta es una demostración local: el sitio confirma el envío, pero no transmite datos a un servidor.';
-    status.classList.add('is-visible');
-    status.focus({ preventScroll: true });
+    submit.disabled = true;
+    submit.classList.add('is-loading');
+    submit.textContent = 'Preparando anotación…';
+    form.classList.add('is-submitting');
+
+    window.setTimeout(() => {
+      form.reset();
+      resetFieldStates();
+
+      submit.disabled = false;
+      submit.classList.remove('is-loading');
+      submit.textContent = 'Enviar mensaje';
+      form.classList.remove('is-submitting');
+
+      setStatus(
+        '¡Listo! La anotación quedó registrada visualmente en esta página. Como esta es una demostración de GitHub Pages, no se envió ningún dato a un servidor.',
+        'success'
+      );
+    }, 850);
   });
 };
-initDemoContactForm();

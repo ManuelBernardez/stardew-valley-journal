@@ -1,4 +1,7 @@
 /* Página: pages/centro-civico.html */
+h2{
+  color: var(--green);
+}
 
 .civic-hero__mark {
   width: min(300px, 64vw);
@@ -255,6 +258,10 @@
 
 .bundle-card__copy {
   min-width: 0;
+}
+
+.h3{
+  color: var(--brown-deep);
 }
 
 .bundle-card__title {

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# El sitemap se añadirá cuando se conozca la URL definitiva de GitHub Pages.
+Sitemap: https://manuelbernardez.github.io/stardew-valley-journal/sitemap.xml

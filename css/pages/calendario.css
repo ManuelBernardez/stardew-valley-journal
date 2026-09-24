@@ -1,19 +1,5 @@
 /* Página: pages/calendario.html */
 
-.calendar-intro {
-  padding-top: clamp(8.4rem, 14vw, 10.5rem);
-  padding-bottom: 2rem;
-}
-
-.calendar-intro h1 {
-  color: var(--brown-deep);
-}
-
-.calendar-intro__lead {
-  max-width: 720px;
-  margin-top: .9rem;
-  font-size: .9rem;
-}
 
 .calendar-section {
   padding-top: 1rem;
@@ -299,10 +285,6 @@
 }
 
 @media (max-width: 600px) {
-  .calendar-intro {
-    padding-top: 7.7rem;
-  }
-
   .calendar-season {
     flex: 1 1 calc(50% - .4rem);
   }

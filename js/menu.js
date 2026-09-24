@@ -1,19 +1,29 @@
-export const initMenu = () => {
+/**
+ * Inicializa el menú principal y su comportamiento responsive.
+ * Se mantiene como script clásico (no ES module) para que el sitio también
+ * funcione cuando los HTML se abren directamente desde el sistema de archivos.
+ */
+function initMenu() {
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav');
   if (!toggle || !nav) return;
 
-  toggle.addEventListener('click', () => {
-    const open = nav.classList.toggle('is-open');
+  const setMobileState = (open) => {
+    nav.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', String(open));
-    toggle.querySelector('.sr-only').textContent = open ? 'Cerrar menú' : 'Abrir menú';
+    const label = toggle.querySelector('.sr-only');
+    if (label) label.textContent = open ? 'Cerrar menú' : 'Abrir menú';
+  };
+
+  toggle.addEventListener('click', () => {
+    setMobileState(!nav.classList.contains('is-open'));
   });
 
   document.addEventListener('click', (event) => {
-    if (!event.target.closest('.site-header')) {
-      nav.classList.remove('is-open');
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.querySelector('.sr-only').textContent = 'Abrir menú';
-    }
+    if (!event.target.closest('.site-header')) setMobileState(false);
   });
-};
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1023) setMobileState(false);
+  });
+}

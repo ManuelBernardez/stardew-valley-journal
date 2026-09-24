@@ -115,6 +115,24 @@
   box-shadow: 0 3px 0 rgba(92, 61, 38, 0.18);
 }
 
+.card-surface {
+  background:linear-gradient(#fffaf0,#f8efd9);
+  border:1px solid var(--line);
+  box-shadow:0 4px 0 rgba(121,83,46,.10),0 14px 26px rgba(61,45,29,.07);
+  border-radius:var(--r)
+}
+.card-surface {
+  position:relative;
+  overflow:hidden
+}
+.card-surface::before {
+  content:"";
+  position:absolute;
+  inset:4px;
+  border:1px solid rgba(132,93,53,.18);
+  pointer-events:none
+}
+
 @media (min-width: 700px) {
   .journal-season-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -161,3 +179,237 @@
     transform: translateX(-50%);
   }
 }
+
+/*
+ * Estilos compartidos para las páginas de estación.
+ * Mantiene una estructura visual común y deja los colores/pequeños acentos
+ * a los CSS específicos de primavera, verano, otoño e invierno.
+ */
+.season-overview {
+  display:grid;
+  gap:1.5rem;
+}
+.season-overview__intro {
+  max-width:760px;
+}
+.season-overview__intro h2 {
+  max-width:760px;
+}
+.season-overview__intro p {
+  margin-top:.7rem;
+}
+.season-facts {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.75rem;
+}
+.season-fact {
+  padding:1rem;
+  background:var(--paper-light);
+  border:1px solid var(--line);
+  border-top:3px solid var(--season-accent);
+  box-shadow:var(--shadow-small);
+}
+.season-fact span {
+  display:block;
+  color:var(--ink-muted);
+  font-size:.65rem;
+  font-weight:700;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.season-fact strong {
+  display:block;
+  margin-top:.25rem;
+  color:var(--green-deep);
+  font:1.65rem/1.05 "Jersey 15",sans-serif;
+}
+.season-story {
+  display:grid;
+  gap:1.5rem;
+  align-items:center;
+}
+.season-story__media {
+  position:relative;
+  min-height:270px;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--season-soft,#dbe7d1),var(--paper-deep));
+  border:1px solid var(--line);
+  box-shadow:var(--shadow-small);
+}
+.season-story__media::after {
+  content:"";
+  position:absolute;
+  inset:.6rem;
+  border:1px solid color-mix(in srgb,var(--season-accent) 30%,transparent);
+  pointer-events:none;
+}
+.season-story__media img {
+  width:min(46%,170px);
+  height:auto;
+  image-rendering:pixelated;
+  filter:drop-shadow(0 10px 12px rgba(53,42,27,.18));
+}
+.season-story__body h2 {
+  max-width:760px;
+  font-size:clamp(2rem,4vw,3.15rem);
+}
+.season-story__body > p:not(.eyebrow) {
+  margin-top:.65rem;
+}
+.season-bullets {
+  display:grid;
+  gap:.7rem;
+  margin-top:1.2rem;
+}
+.season-bullets li {
+  position:relative;
+  padding:.75rem .8rem .75rem 2rem;
+  background:rgba(255,250,240,.7);
+  border:1px solid rgba(203,185,149,.72);
+}
+.season-bullets li::before {
+  content:"✦";
+  position:absolute;
+  left:.75rem;
+  top:.72rem;
+  color:var(--season-accent);
+  font-family:"Jersey 15",sans-serif;
+}
+.station-tip {
+  margin-top:1.2rem;
+  padding:1rem 1.1rem;
+  background:color-mix(in srgb,var(--season-accent) 9%,var(--paper-light));
+  border-left:4px solid var(--season-accent);
+  box-shadow:inset 0 0 0 1px rgba(203,185,149,.55);
+}
+.season-crops-section {
+  background:linear-gradient(180deg,rgba(244,237,220,.92),rgba(231,220,194,.58));
+}
+.season-crops-heading {
+  display:flex;
+  gap:1rem;
+  align-items:end;
+  justify-content:space-between;
+  margin-bottom:1.4rem;
+}
+.season-crops-heading p {
+  max-width:530px;
+}
+.crop-grid--season {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+}
+.crop-card--season {
+  position:relative;
+  overflow:hidden;
+  padding:.6rem;
+  background:#fffdf7;
+  border:1px solid var(--line);
+  box-shadow:0 7px 18px rgba(53,42,27,.08);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.crop-card--season:hover {
+  transform:translateY(-4px) rotate(0)!important;
+  box-shadow:0 14px 26px rgba(53,42,27,.13);
+}
+.crop-card--season:nth-child(odd) {
+  transform:rotate(-.25deg);
+}
+.crop-card--season:nth-child(even) {
+  transform:rotate(.22deg);
+}
+.crop-card--season__top {
+  display:grid;
+  grid-template-columns:72px 1fr;
+  gap:.85rem;
+  align-items:center;
+  padding:.75rem;
+  background:var(--paper-light);
+  border:1px solid rgba(203,185,149,.55);
+}
+.crop-card--season__top img {
+  width:64px;
+  height:64px;
+  object-fit:contain;
+  image-rendering:pixelated;
+}
+.crop-card--season h3 {
+  font-size:1.85rem;
+}
+.crop-card--season__meta {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem .8rem;
+  margin-top:.25rem;
+}
+.crop-card--season__meta span {
+  color:var(--ink-muted);
+  font-size:.63rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.crop-card--season__meta strong {
+  color:var(--green-deep);
+  font-size:.72rem;
+}
+.crop-card--season__body {
+  padding:.8rem .75rem .65rem;
+}
+.crop-card--season__body p {
+  font-size:.78rem;
+}
+.crop-card--season .text-link {
+  display:inline-flex;
+  margin-top:.6rem;
+  color:var(--green-deep);
+  font-size:.72rem;
+}
+.season-links {
+  display:grid;
+  gap:1.2rem;
+  align-items:center;
+}
+.season-links__buttons {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.7rem;
+}
+.season-route {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem;
+  margin-top:1.15rem;
+}
+.season-route a {
+  display:inline-flex;
+  align-items:center;
+  gap:.35rem;
+  padding:.4rem .65rem;
+  background:var(--paper-light);
+  border:1px solid var(--line);
+  color:var(--green-deep);
+  font-size:.68rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+@media(min-width:760px) {
+  .season-overview {grid-template-columns:1.15fr .85fr;align-items:end}
+  .season-facts {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .season-story {grid-template-columns:.85fr 1.15fr}
+  .season-crops-heading {align-items:center}
+  .crop-grid--season {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .season-links {grid-template-columns:1fr auto}
+}
+@media(max-width:699px) {
+  .season-detail-hero__content {padding-block:6rem 3rem}
+  .season-crops-heading {display:block}
+  .season-crops-heading p {margin-top:.5rem}
+}
+
+.advice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.advice-card{position:relative;min-height:215px;padding:1.3rem;background:linear-gradient(180deg,#fffaf0,#f7edd7);border:1px solid var(--line);box-shadow:var(--shadow-small)}.advice-card h3{margin-top:.2rem;color:var(--brown-deep);font:2rem/1.05 "Jersey 15",sans-serif}.advice-card p:not(.eyebrow){margin-top:.6rem;font-size:.74rem;line-height:1.6}.advice-number{position:absolute;top:.55rem;right:.7rem;color:rgba(139,90,56,.24);font:2.2rem/1 "Jersey 15",sans-serif}.calendar-bridge{display:grid;grid-template-columns:1fr auto;gap:1.2rem;align-items:center}@media(max-width:900px){.advice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.calendar-bridge{grid-template-columns:1fr}}@media(max-width:620px){.advice-grid{grid-template-columns:1fr}}
+
+.season-priority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.season-priority{padding:1.15rem;background:var(--paper-light);border:1px solid var(--line);box-shadow:var(--shadow-small)}.season-priority h3{margin-top:.25rem;color:var(--brown-deep);font:1.8rem/1.05 "Jersey 15",sans-serif}.season-priority p{margin-top:.45rem;font-size:.72rem;line-height:1.6}.season-priority .eyebrow{margin-bottom:0}@media(max-width:900px){.season-priority-grid{grid-template-columns:1fr}}

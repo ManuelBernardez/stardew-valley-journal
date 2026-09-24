@@ -1,1 +1,25 @@
-/* Otono: comparte el sistema de estaciones definido en ../style.css. */
+/* Identidad visual de Otoño */
+
+.page-otono {
+  --season-accent: #b96b3d;
+  --season-soft: #efd0ae;
+  --season-paper: #f8ead7;
+  --season-title: #71462f;
+  --season-glow: rgba(185, 107, 61, .30);
+}
+
+.page-otono .season-detail-hero {
+  background:
+    linear-gradient(180deg, rgba(182, 106, 60, .24), rgba(63, 39, 27, .85)),
+    url("../assets/images/backgrounds/stardew-background.jpg") center/cover;
+  border-bottom-color: rgba(185, 107, 61, .58);
+  box-shadow: inset 0 -10px 0 rgba(185, 107, 61, .11);
+}
+
+.page-otono .season-detail-hero__content h1 {
+  text-shadow: 3px 3px 0 rgba(241, 188, 132, .34);
+}
+
+.page-otono .season-fact {
+  background: linear-gradient(180deg, #fff9ef, #f4e0c8);
+}

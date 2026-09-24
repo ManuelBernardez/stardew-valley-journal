@@ -1,9 +1,4 @@
-# ⚠ PLACEHOLDER — NO DEPLOYAR TAL CUAL ⚠
-# El dominio de abajo es ficticio (TLD .invalid, reservado por la IANA
-# para que nunca resuelva a un sitio real — RFC 2606). Reemplazar por
-# el dominio real de producción antes de publicar.
-
 User-agent: *
 Allow: /
 
-Sitemap: https://REEMPLAZAR-DOMINIO-ANTES-DE-DEPLOY.invalid/sitemap.xml
+# El sitemap se añadirá cuando se conozca la URL definitiva de GitHub Pages.

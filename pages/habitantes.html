@@ -1,423 +1,819 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Habitantes — Stardew Journal</title>
-
-  <meta
-    name="description"
-    content="Una selección de habitantes de Stardew Valley con hogares, vínculos y pequeñas pistas para conocerlos mejor."
-  >
-
-  <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <link href="../css/style.css" rel="stylesheet">
-  <link href="../css/pages/habitantes.css" rel="stylesheet">
-
-  <script src="../js/main.js" type="module"></script>
-</head>
-
-<body class="page-habitantes">
-  <a class="skip-link" href="#main-content">Saltar al contenido</a>
-
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Habitantes de Stardew Valley · Stardew Journal
+  </title>
+  <meta content="Una selección de habitantes de Stardew Valley con hogares, vínculos y pistas para conocerlos mejor." name="description"/>
+  <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/pages/habitantes.css" rel="stylesheet"/>
+  <meta content="index,follow,max-image-preview:large" name="robots"/>
+  <meta content="Stardew Journal" name="author"/>
+  <meta content="#2e412e" name="theme-color"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Habitantes de Stardew Valley · Stardew Journal" property="og:title"/>
+  <meta content="Una selección de habitantes de Stardew Valley con hogares, vínculos y pistas para conocerlos mejor." property="og:description"/>
+  <meta content="es_AR" property="og:locale"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="Habitantes de Stardew Valley · Stardew Journal" name="twitter:title"/>
+  <meta content="Una selección de habitantes de Stardew Valley con hogares, vínculos y pistas para conocerlos mejor." name="twitter:description"/>
+ </head>
+ <body class="page-habitantes">
+  <a class="skip-link" href="#main-content">
+   Saltar al contenido
+  </a>
   <div class="site-shell">
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="../index.html" aria-label="Stardew Journal, inicio">
-          <span class="brand-mark" aria-hidden="true">✦</span>
-          <span><strong>stardew</strong><small>journal</small></span>
+   <header class="site-header">
+    <div class="container nav-wrap">
+     <a aria-label="Stardew Journal, inicio" class="brand" href="../index.html">
+      <span aria-hidden="true" class="brand-mark">
+       ✿
+      </span>
+      <span>
+       <strong>
+        stardew
+       </strong>
+       <small>
+        journal
+       </small>
+      </span>
+     </a>
+     <nav aria-label="Navegación principal" class="main-nav" id="main-menu">
+      <ul class="nav-list">
+       <li>
+        <a class="nav-link" href="../index.html">
+         Inicio
         </a>
-
-        <button class="menu-toggle" type="button" aria-controls="main-menu" aria-expanded="false">
-          <span class="sr-only">Abrir menú</span>
-          <span aria-hidden="true">☰</span>
-        </button>
-
-        <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
-          <ul class="nav-list">
-            <li><a class="nav-link" href="../index.html">Inicio</a></li>
-
-            <li class="nav-item has-submenu">
-              <a class="nav-link" href="../pages/valle.html">El Valle</a>
-              <ul class="submenu">
-                <li><a href="../pages/valle.html#lugares">Lugares</a></li>
-                <li><a href="../pages/granja.html">La granja</a></li>
-                <li><a href="../pages/exploracion.html">Exploración</a></li>
-              </ul>
-            </li>
-
-            <li class="nav-item has-submenu">
-              <a class="nav-link" href="../pages/estaciones.html">Estaciones</a>
-              <ul class="submenu">
-                <li><a href="../pages/primavera.html">Primavera</a></li>
-                <li><a href="../pages/verano.html">Verano</a></li>
-                <li><a href="../pages/otono.html">Otoño</a></li>
-                <li><a href="../pages/invierno.html">Invierno</a></li>
-              </ul>
-            </li>
-
-            <li><a class="nav-link" href="../pages/cultivos.html">Cultivos</a></li>
-            <li><a class="nav-link" href="../pages/habitantes.html">Habitantes</a></li>
-            <li><a class="nav-link" href="../pages/sobre.html">Sobre</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main-content">
-      <section class="page-hero page-hero--journal">
-        <div class="page-hero__overlay"></div>
-        <div class="container page-hero__content page-hero__content--centered">
-          <div class="journal-hero-plaque">
-            <h1>Habitantes</h1>
-          </div>
-          <p class="journal-hero-subtitle">
-            Conocé a quienes convierten Pelícano en un lugar para quedarse.
-          </p>
-        </div>
-      </section>
-
-      <section class="section section-paper" aria-labelledby="relations-title">
-        <div class="container">
-          <div class="section-header">
-            <div>
-              <h2 id="relations-title">Cada personaje cuenta una historia</h2>
-            </div>
-
-            <p>
-              La amistad en Stardew Valley no se trata sólo de llenar una barra:
-              acercarte a cada habitante y recordar lo que le importa desbloquea
-              posibilidades e información.
-            </p>
-          </div>
-
-          <div class="relation-intro">
-            <p>
-              La amistad puede llevarte a nuevos diálogos, eventos y fragmentos
-              de historia que no descubrirías de otra manera. Conocer a alguien
-              puede ser complicado, pero cada personaje tiene sus horarios, gustos, 
-              lugares donde suele pasar el tiempo.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" aria-label="Selección de habitantes">
-        <div class="container">
-          <div class="character-grid">
-
-            <article class="character-card card-surface">
-              <div class="character-card__image">
-              <img src="../assets/images/characters/abigail.png" alt="Retrato de Abigail" loading="lazy">
-              </div>
-              <div class="character-card__body">
-                <p class="card__meta">Aventurera · Pueblo Pelícano</p>
-                <h2>Abigail</h2>
-
-                <div class="character-card__info">
-                  <div><span>Vínculo</span><strong>Candidata</strong></div>
-                  <div><span>Hogar</span><strong>Pierre's</strong></div>
-                </div>
-
-                <details>
-                  <summary>Conocer personaje</summary>
-                  <p>
-                    Vive con Pierre y Caroline y mantiene una amistad cercana
-                    con Sam y Sebastian.
-                  </p>
-                  <p class="character-likes">
-                    <strong>Pista:</strong>
-                    Le encantan la amatista, la anguila picante y la calabaza.
-                  </p>
-                  <a
-                    class="text-link"
-                    href="https://es.stardewvalleywiki.com/Abigail"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Ver ficha en la Wiki →</a>
-                </details>
-              </div>
-            </article>
-
-            <article class="character-card card-surface">
-              <div class="character-card__image">
-                <img src="../assets/images/characters/leah.png" alt="Retrato de Leah" loading="lazy">
-              </div>
-              <div class="character-card__body">
-                <p class="card__meta">Artista · Bosque Tizón</p>
-                <h2>Leah</h2>
-
-                <div class="character-card__info">
-                  <div><span>Vínculo</span><strong>Candidata</strong></div>
-                  <div><span>Hogar</span><strong>Cabaña de Leah</strong></div>
-                </div>
-
-                <details>
-                  <summary>Conocer personaje</summary>
-                  <p>
-                    Se mudó al Valle para perseguir su sueño artístico y vive
-                    sola en una pequeña cabaña.
-                  </p>
-                  <p class="character-likes">
-                    <strong>Pista:</strong>
-                    Le gustan especialmente la ensalada, el queso de cabra y la trufa.
-                  </p>
-                  <a
-                    class="text-link"
-                    href="https://es.stardewvalleywiki.com/Leah"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Ver ficha en la Wiki →</a>
-                </details>
-              </div>
-            </article>
-
-            <article class="character-card card-surface">
-              <div class="character-card__image">
-              <img src="../assets/images/characters/sebastian.png" alt="Retrato de Sebastian" loading="lazy">
-              </div>
-              <div class="character-card__body">
-                <p class="card__meta">Programador · La montaña</p>
-                <h2>Sebastian</h2>
-
-                <div class="character-card__info">
-                  <div><span>Vínculo</span><strong>Candidato</strong></div>
-                  <div><span>Hogar</span><strong>Casa de Robin</strong></div>
-                </div>
-
-                <details>
-                  <summary>Conocer personaje</summary>
-                  <p>
-                    Vive en el sótano de Robin y está muy vinculado a los
-                    ordenadores, los cómics y la ciencia ficción.
-                  </p>
-                  <p class="character-likes">
-                    <strong>Pista:</strong>
-                    Le encantan la obsidiana, la lágrima helada y el sashimi.
-                  </p>
-                  <a
-                    class="text-link"
-                    href="https://es.stardewvalleywiki.com/Sebastian"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Ver ficha en la Wiki →</a>
-                </details>
-              </div>
-            </article>
-
-            <article class="character-card card-surface">
-              <div class="character-card__image">
-                <img src="../assets/images/characters/robin.png" alt="Retrato de Robin" loading="lazy">
-              </div>
-              <div class="character-card__body">
-                <p class="card__meta">Carpintera · La montaña</p>
-                <h2>Robin</h2>
-
-                <div class="character-card__info">
-                  <div><span>Vínculo</span><strong>Aldeana</strong></div>
-                  <div><span>Hogar</span><strong>Carpintería</strong></div>
-                </div>
-
-                <details>
-                  <summary>Conocer personaje</summary>
-                  <p>
-                    La carpintera del pueblo. Su trabajo conecta directamente
-                    con las mejoras y construcciones de la granja.
-                  </p>
-                  <p class="character-likes">
-                    <strong>Pista:</strong>
-                    Entre sus regalos favoritos están el espagueti y el melocotón.
-                  </p>
-                  <a
-                    class="text-link"
-                    href="https://es.stardewvalleywiki.com/Robin"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Ver ficha en la Wiki →</a>
-                </details>
-              </div>
-            </article>
-
-            <article class="character-card card-surface">
-              <div class="character-card__image">
-                <img src="../assets/images/characters/lewis.png" alt="Retrato de Lewis" loading="lazy">
-              </div>
-              <div class="character-card__body">
-                <p class="card__meta">Alcalde · Pueblo Pelícano</p>
-                <h2>Lewis</h2>
-
-                <div class="character-card__info">
-                  <div><span>Vínculo</span><strong>Aldeano</strong></div>
-                  <div><span>Hogar</span><strong>Mansión del alcalde</strong></div>
-                </div>
-
-                <details>
-                  <summary>Conocer personaje</summary>
-                  <p>
-                    Una figura central en la organización del pueblo y en
-                    varios de sus acontecimientos.
-                  </p>
-                  <p class="character-likes">
-                    <strong>Pista:</strong>
-                    Cumpleaños: Primavera 7. Le encantan el chile y el estofado vegetal.
-                  </p>
-                  <a
-                    class="text-link"
-                    href="https://es.stardewvalleywiki.com/Lewis"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Ver ficha en la Wiki →</a>
-                </details>
-              </div>
-            </article>
-
-            <article class="character-card card-surface">
-              <div class="character-card__image">
-                <img src="../assets/images/characters/willy.png" alt="Retrato de Willy" loading="lazy">
-              </div>
-              <div class="character-card__body">
-                <p class="card__meta">Pescador · La playa</p>
-                <h2>Willy</h2>
-
-                <div class="character-card__info">
-                  <div><span>Vínculo</span><strong>Aldeano</strong></div>
-                  <div><span>Hogar</span><strong>Tienda de pesca</strong></div>
-                </div>
-
-                <details>
-                  <summary>Conocer personaje</summary>
-                  <p>
-                    Vive y trabaja frente al mar; es una de las primeras
-                    puertas de entrada a la pesca.
-                  </p>
-                  <p class="character-likes">
-                    <strong>Pista:</strong>
-                    Cumpleaños: Verano 24. Le encantan la calabaza,
-                    el diamante y el esturión.
-                  </p>
-                  <a
-                    class="text-link"
-                    href="https://es.stardewvalleywiki.com/Willy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Ver ficha en la Wiki →</a>
-                </details>
-              </div>
-            </article>
-
-            <article class="character-card card-surface">
-              <div class="character-card__image">
-                <img src="../assets/images/characters/sam.png" alt="Retrato de Sam" loading="lazy">
-              </div>
-              <div class="character-card__body">
-                <p class="card__meta">Músico · Pueblo Pelícano</p>
-                <h2>Sam</h2>
-
-                <div class="character-card__info">
-                  <div><span>Vínculo</span><strong>Candidato</strong></div>
-                  <div><span>Hogar</span><strong>Camino del Sauce, 1</strong></div>
-                </div>
-
-                <details>
-                  <summary>Conocer personaje</summary>
-                  <p>
-                    Es un joven enérgico al que le apasiona la música y pasa
-                    buena parte de su tiempo tocando la guitarra, practicando
-                    con su banda y reuniéndose con sus amigos.
-                  </p>
-                  <p class="character-likes">
-                    <strong>Pista:</strong>
-                    Le encantan la pizza, el bollito de arce, el higo chumbo y el ojo de tigre.
-                  </p>
-                  <a
-                    class="text-link"
-                    href="https://es.stardewvalleywiki.com/Sam"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Ver ficha en la Wiki →</a>
-                </details>
-              </div>
-            </article>
-
-            <article class="character-card card-surface">
-              <div class="character-card__image">
-                <img src="../assets/images/characters/penny.png" alt="Retrato de Penny" loading="lazy">
-              </div>
-              <div class="character-card__body">
-                <p class="card__meta">Maestra · Pueblo Pelícano</p>
-                <h2>Penny</h2>
-
-                <div class="character-card__info">
-                  <div><span>Vínculo</span><strong>Candidata</strong></div>
-                  <div><span>Hogar</span><strong>Caravana</strong></div>
-                </div>
-
-                <details>
-                  <summary>Conocer personaje</summary>
-                  <p>
-                    Vive con Pam y suele pasar sus días leyendo, ayudando a
-                    los niños del pueblo y recorriendo distintos rincones de Pelícano.
-                  </p>
-                  <p class="character-likes">
-                    <strong>Pista:</strong>
-                    Le encantan la amapola, el diamante, la esmeralda y el melón.
-                  </p>
-                  <a
-                    class="text-link"
-                    href="https://es.stardewvalleywiki.com/Penny"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Ver ficha en la Wiki →</a>
-                </details>
-              </div>
-            </article>
-
-          </div>
-
-          <div class="callout">
-            <strong>Más que un retrato:</strong>
-            la dimensión social de Stardew Valley se construye con horarios,
-            cumpleaños, preferencias, vínculos y eventos. Esta selección sólo abre la puerta.
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <a class="brand brand--footer" href="../index.html">
-            <span class="brand-mark" aria-hidden="true">✦</span>
-            <span><strong>stardew</strong><small>journal</small></span>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/valle.html">
+         El Valle
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/granja.html">
+           La granja
           </a>
-
-          <p>Fanpage académica, no oficial, creada para Programación 4.</p>
-        </div>
-
-        <div>
-          <h2 class="footer-title">Explorar</h2>
-          <a href="../pages/valle.html">El Valle</a>
-          <a href="../pages/estaciones.html">Estaciones</a>
-          <a href="../pages/cultivos.html">Cultivos</a>
-        </div>
-
-        <div>
-          <h2 class="footer-title">Proyecto</h2>
-          <a href="../pages/habitantes.html">Habitantes</a>
-          <a href="../pages/exploracion.html">Exploración</a>
-          <a href="../pages/sobre.html">Fuentes y créditos</a>
-        </div>
+         </li>
+         <li>
+          <a href="../pages/exploracion.html">
+           Exploración
+          </a>
+         </li>
+         <li>
+          <a href="../pages/centro-civico.html">
+           Centro Cívico
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a class="nav-link" href="../pages/habitantes.html">
+         Habitantes
+        </a>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/estaciones.html">
+         Estaciones
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/primavera.html">
+           Primavera
+          </a>
+         </li>
+         <li>
+          <a href="../pages/verano.html">
+           Verano
+          </a>
+         </li>
+         <li>
+          <a href="../pages/otono.html">
+           Otoño
+          </a>
+         </li>
+         <li>
+          <a href="../pages/invierno.html">
+           Invierno
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a class="nav-link" href="../pages/contacto.html">
+         Contacto
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <div class="nav-search">
+      <button aria-controls="site-search-panel" aria-expanded="false" aria-label="Abrir buscador" class="nav-search-toggle" type="button">
+       <svg aria-hidden="true" height="19" viewbox="0 0 24 24" width="19">
+        <circle cx="11" cy="11" r="6.5">
+        </circle>
+        <path d="m16 16 4.5 4.5">
+        </path>
+       </svg>
+      </button>
+      <div class="nav-search-panel" hidden="" id="site-search-panel">
+       <form class="nav-search-form" data-site-search-form="" role="search">
+        <label class="sr-only" for="site-search-input">
+         Buscar en Stardew Journal
+        </label>
+        <input autocomplete="off" data-site-search-input="" id="site-search-input" placeholder="Buscar en el journal…" type="search"/>
+        <button aria-label="Buscar" class="nav-search-submit" type="submit">
+         ↵
+        </button>
+       </form>
+       <div aria-live="polite" class="nav-search-results" data-site-search-results="">
+       </div>
       </div>
-
-      <div class="container footer-bottom">
-        <span>© 2026 Stardew Journal</span>
-        <span>Stardew Valley © ConcernedApe. Sitio no oficial.</span>
+     </div>
+     <button aria-controls="main-menu" aria-expanded="false" class="menu-toggle" type="button">
+      <span class="sr-only">
+       Abrir menú
+      </span>
+      <span aria-hidden="true">
+       ☰
+      </span>
+     </button>
+    </div>
+   </header>
+   <main id="main-content">
+    <section class="page-hero page-hero--journal">
+     <div class="page-hero__overlay">
+     </div>
+     <div class="container page-hero__content page-hero__content--centered">
+      <div class="journal-hero-plaque">
+       <h1>
+        Habitantes
+       </h1>
       </div>
-    </footer>
+      <p class="journal-hero-subtitle">
+       Conocé a quienes convierten Pelícano en un lugar para quedarse.
+      </p>
+     </div>
+    </section>
+    <section aria-labelledby="relations-title" class="section section-paper">
+     <div class="container">
+      <div class="section-header">
+       <div>
+        <h2 id="relations-title">
+         Cada personaje cuenta una historia
+        </h2>
+       </div>
+       <p>
+        La amistad en Stardew Valley no se trata sólo de llenar una barra:
+                                                 acercarte a cada habitante y recordar lo que le importa desbloquea
+                                                 posibilidades e información.
+       </p>
+      </div>
+      <div class="relation-intro">
+       <p>
+        La amistad puede llevarte a nuevos diálogos, eventos y fragmentos
+                                                 de historia que no descubrirías de otra manera. Conocer a alguien
+                                                 puede ser complicado, pero cada personaje tiene sus horarios, gustos,
+                                                 lugares donde suele pasar el tiempo.
+       </p>
+      </div>
+     </div>
+    </section>
+    <section aria-label="Selección de habitantes" class="section">
+     <div class="container">
+      <div class="character-grid">
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Abigail" decoding="async" height="128" loading="lazy" src="../assets/images/characters/abigail.png" width="128"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Aventurera · Pueblo Pelícano
+         </p>
+         <h2>
+          Abigail
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Vínculo
+           </span>
+           <strong>
+            Candidata
+           </strong>
+          </div>
+          <div>
+           <span>
+            Hogar
+           </span>
+           <strong>
+            Pierre's
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Vive con Pierre y Caroline y mantiene una amistad
+                                                                      cercana
+                                                                      con Sam y Sebastian.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Le encantan la amatista, la anguila picante y la
+                                                                      calabaza.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Abigail" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki →
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Leah" decoding="async" height="128" loading="lazy" src="../assets/images/characters/leah.png" width="128"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Artista · Bosque Tizón
+         </p>
+         <h2>
+          Leah
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Vínculo
+           </span>
+           <strong>
+            Candidata
+           </strong>
+          </div>
+          <div>
+           <span>
+            Hogar
+           </span>
+           <strong>
+            Cabaña de Leah
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Se mudó al Valle para perseguir su sueño artístico
+                                                                      y vive
+                                                                      sola en una pequeña cabaña.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Le gustan especialmente la ensalada, el queso de
+                                                                      cabra y la trufa.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Leah" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki →
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Sebastian" decoding="async" height="128" loading="lazy" src="../assets/images/characters/sebastian.png" width="128"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Programador · La montaña
+         </p>
+         <h2>
+          Sebastian
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Vínculo
+           </span>
+           <strong>
+            Candidato
+           </strong>
+          </div>
+          <div>
+           <span>
+            Hogar
+           </span>
+           <strong>
+            Casa de Robin
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Vive en el sótano de Robin y está muy vinculado a
+                                                                      los
+                                                                      ordenadores, los cómics y la ciencia ficción.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Le encantan la obsidiana, la lágrima helada y el
+                                                                      sashimi.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Sebastian" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki →
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Robin" decoding="async" height="128" loading="lazy" src="../assets/images/characters/robin.png" width="128"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Carpintera · La montaña
+         </p>
+         <h2>
+          Robin
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Vínculo
+           </span>
+           <strong>
+            Aldeana
+           </strong>
+          </div>
+          <div>
+           <span>
+            Hogar
+           </span>
+           <strong>
+            Carpintería
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           La carpintera del pueblo. Su trabajo conecta
+                                                                      directamente
+                                                                      con las mejoras y construcciones de la granja.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Entre sus regalos favoritos están el espagueti y
+                                                                      el melocotón.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Robin" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki →
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Lewis" decoding="async" height="128" loading="lazy" src="../assets/images/characters/lewis.png" width="128"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Alcalde · Pueblo Pelícano
+         </p>
+         <h2>
+          Lewis
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Vínculo
+           </span>
+           <strong>
+            Aldeano
+           </strong>
+          </div>
+          <div>
+           <span>
+            Hogar
+           </span>
+           <strong>
+            Mansión del alcalde
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Una figura central en la organización del pueblo y
+                                                                      en
+                                                                      varios de sus acontecimientos.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Cumpleaños: Primavera 7. Le encantan el chile y el
+                                                                      estofado vegetal.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Lewis" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki →
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Willy" decoding="async" height="128" loading="lazy" src="../assets/images/characters/willy.png" width="128"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Pescador · La playa
+         </p>
+         <h2>
+          Willy
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Vínculo
+           </span>
+           <strong>
+            Aldeano
+           </strong>
+          </div>
+          <div>
+           <span>
+            Hogar
+           </span>
+           <strong>
+            Tienda de pesca
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Vive y trabaja frente al mar; es una de las
+                                                                      primeras
+                                                                      puertas de entrada a la pesca.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Cumpleaños: Verano 24. Le encantan la calabaza,
+                                                                      el diamante y el esturión.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Willy" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki →
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Sam" decoding="async" height="128" loading="lazy" src="../assets/images/characters/sam.png" width="128"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Músico · Pueblo Pelícano
+         </p>
+         <h2>
+          Sam
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Vínculo
+           </span>
+           <strong>
+            Candidato
+           </strong>
+          </div>
+          <div>
+           <span>
+            Hogar
+           </span>
+           <strong>
+            Camino del Sauce, 1
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Es un joven enérgico al que le apasiona la música
+                                                                      y pasa
+                                                                      buena parte de su tiempo tocando la guitarra,
+                                                                      practicando
+                                                                      con su banda y reuniéndose con sus amigos.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Le encantan la pizza, el bollito de arce, el higo
+                                                                      chumbo y el ojo de tigre.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Sam" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki →
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Penny" decoding="async" height="128" loading="lazy" src="../assets/images/characters/penny.png" width="128"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Maestra · Pueblo Pelícano
+         </p>
+         <h2>
+          Penny
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Vínculo
+           </span>
+           <strong>
+            Candidata
+           </strong>
+          </div>
+          <div>
+           <span>
+            Hogar
+           </span>
+           <strong>
+            Caravana
+           </strong>
+          </div>
+         </div>
+         <details>
+          <summary>
+           Conocer personaje
+          </summary>
+          <p>
+           Vive con Pam y suele pasar sus días leyendo,
+                                                                      ayudando a
+                                                                      los niños del pueblo y recorriendo distintos
+                                                                      rincones de Pelícano.
+          </p>
+          <p class="character-likes">
+           <strong>
+            Pista:
+           </strong>
+           Le encantan la amapola, el diamante, la esmeralda
+                                                                      y el melón.
+          </p>
+          <a class="text-link" href="https://es.stardewvalleywiki.com/Penny" rel="noreferrer" target="_blank">
+           Ver ficha en la Wiki →
+          </a>
+         </details>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Marnie" data-fallback="Retrato no disponible" loading="lazy" src="../assets/images/characters/Marnie.png"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Ganadera · Bosque Tizón
+         </p>
+         <h2>
+          Marnie
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Dónde
+           </span>
+           <strong>
+            Rancho de Marnie
+           </strong>
+          </div>
+          <div>
+           <span>
+            Rol
+           </span>
+           <strong>
+            Valle
+           </strong>
+          </div>
+         </div>
+         <p class="character-card__description">
+          Su tienda es fundamental para entrar en la crianza de animales y
+                  conseguir alimento y suministros del rancho.
+         </p>
+         <a class="text-link" href="https://es.stardewvalleywiki.com/Marnie" rel="noopener noreferrer" target="_blank">
+          Ver ficha en
+                  la Wiki →
+         </a>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Linus" data-fallback="Retrato no disponible" loading="lazy" src="../assets/images/characters/Linus.png"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Habitante de la montaña · La montaña
+         </p>
+         <h2>
+          Linus
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Dónde
+           </span>
+           <strong>
+            Tienda de campaña
+           </strong>
+          </div>
+          <div>
+           <span>
+            Rol
+           </span>
+           <strong>
+            Valle
+           </strong>
+          </div>
+         </div>
+         <p class="character-card__description">
+          Vive cerca de las minas y ayuda a mostrar una forma de vivir el
+                  Valle fuera de las estructuras del pueblo.
+         </p>
+         <a class="text-link" href="https://es.stardewvalleywiki.com/Linus" rel="noopener noreferrer" target="_blank">
+          Ver ficha en
+                  la Wiki →
+         </a>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Clint" data-fallback="Retrato no disponible" loading="lazy" src="../assets/images/characters/Clint.png"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Herrero · Pueblo Pelícano
+         </p>
+         <h2>
+          Clint
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Dónde
+           </span>
+           <strong>
+            Herrería
+           </strong>
+          </div>
+          <div>
+           <span>
+            Rol
+           </span>
+           <strong>
+            Valle
+           </strong>
+          </div>
+         </div>
+         <p class="character-card__description">
+          Mejora herramientas y procesa geodas; planificar una visita a su
+                  herrería puede ahorrar días perdidos en la granja.
+         </p>
+         <a class="text-link" href="https://es.stardewvalleywiki.com/Clint" rel="noopener noreferrer" target="_blank">
+          Ver ficha en
+                  la Wiki →
+         </a>
+        </div>
+       </article>
+       <article class="character-card card-surface">
+        <div class="character-card__image">
+         <img alt="Retrato de Rasmodius" data-fallback="Retrato no disponible" loading="lazy" src="../assets/images/characters/Wizard.png"/>
+        </div>
+        <div class="character-card__body">
+         <p class="card__meta">
+          Mago · Bosque Tizón
+         </p>
+         <h2>
+          Rasmodius
+         </h2>
+         <div class="character-card__info">
+          <div>
+           <span>
+            Dónde
+           </span>
+           <strong>
+            Torre del Mago
+           </strong>
+          </div>
+          <div>
+           <span>
+            Rol
+           </span>
+           <strong>
+            Valle
+           </strong>
+          </div>
+         </div>
+         <p class="character-card__description">
+          Es una puerta de entrada a la parte más extraña y fantástica del
+                  Valle, y su historia se relaciona con los secretos del mundo.
+         </p>
+         <a class="text-link" href="https://es.stardewvalleywiki.com/Rasmodius" rel="noopener noreferrer" target="_blank">
+          Ver ficha
+                  en la Wiki →
+         </a>
+        </div>
+       </article>
+      </div>
+     </div>
+     <div class="callout">
+      <strong>
+       Más que un retrato:
+      </strong>
+      la dimensión social de Stardew Valley se construye con horarios,
+                                          cumpleaños, preferencias, vínculos y eventos. Esta selección sólo abre la
+                                          puerta.
+     </div>
+    </section>
+   </main>
   </div>
-</body>
+     <footer class="site-footer">
+    <div class="container footer-grid">
+     <div class="footer-brand-block">
+      <a aria-label="Stardew Journal, inicio" class="brand brand--footer" href="../index.html">
+       <span aria-hidden="true" class="brand-mark">✦</span>
+       <span>
+        <strong>stardew</strong>
+        <small>journal</small>
+       </span>
+      </a>
+      <p class="footer-note">Una guía académica de Stardew Valley, pensada para explorar el Valle de forma clara y agradable.</p>
+      <a class="footer-home-link" href="../index.html">Inicio →</a>
+     </div>
+     <nav aria-label="Mapa del sitio" class="footer-sitemap">
+      <div class="footer-sitemap__group">
+       <h2 class="footer-title">Explorar</h2>
+       <a href="valle.html">El Valle</a>
+       <a href="estaciones.html">Estaciones</a>
+       <a href="calendario.html">Calendario</a>
+       <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-sitemap__group">
+       <h2 class="footer-title">Valle</h2>
+       <a href="centro-civico.html">Centro Cívico</a>
+       <a href="habitantes.html">Habitantes</a>
+       <a href="exploracion.html">Exploración</a>
+       <a href="granja.html">La granja</a>
+      </div>
+      <div class="footer-sitemap__group">
+       <h2 class="footer-title">Estaciones</h2>
+       <a href="primavera.html">Primavera</a>
+       <a href="verano.html">Verano</a>
+       <a href="otono.html">Otoño</a>
+       <a href="invierno.html">Invierno</a>
+      </div>
+     </nav>
+    </div>
+    <div class="container footer-bottom">
+     <span>© 2026 Stardew Journal</span>
+     <span>Stardew Valley © ConcernedApe. Sitio no oficial.</span>
+    </div>
+   </footer>
+  <script defer="" src="../js/menu.js">
+  </script>
+  <script src="../js/main.js" type="module">
+  </script>
+ </body>
 </html>
+

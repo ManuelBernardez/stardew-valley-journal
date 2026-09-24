@@ -116,6 +116,7 @@
   box-shadow:0 12px 30px rgba(64,48,30,.10),inset 0 0 0 5px rgba(255,255,255,.32);
 }
 .field-letter h2 {
+  margin-bottom:1.3rem;
   max-width:680px;
   color:var(--green);
 }
@@ -148,7 +149,7 @@
   color:var(--ink-muted);
 }
 .field-letter blockquote {
-  margin:2rem 0 1.8rem;
+  margin:2rem 0 0;
   padding:1.2rem 1.4rem;
   border-left:3px solid var(--brown);
   background:rgba(235,225,203,.55);
@@ -172,11 +173,8 @@
 
 .collection-heading {
   margin-bottom: 1rem;
-}
-
-.collection-heading h2 {
-  color:var(--green-deep);
-  margin: 0;
+  color:var(--gold);
+  text-shadow:0 3px 0 rgba(89,52,31,.88),0 7px 18px;
 }
 
 /* Collection */
@@ -320,8 +318,7 @@
   max-width:980px;
   margin-inline:auto;
   padding:1.2rem 1.3rem;
-  background:#faf1dd;
-  border:1px solid #cdbb96;
+  border:1px solid var(--gold);
   border-radius:.5rem;
   box-shadow:inset 0 0 0 4px rgba(255,255,255,.3),var(--shadow-small)
 }
@@ -332,15 +329,12 @@
   height:50px;
   border-radius:50%;
   background:var(--green-soft);
-  color:var(--green-deep);
-  font:1.7rem/1 "Jersey 15",sans-serif
+  color:var(--gold);
+  font:1.8rem/1 "Jersey 15",sans-serif
 }
 .field-note h2 {
+  color:var(--green);
   font-size:clamp(1.9rem,4vw,3rem)
-}
-.field-note p:not(.eyebrow) {
-  margin-top:.38rem;
-  font-size:.85rem
 }
 .field-note .button {
   grid-column:1/-1;

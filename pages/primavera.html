@@ -1,107 +1,604 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primavera — Estaciones — Stardew Journal</title>
-  <meta name="description" content="La estación que abre el año: la granja despierta, los árboles recuperan sus hojas y el Valle vuelve a llenarse de color.">
-  <link rel="icon" href="../favicon/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/pages/primavera.css">
-  <script type="module" src="../js/main.js"></script>
-</head>
-<body class="page-primavera">
-  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Primavera en Stardew Valley · Stardew Journal
+  </title>
+  <meta content="La estación que abre el año: la granja despierta y el Valle vuelve a llenarse de color." name="description"/>
+  <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/pages/estaciones.css" rel="stylesheet"/>
+  <link href="../css/pages/primavera.css" rel="stylesheet"/>
+  <meta content="index,follow,max-image-preview:large" name="robots"/>
+  <meta content="Stardew Journal" name="author"/>
+  <meta content="#2e412e" name="theme-color"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Primavera en Stardew Valley · Stardew Journal" property="og:title"/>
+  <meta content="La estación que abre el año: la granja despierta y el Valle vuelve a llenarse de color." property="og:description"/>
+  <meta content="es_AR" property="og:locale"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="Primavera en Stardew Valley · Stardew Journal" name="twitter:title"/>
+  <meta content="La estación que abre el año: la granja despierta y el Valle vuelve a llenarse de color." name="twitter:description"/>
+ </head>
+ <body class="page-primavera">
+  <a class="skip-link" href="#main-content">
+   Saltar al contenido
+  </a>
   <div class="site-shell">
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="../index.html" aria-label="Stardew Journal, inicio">
-          <span class="brand-mark" aria-hidden="true">✦</span><span><strong>stardew</strong><small>journal</small></span>
+   <header class="site-header">
+    <div class="container nav-wrap">
+     <a aria-label="Stardew Journal, inicio" class="brand" href="../index.html">
+      <span aria-hidden="true" class="brand-mark">
+       ✿
+      </span>
+      <span>
+       <strong>
+        stardew
+       </strong>
+       <small>
+        journal
+       </small>
+      </span>
+     </a>
+     <nav aria-label="Navegación principal" class="main-nav" id="main-menu">
+      <ul class="nav-list">
+       <li>
+        <a class="nav-link" href="../index.html">
+         Inicio
         </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu"><span class="sr-only">Abrir menú</span><span aria-hidden="true">☰</span></button>
-        <nav class="main-nav" id="main-menu" aria-label="Navegación principal">
-          <ul class="nav-list">
-            <li><a class="nav-link" href="../index.html">Inicio</a></li>
-            <li class="nav-item has-submenu">
-              <a class="nav-link" href="../pages/valle.html">El Valle</a>
-              <ul class="submenu">
-                <li><a href="../pages/valle.html#lugares">Lugares</a></li>
-                <li><a href="../pages/granja.html">La granja</a></li>
-                <li><a href="../pages/exploracion.html">Exploración</a></li>
-              </ul>
-            </li>
-            <li class="nav-item has-submenu">
-              <a class="nav-link is-active" href="../pages/estaciones.html">Estaciones</a>
-              <ul class="submenu">
-                <li><a href="../pages/primavera.html">Primavera</a></li>
-                <li><a href="../pages/verano.html">Verano</a></li>
-                <li><a href="../pages/otono.html">Otoño</a></li>
-                <li><a href="../pages/invierno.html">Invierno</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link" href="../pages/cultivos.html">Cultivos</a></li>
-            <li><a class="nav-link" href="../pages/habitantes.html">Habitantes</a></li>
-            <li><a class="nav-link" href="../pages/sobre.html">Sobre</a></li>
-          </ul>
-        </nav>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/valle.html">
+         El Valle
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/granja.html">
+           La granja
+          </a>
+         </li>
+         <li>
+          <a href="../pages/exploracion.html">
+           Exploración
+          </a>
+         </li>
+         <li>
+          <a href="../pages/centro-civico.html">
+           Centro Cívico
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a class="nav-link" href="../pages/habitantes.html">
+         Habitantes
+        </a>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/estaciones.html">
+         Estaciones
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/primavera.html">
+           Primavera
+          </a>
+         </li>
+         <li>
+          <a href="../pages/verano.html">
+           Verano
+          </a>
+         </li>
+         <li>
+          <a href="../pages/otono.html">
+           Otoño
+          </a>
+         </li>
+         <li>
+          <a href="../pages/invierno.html">
+           Invierno
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a class="nav-link" href="../pages/contacto.html">
+         Contacto
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <div class="nav-search">
+      <button aria-controls="site-search-panel" aria-expanded="false" aria-label="Abrir buscador" class="nav-search-toggle" type="button">
+       <svg aria-hidden="true" height="19" viewbox="0 0 24 24" width="19">
+        <circle cx="11" cy="11" r="6.5">
+        </circle>
+        <path d="m16 16 4.5 4.5">
+        </path>
+       </svg>
+      </button>
+      <div class="nav-search-panel" hidden="" id="site-search-panel">
+       <form class="nav-search-form" data-site-search-form="" role="search">
+        <label class="sr-only" for="site-search-input">
+         Buscar en Stardew Journal
+        </label>
+        <input autocomplete="off" data-site-search-input="" id="site-search-input" placeholder="Buscar en el journal…" type="search"/>
+        <button aria-label="Buscar" class="nav-search-submit" type="submit">
+         ↵
+        </button>
+       </form>
+       <div aria-live="polite" class="nav-search-results" data-site-search-results="">
+       </div>
       </div>
-    </header>
-    <main id="main-content">
-      <section class="season-detail-hero theme-spring">
-<div class="season-detail-hero__overlay"></div>
-        <div class="container season-detail-hero__content">
-          <nav class="breadcrumb breadcrumb--on-image" aria-label="Ruta">
-            <ol><li><a href="../index.html">Inicio</a></li><li><a href="estaciones.html">Estaciones</a></li><li aria-current="page">Primavera</li></ol>
-          </nav>
-          <p class="season-kicker"><img class="hero-sprite" src="https://stardewvalleywiki.com/Special:FilePath/Strawberry.png" alt="" aria-hidden="true" loading="lazy">Renacer</p>
-          <h1>Primavera</h1>
-          <p>La estación que abre el año: la granja despierta, los árboles recuperan sus hojas y el Valle vuelve a llenarse de color.</p>
-        </div>
-      </section>
-
-      <section class="section section-paper">
-        <div class="container station-overview">
-          <div>
-            <p class="eyebrow">En pocas palabras</p>
-            <h2>Primavera cambia lo que merece tu atención.</h2>
-            <p class="section-copy">Primavera es el punto de partida de la partida y una época de preparar la granja sin saber todavía cuánto terminará cambiando. El césped es verde, aparecen pétalos rosas en los días ventosos y regresan muchos recursos de temporada.</p>
-          </div>
-          <div class="station-facts"><div><span>Días</span><strong>28</strong></div><div><span>Festival del huevo</span><strong>Día 13</strong></div><div><span>Danza floral</span><strong>Día 24</strong></div><div><span>Frambuesas</span><strong>Días 15–18</strong></div></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container station-story">
-          <div class="station-story__media">
-            <img src="https://stardewvalleywiki.com/Special:FilePath/Strawberry.png" alt="Fresas de Primavera" loading="lazy">
-          </div>
-          <div class="station-story__body">
-            <p class="eyebrow">El agua también cambia</p>
-            <h2>Es una buena estación para empezar a leer el calendario. Cultivos, peces y objetos de recolección tienen ventanas específicas, así que planificar no significa optimizar cada día: significa saber qué no querés dejar pasar.</h2>
-            <ul class="season-bullets"><li>Cultivos como chirivía, coliflor y fresa abren las primeras decisiones de la granja.</li><li>Durante los días 15–18 aparecen frambuesas en arbustos alrededor del pueblo.</li><li>El Festival del Huevo y la Danza Floral convierten el pueblo en espacios de encuentro.</li></ul>
-            <div class="station-tip"><strong>Apunte:</strong> Antes de sembrar, mirá cuántos días quedan hasta el cambio de estación. Un cultivo que no termine a tiempo puede no ser tan buena apuesta como parece.</div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-soft">
-        <div class="container station-links">
-          <div><p class="eyebrow">Seguimos recorriendo</p><h2>Una estación puede llevarte a otra parte del Valle.</h2></div>
-          <div class="button-row"><a class="button button--paper" href="cultivos.html">Cultivos de Primavera →</a><a class="button button--paper" href="habitantes.html">Habitantes y vínculos →</a></div>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div><a class="brand brand--footer" href="../index.html"><span class="brand-mark" aria-hidden="true">✦</span><span><strong>stardew</strong><small>journal</small></span></a><p>Fanpage académica, no oficial, creada para Programación 4.</p></div>
-        <div><h2 class="footer-title">Explorar</h2><a href="valle.html">El Valle</a><a href="granja.html">La granja</a><a href="exploracion.html">Exploración</a></div>
-        <div><h2 class="footer-title">Estaciones</h2><a href="primavera.html">Primavera</a><a href="verano.html">Verano</a><a href="otono.html">Otoño</a><a href="invierno.html">Invierno</a></div>
+     </div>
+     <button aria-controls="main-menu" aria-expanded="false" class="menu-toggle" type="button">
+      <span class="sr-only">
+       Abrir menú
+      </span>
+      <span aria-hidden="true">
+       ☰
+      </span>
+     </button>
+    </div>
+   </header>
+   <main id="main-content">
+    <section class="season-detail-hero theme-spring">
+     <div class="container season-detail-hero__content">
+      <nav aria-label="Ruta" class="breadcrumb">
+       <ol>
+        <li>
+         <a href="../index.html">
+          Inicio
+         </a>
+        </li>
+        <li>
+         <a href="estaciones.html">
+          Estaciones
+         </a>
+        </li>
+        <li aria-current="page">
+         Primavera
+        </li>
+       </ol>
+      </nav>
+      <p class="season-kicker">
+       <img alt="" aria-hidden="true" class="hero-sprite" decoding="async" height="28" src="../assets/images/crops/strawberry.png" width="28"/>
+       Renacer
+      </p>
+      <h1>
+       Primavera
+      </h1>
+      <p>
+       La estación que abre el año: la granja despierta, los árboles recuperan sus hojas y el Valle
+                        vuelve a llenarse de color.
+      </p>
+     </div>
+    </section>
+    <section class="section section-paper">
+     <div class="container season-overview">
+      <div class="season-overview__intro">
+       <p class="eyebrow">
+        En pocas palabras
+       </p>
+       <h2>
+        Primavera es el punto de partida y una época de preparar la granja sin saber todavía cuánto
+                            terminará cambiando.
+       </h2>
+       <p>
+        El césped vuelve a crecer, aparecen recursos de temporada y cada día trae una mezcla distinta
+                            de pequeñas tareas.
+       </p>
       </div>
-      <div class="container footer-bottom"><span>© 2026 Stardew Journal</span><span>Stardew Valley © ConcernedApe. Sitio no oficial.</span></div>
-    </footer>
+      <div class="season-facts">
+       <div class="season-fact">
+        <span>
+         Días
+        </span>
+        <strong>
+         28
+        </strong>
+       </div>
+       <div class="season-fact">
+        <span>
+         Festival del Huevo
+        </span>
+        <strong>
+         Día 13
+        </strong>
+       </div>
+       <div class="season-fact">
+        <span>
+         Danza Floral
+        </span>
+        <strong>
+         Día 24
+        </strong>
+       </div>
+       <div class="season-fact">
+        <span>
+         Frutillas silvestres
+        </span>
+        <strong>
+         Días 15–18
+        </strong>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="section section-soft season-priorities">
+     <div class="container">
+      <div class="section-header section-header--center">
+       <div>
+        <p class="eyebrow">
+         Antes de seguir
+        </p>
+        <h2>
+         Lo que merece una visita o una reserva
+        </h2>
+       </div>
+       <p>
+        Estas notas concentran lo que más fácilmente se pierde cuando sólo se mira la lista de
+                            cultivos.
+       </p>
+      </div>
+      <div class="season-priority-grid">
+       <article class="season-priority card-surface">
+        <span class="eyebrow">
+         Ventana corta
+        </span>
+        <h3>
+         Días 15–18
+        </h3>
+        <p>
+         Las salmonberries aparecen sólo durante esos días; si te sirven, conviene hacer la ruta
+                                de recolección durante la ventana.
+        </p>
+       </article>
+       <article class="season-priority card-surface">
+        <span class="eyebrow">
+         Centro Cívico
+        </span>
+        <h3>
+         Alacena de Primavera
+        </h3>
+        <p>
+         Guardá al menos una chirivía, judía verde, coliflor y papa si querés resolver ese lote
+                                cuando aparezca.
+        </p>
+       </article>
+       <article class="season-priority card-surface">
+        <span class="eyebrow">
+         Antes del 28
+        </span>
+        <h3>
+         Fresas y herramientas
+        </h3>
+        <p>
+         El Festival del Huevo trae semillas de fresa; planificá también cualquier mejora de
+                                herramienta para no perder días útiles.
+        </p>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section aria-labelledby="crops-title" class="section season-crops-section" id="cultivos">
+     <div class="container">
+      <div class="season-crops-heading">
+       <div>
+        <p class="eyebrow">
+         Una selección práctica de cultivos y forrajes que ayuda a reconocer qué
+                                merece prioridad en esta estación.
+        </p>
+        <h2 id="crops-title">
+         Cultivos que le dan carácter a Primavera
+        </h2>
+       </div>
+       <p>
+        Una selección práctica para reconocer los cultivos más representativos de la temporada sin
+                            convertir el journal en una segunda Wiki.
+       </p>
+      </div>
+      <div class="crop-grid--season">
+       <article class="crop-card--season" data-crop-card="" data-days="4" data-name="chirivía" data-price="35" data-regrow="0" data-tags="lote primavera" data-type="cultivo">
+        <div class="crop-card--season__top">
+         <img alt="Icono pixel-art de Chirivía" decoding="async" height="64" loading="lazy" src="../assets/images/crops/parsnip.png" width="64"/>
+         <div>
+          <h3>
+           Chirivía
+          </h3>
+          <div class="crop-card--season__meta">
+           <span>
+            Crecimiento
+           </span>
+           <strong>
+            4
+                                            días
+           </strong>
+           <span>
+            Base
+           </span>
+           <strong>
+            35g
+           </strong>
+          </div>
+         </div>
+        </div>
+        <div class="crop-card--season__body">
+         <p>
+          Rápida y sencilla para arrancar; también forma parte del lote de Primavera.
+         </p>
+         <a class="text-link" href="https://es.stardewvalleywiki.com/Chirivía" rel="noreferrer noopener" target="_blank">
+          Ver ficha en la Wiki →
+         </a>
+        </div>
+       </article>
+       <article class="crop-card--season" data-crop-card="" data-days="6" data-name="papa" data-price="80" data-regrow="0" data-tags="lote primavera extra" data-type="cultivo">
+        <div class="crop-card--season__top">
+         <img alt="Icono pixel-art de Papa" data-fallback="Papa" height="64" loading="lazy" src="../assets/images/crops/potato.svg" width="64"/>
+         <div>
+          <h3>
+           Papa
+          </h3>
+          <div class="crop-card--season__meta">
+           <span>
+            Crecimiento
+           </span>
+           <strong>
+            6
+                                            días
+           </strong>
+           <span>
+            Base
+           </span>
+           <strong>
+            80g
+           </strong>
+          </div>
+         </div>
+        </div>
+        <div class="crop-card--season__body">
+         <p>
+          Crece rápido y puede entregar más de una papa en una misma cosecha.
+         </p>
+         <a class="text-link" href="https://es.stardewvalleywiki.com/Papa" rel="noreferrer noopener" target="_blank">
+          Ver ficha en la Wiki →
+         </a>
+        </div>
+       </article>
+       <article class="crop-card--season" data-crop-card="" data-days="12" data-name="coliflor" data-price="175" data-regrow="0" data-tags="lote primavera gigante" data-type="cultivo">
+        <div class="crop-card--season__top">
+         <img alt="Icono pixel-art de Coliflor" data-fallback="Coliflor" height="64" loading="lazy" src="../assets/images/crops/cauliflower.svg" width="64"/>
+         <div>
+          <h3>
+           Coliflor
+          </h3>
+          <div class="crop-card--season__meta">
+           <span>
+            Crecimiento
+           </span>
+           <strong>
+            12
+                                            días
+           </strong>
+           <span>
+            Base
+           </span>
+           <strong>
+            175g
+           </strong>
+          </div>
+         </div>
+         <div class="crop-badges">
+          <span>
+           Puede ser gigante
+          </span>
+         </div>
+        </div>
+        <div class="crop-card--season__body">
+         <p>
+          Más lenta, pero valiosa y con posibilidad de convertirse en cultivo gigante.
+         </p>
+         <a class="text-link" href="https://es.stardewvalleywiki.com/Coliflor" rel="noreferrer noopener" target="_blank">
+          Ver ficha en la Wiki →
+         </a>
+        </div>
+       </article>
+       <article class="crop-card--season" data-crop-card="" data-days="10" data-name="judía verde" data-price="40" data-regrow="3" data-tags="lote primavera recosecha espaldera" data-type="cultivo">
+        <div class="crop-card--season__top">
+         <img alt="Icono pixel-art de Judía verde" data-fallback="Judía verde" height="64" loading="lazy" src="../assets/images/crops/green-bean.svg" width="64"/>
+         <div>
+          <h3>
+           Judía verde
+          </h3>
+          <div class="crop-card--season__meta">
+           <span>
+            Crecimiento
+           </span>
+           <strong>
+            10
+                                            días
+           </strong>
+           <span>
+            Base
+           </span>
+           <strong>
+            40g
+           </strong>
+          </div>
+         </div>
+         <div class="crop-badges">
+          <span>
+           Recosecha · 3 d
+          </span>
+         </div>
+        </div>
+        <div class="crop-card--season__body">
+         <p>
+          Se cosecha varias veces después de madurar, así que premia una parcela bien
+                                    planificada.
+         </p>
+         <a class="text-link" href="https://es.stardewvalleywiki.com/Judía_verde" rel="noreferrer noopener" target="_blank">
+          Ver ficha en la Wiki →
+         </a>
+        </div>
+       </article>
+       <article class="crop-card--season" data-crop-card="" data-days="6" data-name="kale" data-price="110" data-regrow="0" data-tags="cultivo" data-type="cultivo">
+        <div class="crop-card--season__top">
+         <img alt="Icono pixel-art de Kale" data-fallback="Kale" height="64" loading="lazy" src="../assets/images/crops/kale.svg" width="64"/>
+         <div>
+          <h3>
+           Kale
+          </h3>
+          <div class="crop-card--season__meta">
+           <span>
+            Crecimiento
+           </span>
+           <strong>
+            6
+                                            días
+           </strong>
+           <span>
+            Base
+           </span>
+           <strong>
+            110g
+           </strong>
+          </div>
+         </div>
+        </div>
+        <div class="crop-card--season__body">
+         <p>
+          Una opción intermedia para combinar tiempos de crecimiento y ventas.
+         </p>
+         <a class="text-link" href="https://es.stardewvalleywiki.com/Kale" rel="noreferrer noopener" target="_blank">
+          Ver ficha en la Wiki →
+         </a>
+        </div>
+       </article>
+       <article class="crop-card--season" data-crop-card="" data-days="8" data-name="fresa" data-price="120" data-regrow="4" data-tags="festival huevo recosecha" data-type="cultivo">
+        <div class="crop-card--season__top">
+         <img alt="Icono pixel-art de Fresa" decoding="async" height="64" loading="lazy" src="../assets/images/crops/strawberry.png" width="64"/>
+         <div>
+          <h3>
+           Fresa
+          </h3>
+          <div class="crop-card--season__meta">
+           <span>
+            Crecimiento
+           </span>
+           <strong>
+            8
+                                            días
+           </strong>
+           <span>
+            Base
+           </span>
+           <strong>
+            120g
+           </strong>
+          </div>
+         </div>
+         <div class="crop-badges">
+          <span>
+           Recosecha · 4 d
+          </span>
+         </div>
+        </div>
+        <div class="crop-card--season__body">
+         <p>
+          Empieza después de plantarla y luego produce nuevamente cada 4 días.
+         </p>
+         <a class="text-link" href="https://es.stardewvalleywiki.com/Fresa" rel="noreferrer noopener" target="_blank">
+          Ver ficha en la Wiki →
+         </a>
+        </div>
+       </article>
+      </div>
+     </div>
+    </section>
+    <section class="section section-soft">
+     <div class="container season-links">
+      <div>
+       <h2>
+        Preparate para el verano
+       </h2>
+       <div class="season-route">
+        <a href="estaciones.html">
+         Ciclo anual
+        </a>
+        <a href="granja.html">
+         La
+                                granja
+        </a>
+        <a href="exploracion.html">
+         Exploración
+        </a>
+       </div>
+      </div>
+      <div class="season-links__buttons">
+       <a href="verano.html">
+        Verano →
+       </a>
+       <a href="estaciones.html">
+        Estaciones →
+       </a>
+      </div>
+     </div>
+    </section>
+   </main>
+      <footer class="site-footer">
+    <div class="container footer-grid">
+     <div class="footer-brand-block">
+      <a aria-label="Stardew Journal, inicio" class="brand brand--footer" href="../index.html">
+       <span aria-hidden="true" class="brand-mark">✦</span>
+       <span>
+        <strong>stardew</strong>
+        <small>journal</small>
+       </span>
+      </a>
+      <p class="footer-note">Una guía académica de Stardew Valley, pensada para explorar el Valle de forma clara y agradable.</p>
+      <a class="footer-home-link" href="../index.html">Inicio →</a>
+     </div>
+     <nav aria-label="Mapa del sitio" class="footer-sitemap">
+      <div class="footer-sitemap__group">
+       <h2 class="footer-title">Explorar</h2>
+       <a href="valle.html">El Valle</a>
+       <a href="estaciones.html">Estaciones</a>
+       <a href="calendario.html">Calendario</a>
+       <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-sitemap__group">
+       <h2 class="footer-title">Valle</h2>
+       <a href="centro-civico.html">Centro Cívico</a>
+       <a href="habitantes.html">Habitantes</a>
+       <a href="exploracion.html">Exploración</a>
+       <a href="granja.html">La granja</a>
+      </div>
+      <div class="footer-sitemap__group">
+       <h2 class="footer-title">Estaciones</h2>
+       <a href="primavera.html">Primavera</a>
+       <a href="verano.html">Verano</a>
+       <a href="otono.html">Otoño</a>
+       <a href="invierno.html">Invierno</a>
+      </div>
+     </nav>
+    </div>
+    <div class="container footer-bottom">
+     <span>© 2026 Stardew Journal</span>
+     <span>Stardew Valley © ConcernedApe. Sitio no oficial.</span>
+    </div>
+   </footer>
   </div>
-</body>
+  <script defer="" src="../js/menu.js">
+  </script>
+  <script src="../js/main.js" type="module">
+  </script>
+ </body>
 </html>
+

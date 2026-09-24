@@ -1,0 +1,500 @@
+/* Página: pages/centro-civico.html */
+
+.civic-hero__mark {
+  width: min(300px, 64vw);
+  height: auto;
+  margin: 0 0 1.5rem;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 8px 10px rgba(53, 42, 27, .18));
+}
+
+.hero-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin-top: 1.5rem;
+}
+
+.hero-stat-row span {
+  padding: .55rem .75rem;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 240, .78);
+  color: var(--ink-soft);
+  font-size: .76rem;
+}
+
+.hero-stat-row strong {
+  margin-right: .25rem;
+  color: var(--green-deep);
+  font: 400 1.7rem/1 "Jersey 15", sans-serif;
+}
+
+.civic-intro {
+  display: grid;
+  grid-template-columns: 1.35fr .65fr;
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+.civic-callout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.4rem;
+  border-top: 4px solid #ad7547;
+}
+
+.civic-callout > span {
+  color: #ad7547;
+  font-size: 2rem;
+}
+
+.bundle-summary {
+  display: grid;
+  grid-template-columns: 140px minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.2rem;
+}
+
+.bundle-summary strong {
+  display: block;
+  color: var(--green-deep);
+  font: 3rem/1 "Jersey 15", sans-serif;
+}
+
+.bundle-summary span {
+  color: var(--ink-muted);
+  font-size: .67rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.progress-bar {
+  height: 12px;
+  overflow: hidden;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+}
+
+.progress-bar span {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--green), #7e9f63);
+  transition: width .22s ease;
+}
+
+.bundle-filter {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+.bundle-filter label {
+  display: grid;
+  gap: .28rem;
+}
+
+.bundle-filter label > span {
+  color: var(--green-deep);
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.bundle-filter input,
+.bundle-filter select {
+  width: 100%;
+  min-height: 42px;
+  padding: .5rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: .2rem;
+  background: #fffaf0;
+  color: var(--ink);
+}
+
+.bundle-filter input:focus,
+.bundle-filter select:focus {
+  outline: 2px solid rgba(73, 109, 67, .25);
+  outline-offset: 1px;
+}
+
+/* Sólo las salas son plegables. */
+.bundle-room {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 250, 240, .4);
+  box-shadow: var(--shadow-small);
+}
+
+.bundle-room + .bundle-room {
+  margin-top: 1rem;
+}
+
+.bundle-room__summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(180deg, rgba(255, 250, 240, .94), rgba(247, 237, 215, .82));
+}
+
+.bundle-room__summary::-webkit-details-marker {
+  display: none;
+}
+
+.bundle-room__summary:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+
+.bundle-room[open] > .bundle-room__summary {
+  background: linear-gradient(180deg, #fffaf0, #f2e6cb);
+}
+
+.bundle-room__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.bundle-room__identity {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  min-width: 0;
+}
+
+.bundle-room__copy {
+  display: grid;
+  gap: .1rem;
+  min-width: 0;
+}
+
+.bundle-room__title {
+  color: var(--brown-deep);
+  font: 400 2.7rem/1.05 "Jersey 15", sans-serif;
+  overflow-wrap: anywhere;
+}
+
+.bundle-room__description {
+  color: var(--ink-soft);
+  font-size: .75rem;
+  overflow-wrap: anywhere;
+}
+
+.bundle-room__note {
+  padding: .85rem 1.1rem 0;
+  color: var(--ink-soft);
+  font-size: .75rem;
+  line-height: 1.65;
+}
+
+.bundle-room__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+  margin-top: 1rem;
+  padding: 0 1rem 1rem;
+}
+
+.room-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  border-radius: .5rem;
+  background: var(--paper-deep);
+  font-size: 1.5rem;
+}
+
+.room-progress,
+.bundle-status {
+  padding: .35rem .55rem;
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+  color: var(--green-deep);
+  font: 700 .68rem "Space Mono", monospace;
+  white-space: nowrap;
+}
+
+/* Los lotes ya no son <details>: toda su información queda visible. */
+.bundle-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(#fffaf0, #f8efd9);
+  border: 1px solid var(--line);
+  box-shadow: 0 3px 0 rgba(121, 83, 46, .08);
+}
+
+.bundle-card.is-complete {
+  background: linear-gradient(#f8f7e9, #edf3e3);
+  border-color: #789267;
+}
+
+.bundle-card__summary {
+  display: block;
+  padding: 1rem;
+  list-style: none;
+}
+
+.bundle-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.bundle-card__copy {
+  min-width: 0;
+}
+
+.bundle-card__title {
+  display: block;
+  color: var(--brown-deep);
+  font: 400 1.7rem/1.05 "Jersey 15", sans-serif;
+  overflow-wrap: anywhere;
+}
+
+.bundle-requirement {
+  margin-top: .25rem;
+  padding: 0 1rem;
+  color: var(--ink-muted);
+  font-size: .69rem;
+}
+
+.bundle-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .3rem;
+  margin: .8rem 1rem 0;
+}
+
+.bundle-items label {
+  display: flex;
+  align-items: flex-start;
+  gap: .45rem;
+  min-width: 0;
+  padding: .35rem;
+  border: 1px solid transparent;
+  font-size: .72rem;
+  line-height: 1.35;
+}
+
+.bundle-items label:hover {
+  background: rgba(231, 220, 194, .38);
+  border-color: rgba(203, 185, 149, .48);
+}
+
+.bundle-items label.is-checked span {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.bundle-items input {
+  flex: 0 0 auto;
+  margin-top: .15rem;
+  accent-color: var(--green);
+}
+
+.bundle-card__hint {
+  display: block;
+  margin: .8rem 1rem 1rem;
+  padding: .65rem .7rem;
+  background: rgba(219, 231, 209, .48);
+  border-left: 3px solid var(--green);
+  color: var(--ink-soft);
+  font-size: .67rem;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.bundle-card__bottom {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .75rem;
+  margin-top: auto;
+  padding: .8rem 1rem 1rem;
+  border-top: 1px dashed var(--line);
+}
+
+.bundle-card__bottom span {
+  color: var(--ink-muted);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.bundle-card__bottom strong {
+  color: var(--green-deep);
+  font-size: .75rem;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+.planning-card {
+  padding: 1.2rem;
+}
+
+.planning-card h3 {
+  color: var(--brown-deep);
+  font-size: 1.8rem;
+}
+
+.planning-card p {
+  margin-top: .55rem;
+  font-size: .73rem;
+  line-height: 1.6;
+}
+
+.planning-card ul {
+  display: grid;
+  gap: .45rem;
+  margin-top: .8rem;
+}
+
+.planning-card li {
+  color: var(--ink-soft);
+  font-size: .68rem;
+  line-height: 1.55;
+}
+
+.planning-card strong {
+  color: var(--green-deep);
+}
+
+.civic-planning__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.civic-planning__note {
+  width: 100%;
+  max-width: none;
+  margin: 1.5rem 0 0;
+  padding: 1rem 1.2rem;
+  line-height: 1.65;
+}
+
+.page-hero--civic {
+  position: relative;
+  min-height: 690px;
+  background:
+    linear-gradient(180deg, rgba(15, 25, 18, .18), rgba(18, 26, 18, .84)),
+    url("../assets/images/backgrounds/stardew-background.jpg") center / cover;
+  border-bottom-color: rgba(102, 132, 95, .48);
+}
+
+.page-hero--civic::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 1px dashed rgba(255, 245, 220, .28);
+  pointer-events: none;
+}
+
+.page-hero--civic .page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(34, 49, 34, .08), rgba(18, 26, 18, .28));
+}
+
+.page-hero--civic .page-hero__content {
+  padding-block: 7.75rem 3.5rem;
+}
+
+.page-hero--civic .civic-hero__mark {
+  width: min(164px, 28vw);
+  height: auto;
+  margin: 0 auto 1rem;
+  padding: .42rem;
+  background: rgba(255, 250, 240, .46);
+  border: 1px solid rgba(255, 245, 220, .42);
+  border-radius: .2rem;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 7px 10px rgba(0, 0, 0, .25));
+}
+
+.page-hero--civic .journal-hero-plaque {
+  min-width: min(90vw, 590px);
+}
+
+.page-hero--civic .journal-hero-subtitle {
+  max-width: 760px;
+}
+
+.page-hero--civic .hero-stat-row {
+  justify-content: center;
+  margin-top: 1.15rem;
+}
+
+@media (max-width: 900px) {
+  .civic-intro,
+  .bundle-filter {
+    grid-template-columns: 1fr;
+  }
+
+  .civic-planning__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .bundle-room__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bundle-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .bundle-summary .button {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero--civic {
+    min-height: 640px;
+  }
+
+  .page-hero--civic .page-hero__content {
+    padding-block: 7rem 3rem;
+  }
+
+  .page-hero--civic .civic-hero__mark {
+    width: min(140px, 42vw);
+  }
+
+  .bundle-items {
+    grid-template-columns: 1fr;
+  }
+
+  .bundle-room__header {
+    align-items: flex-start;
+  }
+
+  .room-progress {
+    font-size: .62rem;
+  }
+
+  .bundle-card__bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bundle-card__bottom strong {
+    text-align: left;
+  }
+}

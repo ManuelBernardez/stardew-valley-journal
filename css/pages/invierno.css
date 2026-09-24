@@ -1,1 +1,25 @@
-/* Invierno: comparte el sistema de estaciones definido en ../style.css. */
+/* Identidad visual de Invierno */
+
+.page-invierno {
+  --season-accent: #7396a4;
+  --season-soft: #dce9ed;
+  --season-paper: #edf3f4;
+  --season-title: #3f5b63;
+  --season-glow: rgba(115, 150, 164, .30);
+}
+
+.page-invierno .season-detail-hero {
+  background:
+    linear-gradient(180deg, rgba(121, 161, 176, .24), rgba(35, 53, 60, .87)),
+    url("../assets/images/backgrounds/stardew-background.jpg") center/cover;
+  border-bottom-color: rgba(115, 150, 164, .60);
+  box-shadow: inset 0 -10px 0 rgba(115, 150, 164, .12);
+}
+
+.page-invierno .season-detail-hero__content h1 {
+  text-shadow: 3px 3px 0 rgba(202, 226, 232, .34);
+}
+
+.page-invierno .season-fact {
+  background: linear-gradient(180deg, #fbfdfd, #e7eff1);
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Calendario de Stardew Valley · Stardew Journal
+  </title>
+  <meta content="Calendario visual de Stardew Valley con 28 días, cumpleaños, festivales y eventos de cada estación." name="description"/>
+  <link href="../favicon/favicon.svg" rel="icon" type="image/svg+xml"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+15&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="../css/style.css" rel="stylesheet"/>
+  <link href="../css/pages/calendario.css" rel="stylesheet"/>
+  <script defer="" src="../js/menu.js">
+  </script>
+  <script src="../js/main.js" type="module">
+  </script>
+  <script src="../js/calendar.js" type="module">
+  </script>
+  <meta content="index,follow,max-image-preview:large" name="robots"/>
+  <meta content="Stardew Journal" name="author"/>
+  <meta content="#2e412e" name="theme-color"/>
+  <meta content="strict-origin-when-cross-origin" name="referrer"/>
+  <meta content="website" property="og:type"/>
+  <meta content="Calendario de Stardew Valley · Stardew Journal" property="og:title"/>
+  <meta content="Calendario visual de Stardew Valley con 28 días, cumpleaños, festivales y eventos de cada estación." property="og:description"/>
+  <meta content="es_AR" property="og:locale"/>
+  <meta content="summary" name="twitter:card"/>
+  <meta content="Calendario de Stardew Valley · Stardew Journal" name="twitter:title"/>
+  <meta content="Calendario visual de Stardew Valley con 28 días, cumpleaños, festivales y eventos de cada estación." name="twitter:description"/>
+ </head>
+ <body class="page-calendar">
+  <a class="skip-link" href="#main-content">
+   Saltar al contenido
+  </a>
+  <div class="site-shell">
+   <header class="site-header">
+    <div class="container nav-wrap">
+     <a aria-label="Stardew Journal, inicio" class="brand" href="../index.html">
+      <span aria-hidden="true" class="brand-mark">
+       ✿
+      </span>
+      <span>
+       <strong>
+        stardew
+       </strong>
+       <small>
+        journal
+       </small>
+      </span>
+     </a>
+     <nav aria-label="Navegación principal" class="main-nav" id="main-menu">
+      <ul class="nav-list">
+       <li>
+        <a class="nav-link" href="../index.html">
+         Inicio
+        </a>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/valle.html">
+         El Valle
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/granja.html">
+           La granja
+          </a>
+         </li>
+         <li>
+          <a href="../pages/exploracion.html">
+           Exploración
+          </a>
+         </li>
+         <li>
+          <a href="../pages/centro-civico.html">
+           Centro Cívico
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a class="nav-link" href="../pages/habitantes.html">
+         Habitantes
+        </a>
+       </li>
+       <li class="nav-item has-submenu">
+        <a class="nav-link" href="../pages/estaciones.html">
+         Estaciones
+        </a>
+        <ul class="submenu">
+         <li>
+          <a href="../pages/primavera.html">
+           Primavera
+          </a>
+         </li>
+         <li>
+          <a href="../pages/verano.html">
+           Verano
+          </a>
+         </li>
+         <li>
+          <a href="../pages/otono.html">
+           Otoño
+          </a>
+         </li>
+         <li>
+          <a href="../pages/invierno.html">
+           Invierno
+          </a>
+         </li>
+        </ul>
+       </li>
+       <li>
+        <a class="nav-link" href="../pages/contacto.html">
+         Contacto
+        </a>
+       </li>
+      </ul>
+     </nav>
+     <div class="nav-search">
+      <button aria-controls="site-search-panel" aria-expanded="false" aria-label="Abrir buscador" class="nav-search-toggle" type="button">
+       <svg aria-hidden="true" height="19" viewbox="0 0 24 24" width="19">
+        <circle cx="11" cy="11" r="6.5">
+        </circle>
+        <path d="m16 16 4.5 4.5">
+        </path>
+       </svg>
+      </button>
+      <div class="nav-search-panel" hidden="" id="site-search-panel">
+       <form class="nav-search-form" data-site-search-form="" role="search">
+        <label class="sr-only" for="site-search-input">
+         Buscar en Stardew Journal
+        </label>
+        <input autocomplete="off" data-site-search-input="" id="site-search-input" placeholder="Buscar en el journal…" type="search"/>
+        <button aria-label="Buscar" class="nav-search-submit" type="submit">
+         ↵
+        </button>
+       </form>
+       <div aria-live="polite" class="nav-search-results" data-site-search-results="">
+       </div>
+      </div>
+     </div>
+     <button aria-controls="main-menu" aria-expanded="false" class="menu-toggle" type="button">
+      <span class="sr-only">
+       Abrir menú
+      </span>
+      <span aria-hidden="true">
+       ☰
+      </span>
+     </button>
+    </div>
+   </header>
+   <main id="main-content">
+    <section class="section calendar-intro">
+     <div class="container narrow">
+      <p class="eyebrow">
+       Cuaderno del tiempo
+      </p>
+      <h1>
+       Calendario del Valle
+      </h1>
+      <p class="calendar-intro__lead">
+       Una vista rápida de los 28 días de cada estación. Tocá una casilla marcada para recordar un cumpleaños o un evento.
+      </p>
+     </div>
+    </section>
+    <section aria-labelledby="calendar-title" class="section calendar-section">
+     <div class="container">
+      <div class="calendar-heading">
+       <div>
+        <p class="eyebrow">
+         Almanaque anual
+        </p>
+        <h2 data-calendar-title="" id="calendar-title">
+         Primavera
+        </h2>
+       </div>
+       <div aria-label="Seleccionar estación" class="calendar-toolbar" role="group">
+        <button class="calendar-season is-active" data-calendar-season="primavera" type="button">
+         Primavera
+        </button>
+        <button class="calendar-season" data-calendar-season="verano" type="button">
+         Verano
+        </button>
+        <button class="calendar-season" data-calendar-season="otono" type="button">
+         Otoño
+        </button>
+        <button class="calendar-season" data-calendar-season="invierno" type="button">
+         Invierno
+        </button>
+       </div>
+      </div>
+      <div class="calendar-panel">
+       <div class="calendar-visual-wrap">
+        <div class="calendar-image-frame">
+         <img alt="Calendario de Primavera de Stardew Valley, con 28 días y casillas marcadas para eventos y cumpleaños" class="calendar-image" data-calendar-image="" decoding="async" height="336" src="../assets/images/calendar/Calendar_Spring_ES.png" width="480"/>
+         <div aria-label="Eventos y cumpleaños de la estación" class="calendar-hotspots" data-calendar-hotspots="">
+         </div>
+        </div>
+        <p class="calendar-hint">
+         Las casillas con evento o cumpleaños son interactivas.
+        </p>
+       </div>
+       <aside aria-live="polite" class="calendar-detail card-surface">
+        <div class="calendar-detail__top">
+         <p class="eyebrow">
+          Apuntes de la estación
+         </p>
+         <h3 data-calendar-detail-title="">
+          Primavera
+         </h3>
+         <p data-calendar-description="">
+          El año empieza con cultivos, recolección y varios recursos que conviene guardar desde el primer día.
+         </p>
+        </div>
+        <div class="calendar-events" data-calendar-events="">
+        </div>
+        <div class="calendar-tips">
+         <h4>
+          Qué conviene tener presente
+         </h4>
+         <ul data-calendar-tips="">
+         </ul>
+        </div>
+       </aside>
+      </div>
+     </div>
+    </section>
+    <section class="section calendar-note">
+     <div class="container narrow">
+      <div class="callout">
+       <strong>
+        Referencia:
+       </strong>
+       las ilustraciones del calendario están almacenadas localmente en el proyecto. Las fechas y nombres de eventos se contrastan con la
+       <a class="text-link" href="https://es.stardewvalleywiki.com/Calendario" rel="noopener noreferrer" target="_blank">
+        Stardew Valley Wiki
+       </a>
+       .
+      </div>
+     </div>
+    </section>
+   </main>
+      <footer class="site-footer">
+    <div class="container footer-grid">
+     <div class="footer-brand-block">
+      <a aria-label="Stardew Journal, inicio" class="brand brand--footer" href="../index.html">
+       <span aria-hidden="true" class="brand-mark">✦</span>
+       <span>
+        <strong>stardew</strong>
+        <small>journal</small>
+       </span>
+      </a>
+      <p class="footer-note">Una guía académica de Stardew Valley, pensada para explorar el Valle de forma clara y agradable.</p>
+      <a class="footer-home-link" href="../index.html">Inicio →</a>
+     </div>
+     <nav aria-label="Mapa del sitio" class="footer-sitemap">
+      <div class="footer-sitemap__group">
+       <h2 class="footer-title">Explorar</h2>
+       <a href="valle.html">El Valle</a>
+       <a href="estaciones.html">Estaciones</a>
+       <a href="calendario.html">Calendario</a>
+       <a href="contacto.html">Contacto</a>
+      </div>
+      <div class="footer-sitemap__group">
+       <h2 class="footer-title">Valle</h2>
+       <a href="centro-civico.html">Centro Cívico</a>
+       <a href="habitantes.html">Habitantes</a>
+       <a href="exploracion.html">Exploración</a>
+       <a href="granja.html">La granja</a>
+      </div>
+      <div class="footer-sitemap__group">
+       <h2 class="footer-title">Estaciones</h2>
+       <a href="primavera.html">Primavera</a>
+       <a href="verano.html">Verano</a>
+       <a href="otono.html">Otoño</a>
+       <a href="invierno.html">Invierno</a>
+      </div>
+     </nav>
+    </div>
+    <div class="container footer-bottom">
+     <span>© 2026 Stardew Journal</span>
+     <span>Stardew Valley © ConcernedApe. Sitio no oficial.</span>
+    </div>
+   </footer>
+  </div>
+ </body>
+</html>
+

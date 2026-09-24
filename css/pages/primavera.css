@@ -1,1 +1,25 @@
-/* Primavera: comparte el sistema de estaciones definido en ../style.css. */
+/* Identidad visual de Primavera */
+
+.page-primavera {
+  --season-accent: #88ae63;
+  --season-soft: #dceccf;
+  --season-paper: #f7f2df;
+  --season-title: #46603a;
+  --season-glow: rgba(136, 174, 99, .28);
+}
+
+.page-primavera .season-detail-hero {
+  background:
+    linear-gradient(180deg, rgba(109, 150, 76, .18), rgba(33, 54, 34, .84)),
+    url("../assets/images/backgrounds/stardew-background.jpg") center/cover;
+  border-bottom-color: rgba(136, 174, 99, .52);
+  box-shadow: inset 0 -10px 0 rgba(136, 174, 99, .10);
+}
+
+.page-primavera .season-detail-hero__content h1 {
+  text-shadow: 3px 3px 0 rgba(190, 219, 153, .42);
+}
+
+.page-primavera .season-fact {
+  background: linear-gradient(180deg, #fffaf0, #f0f5e6);
+}

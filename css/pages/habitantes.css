@@ -1,3 +1,5 @@
+/* Página: pages/habitantes.html */
+
 .card__meta {
   color: var(--ink-muted);
   font-size: .64rem;
@@ -6,48 +8,79 @@
   text-transform: uppercase;
 }
 
+/* Galería de habitantes: tarjetas uniformes, cálidas y con acabado de ficha rústica. */
 .character-grid {
   max-width: 1060px;
   margin-inline: auto;
   display: grid;
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+  align-items: stretch;
 }
 
 .character-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
   overflow: hidden;
-  background: #fbf2dc;
-  border: 1px solid var(--line);
-  border-radius: var(--r);
-  box-shadow: 0 8px 18px rgba(40,35,25,.09);
-  transition: transform .22s ease,box-shadow .22s ease;
+  background: linear-gradient(180deg, #fff9e9 0%, #f5e7c8 100%);
+  border: 1px solid #ad8d61;
+  border-radius: .22rem .55rem .22rem .55rem;
+  box-shadow: 0 3px 0 rgba(112, 78, 43, .18), 0 10px 20px rgba(62, 48, 31, .08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.character-card::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  z-index: 2;
+  border: 1px dashed rgba(128, 94, 54, .26);
+  pointer-events: none;
 }
 
 .character-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 14px 26px rgba(40,35,25,.13);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 0 rgba(112, 78, 43, .17), 0 15px 26px rgba(62, 48, 31, .12);
 }
 
 .character-card__image {
-  padding: .7rem .8rem 0;
-  background: linear-gradient(180deg,#e7e0d0,#f3ecdd);
+  display: grid;
+  place-items: center;
+  aspect-ratio: 4 / 3;
+  min-height: 190px;
+  padding: 1rem;
+  background: linear-gradient(180deg, #e9dec6 0%, #f2e8d3 100%);
+  border-bottom: 1px solid rgba(154, 121, 79, .55);
 }
 
 .character-card__image img {
-  width: 100%;
-  aspect-ratio: 5/3;
-  max-height: 160px;
+  width: 76%;
+  height: 100%;
+  max-height: 178px;
+  aspect-ratio: 1;
   object-fit: contain;
+  object-position: center;
   image-rendering: pixelated;
+  filter: drop-shadow(0 3px 2px rgba(67, 51, 31, .14));
 }
 
 .character-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
   padding: 1rem 1.05rem 1.1rem;
 }
 
 .character-card h2 {
   margin-top: .45rem;
-  color: var(--brown-deep);
+  margin-bottom: .2rem;
+  color: #563f29;
   font-size: 1.85rem;
+  letter-spacing: .01em;
 }
 
 .character-card__info {
@@ -58,14 +91,16 @@
 }
 
 .character-card__info div {
+  min-width: 0;
   padding: .55rem .65rem;
-  background: var(--paper-deep);
-  border-radius: .35rem;
+  background: rgba(231, 214, 182, .48);
+  border: 1px solid rgba(173, 141, 97, .35);
+  border-radius: .22rem;
 }
 
 .character-card__info span {
   display: block;
-  color: var(--ink-muted);
+  color: #806b52;
   font-size: .58rem;
   letter-spacing: .07em;
   text-transform: uppercase;
@@ -74,20 +109,21 @@
 .character-card__info strong {
   display: block;
   margin-top: .1rem;
-  color: var(--green-deep);
+  color: #476342;
   font-size: .78rem;
+  overflow-wrap: anywhere;
 }
 
 .character-card details {
-  margin-top: .7rem;
-  padding-top: .65rem;
-  border-top: 1px dashed var(--line);
+  margin-top: auto;
+  padding-top: .8rem;
+  border-top: 1px dashed rgba(128, 94, 54, .34);
 }
 
 .character-card summary,
 .character-card .text-link {
-  color: var(--green-deep);
-  font-family: "Space Mono",sans-serif;
+  color: #476342;
+  font-family: "Space Mono", sans-serif;
   font-size: .76rem;
   font-weight: 700;
 }
@@ -98,8 +134,10 @@
 
 .character-card details p {
   margin-top: .5rem;
+  color: #665644;
   font-size: .78rem;
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .character-card .text-link {
@@ -109,40 +147,34 @@
   margin-top: .65rem;
   padding-bottom: .1rem;
   text-decoration: none;
-  border-bottom: 1px dashed rgba(70,98,67,.4);
+  border-bottom: 1px dashed rgba(70, 98, 67, .4);
+  overflow-wrap: anywhere;
 }
 
 .character-likes {
   margin-top: .6rem;
-  color: var(--ink-muted) !important;
+  color: #806b52 !important;
   font-size: .72rem;
 }
 
-/* =========================================
-   SECCIÓN: INTRODUCCIÓN DE RELACIONES
-   ========================================= */
-/* =========================================
-   INTRODUCCIÓN: ESTILO "CITA DE DIARIO"
-   ========================================= */
+/* Introducción de relaciones. */
 .relation-intro-block {
   max-width: 800px;
   margin: 0 auto 3rem;
   padding: 1.5rem 2rem;
   background: transparent;
-  border-left: 6px solid var(--green-deep, #466243); /* Un acento visual fuerte a la izquierda */
-  border-bottom: 1px dashed var(--line); /* Cierre sutil abajo */
+  border-left: 6px solid var(--green-deep);
+  border-bottom: 1px dashed var(--line);
 }
 
 .relation-intro-block p {
+  margin-bottom: .75rem;
+  color: var(--brown-deep);
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--brown-deep);
-  margin-bottom: 0.75rem;
 }
 
-/* =========================================
-   PASOS: DISEÑO EN TARJETAS
-   ========================================= */
+/* Pasos de relación. */
 .relation-steps-grid {
   max-width: 1060px;
   margin-inline: auto;
@@ -151,65 +183,69 @@
 }
 
 .step-card {
-  background: #fbf2dc; /* Mismo fondo que tus character-cards */
-  border: 1px solid var(--line);
-  border-radius: var(--r, 8px);
   padding: 2rem 1.5rem;
-  box-shadow: 0 4px 12px rgba(40,35,25,.06);
-  text-align: center; /* Centramos el texto para darle impacto de "pilar" */
+  background: #fbf2dc;
+  border: 1px solid var(--line);
+  border-radius: var(--r);
+  box-shadow: 0 4px 12px rgba(40, 35, 25, .06);
+  text-align: center;
 }
 
 .step-eyebrow {
   display: inline-block;
-  margin-bottom: 0.8rem;
-  padding: 0.3rem 0.8rem;
-  background: var(--paper-deep, #e7e0d0);
+  margin-bottom: .8rem;
+  padding: .3rem .8rem;
+  background: var(--paper-deep);
   border-radius: 4px;
-  color: #b85d19; /* NUEVO COLOR: Un tono terracota/cobre que resalta */
+  color: #b85d19;
   font-family: "Space Mono", sans-serif;
-  font-size: 0.65rem;
+  font-size: .65rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: .12em;
   text-transform: uppercase;
 }
 
 .step-card h3 {
+  margin-bottom: 1rem;
   color: var(--brown-deep);
   font-size: 1.8rem;
-  margin-bottom: 1rem;
 }
 
 .step-card p {
-  color: var(--ink-muted);
-  font-size: 0.88rem;
-  line-height: 1.6;
   max-width: 30ch;
-  margin: 0 auto; /* Mantiene el párrafo centrado y sin desbordar */
+  margin: 0 auto;
+  color: var(--ink-muted);
+  font-size: .88rem;
+  line-height: 1.6;
 }
 
-/* Responsive */
 @media (min-width: 768px) {
   .relation-steps-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
   }
-}
 
-@media (min-width: 768px) {
-  .character-grid,
-  .relation-steps {
-    grid-template-columns: repeat(2,minmax(0,1fr));
+  .character-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
 @media (min-width: 1024px) {
   .character-grid {
-    grid-template-columns: repeat(4,minmax(0,1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
-  .relation-steps {
-    grid-template-columns: repeat(3,minmax(0,1fr));
+  .relation-steps-grid {
     gap: 2.5rem;
   }
 }
 
+@media (max-width: 560px) {
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .character-card__image {
+    min-height: 210px;
+  }
+}

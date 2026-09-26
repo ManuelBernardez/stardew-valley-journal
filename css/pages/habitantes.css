@@ -280,7 +280,6 @@
 .character-modal__close:hover {
   background: #fff9e9;
 }
-
 .character-modal__nav {
   position: absolute;
   top: 50%;
@@ -290,8 +289,8 @@
   height: 2.7rem;
   place-items: center;
   padding: 0;
-  color: #476342;
-  background: #fff9e9;
+  color: #563f29;
+  background: #f5e7c8;
   border: 1px solid #ad8d61;
   border-radius: 50%;
   font-family: "Space Mono", sans-serif;
@@ -300,10 +299,25 @@
   cursor: pointer;
   transform: translateY(-50%);
   box-shadow: 0 3px 8px rgba(62, 48, 31, .12);
+  transition:
+    color .2s ease,
+    background-color .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
 }
 
 .character-modal__nav:hover {
-  background: #f5e7c8;
+  color: #476342;
+  background: #fff9e9;
+  border-color: #8c7655;
+  box-shadow:
+    0 0 0 3px rgba(71, 99, 66, .12),
+    0 3px 10px rgba(62, 48, 31, .16);
+}
+
+.character-modal__nav:focus-visible {
+  outline: 2px solid #476342;
+  outline-offset: 3px;
 }
 
 .character-modal__prev {

@@ -1,6 +1,7 @@
 .hero-home {
   position:relative;
-  min-height:clamp(620px,80vh,820px);
+  min-height: 100svh;
+  box-sizing: border-box;
   overflow:hidden
 }
 .hero-home .hero__image {
@@ -89,7 +90,7 @@
   --delay:.7s
 }
 .home-intro {
-  padding-block:clamp(3.6rem,7vw,5.8rem);
+  padding-block:clamp(2rem 0);
   background:rgba(251,242,220,.95);
 }
 .home-intro__inner {

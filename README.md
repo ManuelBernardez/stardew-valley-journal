@@ -7,17 +7,13 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-f7df1e?style=flat-square&logo=javascript&logoColor=111111)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 [![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-222222?style=flat-square&logo=github)](https://pages.github.com/)
 
-## ✦ Vista visual
-
-La interfaz busca parecer un **cuaderno de campo del Valle**: papel envejecido, verdes de bosque, marrones de madera, detalles dorados y tipografía inspirada en pixel art.
-
-![Documentación visual de Stardew Journal](docs/visual-preview.png)
-
-## ✦ Qué es
+## ✦ Sobre el proyecto
 
 Stardew Journal es un sitio estático multipágina con navegación responsive, buscador editorial, calendario interactivo, seguimiento del Centro Cívico, páginas de estaciones, galería de habitantes y formulario de contacto de demostración.
 
 No requiere framework, build, base de datos ni servidor propio para su versión publicada.
+
+[Visitar Stardew Journal](https://manuelbernardez.github.io/stardew-valley-journal/)
 
 ## ✦ Estructura
 
@@ -60,6 +56,8 @@ stardew-valley-journal/
 | **Responsive** | Layouts adaptativos para desktop, tablet y mobile. |
 
 ## ✦ Sistema visual
+
+Se buscó crear un **cuaderno de campo del valle**: papel envejecido, verdes y marrones (bosque y madera), detalles dorados y tipografía inspirada en el pixel art original.
 
 **Paleta:**
 

@@ -145,8 +145,16 @@ const initNavSearch = () => {
   };
   toggle.addEventListener('click', () => panel.hidden ? open() : close());
   input.addEventListener('input', render);
-  form.addEventListener('submit', (event) => event.preventDefault());
-  document.addEventListener('keydown', (event) => { if (event.key === 'Escape') close(); });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    render();
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') close();
+  });
+
   document.addEventListener('click', (event) => {
     if (!event.target.closest('.nav-search')) close();
   });
@@ -161,8 +169,8 @@ initImageFallback();
 initReveal();
 initClickSpark();
 initNavSearch();
-
-const initDemoContactForm = () => {
+const initContactForm = () => {
+    console.log('✅ NUEVO initContactForm EJECUTADO');
   const form = document.querySelector('[data-contact-form]');
   const status = document.querySelector('[data-contact-status]');
 
@@ -183,10 +191,6 @@ const initDemoContactForm = () => {
     status.hidden = false;
     status.textContent = message;
     status.className = `contact-form__status is-visible is-${type}`;
-
-    requestAnimationFrame(() => {
-      status.focus({ preventScroll: true });
-    });
   };
 
   const clearStatus = () => {
@@ -203,16 +207,25 @@ const initDemoContactForm = () => {
       message = 'Este campo es obligatorio.';
     } else if (field.name === 'name' && value.length < 2) {
       message = 'Ingresá al menos 2 caracteres.';
-    } else if (field.name === 'email' && field.validity.typeMismatch) {
+    } else if (
+      field.name === 'email' &&
+      field.validity.typeMismatch
+    ) {
       message = 'Ingresá un correo válido.';
-    } else if (field.name === 'message' && value.length < 10) {
+    } else if (
+      field.name === 'message' &&
+      value.length < 10
+    ) {
       message = 'El mensaje debe tener al menos 10 caracteres.';
     }
 
     const error = errors[field.name];
     const wrapper = field.closest('.contact-form__field');
 
-    field.setAttribute('aria-invalid', String(Boolean(message)));
+    field.setAttribute(
+      'aria-invalid',
+      String(Boolean(message))
+    );
 
     if (message) {
       field.setCustomValidity(message);
@@ -237,7 +250,9 @@ const initDemoContactForm = () => {
 
   const updateMessageCount = () => {
     if (!messageField || !messageCount) return;
-    messageCount.textContent = messageField.value.length;
+
+    messageCount.textContent =
+      messageField.value.length;
   };
 
   const resetFieldStates = () => {
@@ -245,7 +260,9 @@ const initDemoContactForm = () => {
       field.setCustomValidity('');
       field.setAttribute('aria-invalid', 'false');
 
-      const wrapper = field.closest('.contact-form__field');
+      const wrapper =
+        field.closest('.contact-form__field');
+
       wrapper?.classList.remove('has-error');
 
       const error = errors[field.name];
@@ -265,7 +282,9 @@ const initDemoContactForm = () => {
     });
 
     field.addEventListener('input', () => {
-      if (!status.hidden) clearStatus();
+      if (!status.hidden) {
+        clearStatus();
+      }
 
       if (field.value.trim()) {
         validateField(field);
@@ -273,7 +292,9 @@ const initDemoContactForm = () => {
         field.setCustomValidity('');
         field.setAttribute('aria-invalid', 'false');
 
-        const wrapper = field.closest('.contact-form__field');
+        const wrapper =
+          field.closest('.contact-form__field');
+
         wrapper?.classList.remove('has-error');
 
         const error = errors[field.name];
@@ -292,12 +313,14 @@ const initDemoContactForm = () => {
 
   updateMessageCount();
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
     clearStatus();
 
-    const isValid = fields.every((field) => validateField(field));
+    const isValid = fields.every((field) =>
+      validateField(field)
+    );
 
     if (!isValid) {
       setStatus(
@@ -306,31 +329,63 @@ const initDemoContactForm = () => {
       );
 
       const firstInvalid = fields.find(
-        (field) => field.getAttribute('aria-invalid') === 'true'
+        (field) =>
+          field.getAttribute('aria-invalid') === 'true'
       );
 
       firstInvalid?.focus();
+
       return;
     }
 
+    const originalSubmitText = submit.textContent;
+
     submit.disabled = true;
     submit.classList.add('is-loading');
-    submit.textContent = 'Preparando anotación…';
+    submit.textContent = 'Enviando…';
     form.classList.add('is-submitting');
 
-    window.setTimeout(() => {
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(
+          `Formspree respondió con HTTP ${response.status}`
+        );
+      }
+
       form.reset();
       resetFieldStates();
 
-      submit.disabled = false;
-      submit.classList.remove('is-loading');
-      submit.textContent = 'Enviar mensaje';
-      form.classList.remove('is-submitting');
-
       setStatus(
-        '¡Listo! La anotación quedó registrada visualmente en esta página. Como esta es una demostración de GitHub Pages, no se envió ningún dato a un servidor.',
+        '¡Mensaje enviado correctamente! Gracias por contactarnos.',
         'success'
       );
-    }, 850);
+
+      status.focus({ preventScroll: true });
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+
+      setStatus(
+        'No pudimos enviar el mensaje. Intentá nuevamente en unos segundos.',
+        'error'
+      );
+
+      status.focus({ preventScroll: true });
+    } finally {
+      submit.disabled = false;
+      submit.classList.remove('is-loading');
+      submit.textContent = originalSubmitText;
+      form.classList.remove('is-submitting');
+    }
   });
+
 };
+
+initContactForm();

@@ -263,7 +263,9 @@
   }
 }
 
-/* Feedback */
+/* ================================
+   Feedback del formulario
+   ================================ */
 
 .contact-form__status {
   grid-column: 1 / -1;
@@ -273,31 +275,34 @@
   border-radius: .3rem;
   font-size: .8rem;
   line-height: 1.5;
-  opacity: 0;
-  transform: translateY(4px);
-  transition:
-    opacity .18s ease,
-    transform .18s ease,
-    background .18s ease,
-    border-color .18s ease;
 }
 
-.contact-form__status.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+.contact-form__status[data-fs-error] {
+  border-color: rgba(138, 64, 52, .25);
+  background: rgba(250, 232, 226, .88);
+  color: #7b382f;
 }
 
-.contact-form__status.is-success {
+.contact-form__status[data-fs-success] {
   border-color: rgba(73, 109, 67, .25);
   background: rgba(231, 241, 222, .82);
   color: var(--green-deep);
 }
 
-.contact-form__status.is-error {
-  border-color: rgba(138, 64, 52, .25);
-  background: rgba(250, 232, 226, .88);
-  color: #7b382f;
+.contact-form__error {
+  display: block;
+  min-height: 1.1rem;
+  margin-top: .35rem;
+  color: #8a4034;
+  font-size: .72rem;
+  line-height: 1.4;
 }
+
+.contact-form__error[hidden] {
+  display: none;
+}
+
+
 
 /* Accesibilidad: menos movimiento */
 

@@ -36,10 +36,7 @@ stardew-valley-journal/
 │   ├── calendar.js
 │   └── tools.js
 ├── pages/
-├── tools/
-│   ├── check_site.py
-│   └── make_sitemap.py
-├── docs/
+│
 └── CREDITS.md
 ```
 
@@ -47,13 +44,24 @@ stardew-valley-journal/
 
 | Módulo | Qué hace |
 |---|---|
+| **Habitantes** | Galería de personajes con imágenes locales y estilo rústico unificado. |
 | **Navegación** | Navbar responsive, menú hamburguesa y submenús por categoría. |
 | **Buscador** | Índice editorial local, sin API ni backend. En mobile el panel se adapta al viewport. |
 | **Calendario** | 4 estaciones, 28 días, cumpleaños y festivales con hotspots interactivos. |
 | **Centro Cívico** | Salas y lotes con progreso persistido en `localStorage`. |
-| **Habitantes** | Galería de personajes con imágenes locales y estilo rústico unificado. |
-| **Contacto** | Validación HTML5 + confirmación visual de demostración. |
+| **Contacto** | Validación HTML5 + formulario funcional. |
 | **Responsive** | Layouts adaptativos para desktop, tablet y mobile. |
+
+## ✦ Tecnologías
+
+- HTML5 semántico
+- CSS3
+- JavaScript vanilla
+- CSS Grid + Flexbox
+- Diseño responsive Mobile First
+- `localStorage`
+- Formspree AJAX para el formulario de contacto
+- GitHub Pages
 
 ## ✦ Sistema visual
 
@@ -100,46 +108,6 @@ Cada página pública tiene `rel="canonical"` con su URL definitiva. El proyecto
 - `robots.txt` apuntando al sitemap.
 - `.nojekyll` para publicación estática desde GitHub Pages.
 - `404.html` para rutas inexistentes.
-
-Para regenerar el sitemap con la URL definitiva:
-
-```bash
-python tools/make_sitemap.py
-```
-
-También acepta otra URL base cuando se necesita reutilizar el proyecto:
-
-```bash
-python tools/make_sitemap.py https://USUARIO.github.io/REPOSITORIO/
-```
-
-## ✦ Pruebas
-
-Auditoría estática:
-
-```bash
-python tools/check_site.py
-```
-
-La comprobación valida rutas locales, imágenes, `title`, `description`, cantidad de `h1`, CSS y sintaxis JavaScript cuando Node está disponible.
-
-> Los siete PNG auxiliares de exploración/granja que faltan en el paquete están preparados para colocarse en las rutas locales ya definidas. Una vez copiados, la auditoría vuelve a `Errores: 0`.
-
-## ✦ GitHub Pages
-
-1. Crear un repositorio público y mantener `index.html` en la raíz.
-2. Copiar el contenido del proyecto al repositorio.
-3. Hacer `git add .`, `git commit` y `git push` sobre `main`.
-4. En **Settings → Pages**, elegir **Deploy from a branch → main → /(root)**.
-5. Abrir la URL publicada y comprobar navegación, buscador, calendario, Centro Cívico, formulario e imágenes.
-
-Después de cambios:
-
-```bash
-git add .
-git commit -m "Actualizar Stardew Journal"
-git push
-```
 
 ## ✦ Créditos y uso
 

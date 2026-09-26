@@ -657,7 +657,7 @@ a:active,button:active,summary:active {
 }
 /* Shared page hero. Inner pages no longer load a separate hero image. */
 .page-hero {
-  position:center;
+  position:relative;
   min-height:640px;
   display:flex;
   align-items:center;
@@ -949,3 +949,4 @@ a:active,button:active,summary:active {
     width:100%
   }
 }
+

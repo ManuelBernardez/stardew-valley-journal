@@ -63,23 +63,6 @@ const initReveal = () => {
   items.forEach((item) => observer.observe(item));
 };
 
-const initClickSpark = () => {
-  const targets = document.querySelectorAll('a, button');
-  targets.forEach((target) => {
-    target.addEventListener('click', () => {
-      const spark = document.createElement('span');
-      spark.className = 'click-spark';
-      spark.setAttribute('aria-hidden', 'true');
-      spark.textContent = '✦';
-      document.body.appendChild(spark);
-      const rect = target.getBoundingClientRect();
-      spark.style.left = `${rect.left + rect.width / 2}px`;
-      spark.style.top = `${rect.top + rect.height / 2}px`;
-      spark.addEventListener('animationend', () => spark.remove(), { once: true });
-    });
-  });
-};
-
 const initImageFallback = () => {
   document.querySelectorAll('img[data-fallback]').forEach((img) => {
     img.addEventListener('error', () => {
@@ -167,112 +150,129 @@ else document.addEventListener('DOMContentLoaded', bootMenu, { once: true });
 initActiveLink();
 initImageFallback();
 initReveal();
-initClickSpark();
 initNavSearch();
+
 const initContactForm = () => {
-    console.log('✅ NUEVO initContactForm EJECUTADO');
   const form = document.querySelector('[data-contact-form]');
-  const status = document.querySelector('[data-contact-status]');
 
-  if (!form || !status) return;
+  if (!form) return;
 
-  const fields = [...form.querySelectorAll('input, textarea')];
-  const submit = form.querySelector('.contact-form__submit');
-  const messageField = form.querySelector('[name="message"]');
-  const messageCount = form.querySelector('[data-message-count]');
+  const fields = [
+    ...form.querySelectorAll(
+      'input:not([type="hidden"]), textarea'
+    )
+  ];
+
+  const messageField =
+    form.querySelector('[name="message"]');
+
+  const messageCount =
+    form.querySelector('[data-message-count]');
 
   const errors = {
-    name: form.querySelector('[data-contact-error="name"]'),
-    email: form.querySelector('[data-contact-error="email"]'),
-    message: form.querySelector('[data-contact-error="message"]')
+    name: form.querySelector(
+      '[data-contact-error="name"]'
+    ),
+
+    email: form.querySelector(
+      '[data-contact-error="email"]'
+    ),
+
+    message: form.querySelector(
+      '[data-contact-error="message"]'
+    )
   };
 
-  const setStatus = (message, type = 'success') => {
-    status.hidden = false;
-    status.textContent = message;
-    status.className = `contact-form__status is-visible is-${type}`;
-  };
+  const clearFieldError = (field) => {
+    const error = errors[field.name];
 
-  const clearStatus = () => {
-    status.hidden = true;
-    status.textContent = '';
-    status.className = 'contact-form__status';
+    const wrapper =
+      field.closest('.contact-form__field');
+
+    field.setCustomValidity('');
+
+    field.setAttribute(
+      'aria-invalid',
+      'false'
+    );
+
+    wrapper?.classList.remove('has-error');
+
+    if (error) {
+      error.textContent = '';
+      error.hidden = true;
+    }
   };
 
   const validateField = (field) => {
     const value = field.value.trim();
+
     let message = '';
 
     if (!value) {
       message = 'Este campo es obligatorio.';
-    } else if (field.name === 'name' && value.length < 2) {
-      message = 'Ingresá al menos 2 caracteres.';
+    } else if (
+      field.name === 'name' &&
+      value.length < 2
+    ) {
+      message =
+        'Ingresá al menos 2 caracteres.';
     } else if (
       field.name === 'email' &&
       field.validity.typeMismatch
     ) {
-      message = 'Ingresá un correo válido.';
+      message =
+        'Ingresá un correo válido.';
     } else if (
       field.name === 'message' &&
       value.length < 10
     ) {
-      message = 'El mensaje debe tener al menos 10 caracteres.';
+      message =
+        'El mensaje debe tener al menos 10 caracteres.';
     }
 
     const error = errors[field.name];
-    const wrapper = field.closest('.contact-form__field');
+
+    const wrapper =
+      field.closest('.contact-form__field');
+
+    const isInvalid =
+      Boolean(message);
 
     field.setAttribute(
       'aria-invalid',
-      String(Boolean(message))
+      String(isInvalid)
     );
 
-    if (message) {
+    if (isInvalid) {
       field.setCustomValidity(message);
-      wrapper?.classList.add('has-error');
+
+      wrapper?.classList.add(
+        'has-error'
+      );
 
       if (error) {
         error.textContent = message;
         error.hidden = false;
       }
     } else {
-      field.setCustomValidity('');
-      wrapper?.classList.remove('has-error');
-
-      if (error) {
-        error.textContent = '';
-        error.hidden = true;
-      }
+      clearFieldError(field);
     }
 
-    return !message;
+    return !isInvalid;
   };
 
   const updateMessageCount = () => {
-    if (!messageField || !messageCount) return;
+    if (!messageField || !messageCount) {
+      return;
+    }
 
     messageCount.textContent =
       messageField.value.length;
   };
 
   const resetFieldStates = () => {
-    fields.forEach((field) => {
-      field.setCustomValidity('');
-      field.setAttribute('aria-invalid', 'false');
-
-      const wrapper =
-        field.closest('.contact-form__field');
-
-      wrapper?.classList.remove('has-error');
-
-      const error = errors[field.name];
-
-      if (error) {
-        error.textContent = '';
-        error.hidden = true;
-      }
-    });
-
+    fields.forEach(clearFieldError);
     updateMessageCount();
   };
 
@@ -282,27 +282,10 @@ const initContactForm = () => {
     });
 
     field.addEventListener('input', () => {
-      if (!status.hidden) {
-        clearStatus();
-      }
-
       if (field.value.trim()) {
         validateField(field);
       } else {
-        field.setCustomValidity('');
-        field.setAttribute('aria-invalid', 'false');
-
-        const wrapper =
-          field.closest('.contact-form__field');
-
-        wrapper?.classList.remove('has-error');
-
-        const error = errors[field.name];
-
-        if (error) {
-          error.textContent = '';
-          error.hidden = true;
-        }
+        clearFieldError(field);
       }
 
       if (field === messageField) {
@@ -311,81 +294,45 @@ const initContactForm = () => {
     });
   });
 
-  updateMessageCount();
-
-  form.addEventListener('submit', async (event) => {
-    event.preventDefault();
-
-    clearStatus();
-
-    const isValid = fields.every((field) =>
-      validateField(field)
+  /*
+   * Validación propia.
+   *
+   * Formspree se ocupa del envío.
+   * Este listener solamente bloquea el envío
+   * cuando nuestra validación encuentra errores.
+   */
+  form.addEventListener('submit', (event) => {
+    const valid = fields.every(
+      validateField
     );
 
-    if (!isValid) {
-      setStatus(
-        'Revisá los campos marcados antes de continuar.',
-        'error'
-      );
-
-      const firstInvalid = fields.find(
-        (field) =>
-          field.getAttribute('aria-invalid') === 'true'
-      );
-
-      firstInvalid?.focus();
-
+    if (valid) {
       return;
     }
 
-    const originalSubmitText = submit.textContent;
+    event.preventDefault();
 
-    submit.disabled = true;
-    submit.classList.add('is-loading');
-    submit.textContent = 'Enviando…';
-    form.classList.add('is-submitting');
+    const firstInvalid = fields.find(
+      (field) =>
+        field.getAttribute(
+          'aria-invalid'
+        ) === 'true'
+    );
 
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: {
-          Accept: 'application/json'
-        }
-      });
-
-      if (!response.ok) {
-        throw new Error(
-          `Formspree respondió con HTTP ${response.status}`
-        );
-      }
-
-      form.reset();
-      resetFieldStates();
-
-      setStatus(
-        '¡Mensaje enviado correctamente! Gracias por contactarnos.',
-        'success'
-      );
-
-      status.focus({ preventScroll: true });
-    } catch (error) {
-      console.error('Error al enviar el formulario:', error);
-
-      setStatus(
-        'No pudimos enviar el mensaje. Intentá nuevamente en unos segundos.',
-        'error'
-      );
-
-      status.focus({ preventScroll: true });
-    } finally {
-      submit.disabled = false;
-      submit.classList.remove('is-loading');
-      submit.textContent = originalSubmitText;
-      form.classList.remove('is-submitting');
-    }
+    firstInvalid?.focus();
   });
 
+  /*
+   * Formspree resetea el formulario
+   * después de un envío exitoso.
+   */
+  form.addEventListener('reset', () => {
+    window.setTimeout(() => {
+      resetFieldStates();
+    }, 0);
+  });
+
+  updateMessageCount();
 };
 
 initContactForm();

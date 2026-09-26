@@ -189,15 +189,15 @@
 
           </article>
 
-          <form action="https://formspree.io/f/mwlprypy" aria-label="Formulario de contacto"
-            class="card-surface contact-form" data-contact-form method="post">
+          <form id="contact-form" action="https://formspree.io/f/mwlprypy" method="post"
+            aria-label="Formulario de contacto" class="card-surface contact-form" data-contact-form novalidate>
             <div class="contact-form__field">
               <div class="contact-form__label-row">
                 <label for="contact-name">Nombre</label>
               </div>
 
               <input id="contact-name" name="name" type="text" autocomplete="name" minlength="2" maxlength="60"
-                placeholder="Tu nombre" aria-describedby="contact-name-error" required />
+                placeholder="Tu nombre" aria-describedby="contact-name-error" data-fs-field required />
 
               <small class="contact-form__error" data-contact-error="name" id="contact-name-error" hidden></small>
             </div>
@@ -208,7 +208,7 @@
               </div>
 
               <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="120"
-                placeholder="nombre@ejemplo.com" aria-describedby="contact-email-error" required />
+                placeholder="nombre@ejemplo.com" aria-describedby="contact-email-error" data-fs-field required />
 
               <small class="contact-form__error" data-contact-error="email" id="contact-email-error" hidden></small>
             </div>
@@ -224,20 +224,27 @@
 
               <textarea id="contact-message" name="message" rows="7" minlength="10" maxlength="600"
                 placeholder="Escribí tu consulta, comentario o sugerencia…" aria-describedby="contact-message-error"
-                required></textarea>
+                data-fs-field required></textarea>
 
               <small class="contact-form__error" data-contact-error="message" id="contact-message-error" hidden></small>
             </div>
 
-            <input type="hidden" name="_subject" value="Nuevo mensaje desde Stardew Journal">
+            <input type="hidden" name="_subject" value="Nuevo mensaje desde Stardew Journal" />
 
-            <button class="button button--green contact-form__submit" type="submit">
+            <!-- Error general de Formspree -->
+            <p class="contact-form__status" data-fs-error role="alert" aria-live="assertive" hidden></p>
+
+            <!-- Éxito de Formspree -->
+            <p class="contact-form__status contact-form__status--success" data-fs-success role="status"
+              aria-live="polite" hidden>
+              ¡Mensaje enviado correctamente! Gracias por contactarnos.
+            </p>
+
+            <button class="button button--green contact-form__submit" type="submit" data-fs-submit-btn>
               Enviar mensaje
             </button>
-
-            <p aria-live="polite" class="contact-form__status" data-contact-status hidden role="status" tabindex="-1">
-            </p>
           </form>
+
 
         </div>
       </section>
@@ -374,10 +381,57 @@
       </div>
     </footer>
   </div>
-  <script defer="" src="../js/menu.js">
+  <script defer="" src="../js/menu.js"></script>
+  <script src="../js/main.js" type="module"></script>
+  <script defer src="../js/menu.js"></script>
+
+  <script>
+    window.formspree =
+      window.formspree ||
+      function () {
+        (formspree.q = formspree.q || []).push(arguments);
+      };
+
+    formspree('initForm', {
+      formElement: '#contact-form',
+      formId: 'mwlprypy',
+
+      disable: ({ form }) => {
+        form.classList.add('is-submitting');
+
+        const submit =
+          form.querySelector('[data-fs-submit-btn]');
+
+        if (submit) {
+          submit.classList.add('is-loading');
+          submit.dataset.originalText =
+            submit.textContent;
+          submit.textContent = 'Enviando…';
+        }
+      },
+
+      enable: ({ form }) => {
+        form.classList.remove('is-submitting');
+
+        const submit =
+          form.querySelector('[data-fs-submit-btn]');
+
+        if (submit) {
+          submit.classList.remove('is-loading');
+
+          if (submit.dataset.originalText) {
+            submit.textContent =
+              submit.dataset.originalText;
+
+            delete submit.dataset.originalText;
+          }
+        }
+      }
+    });
   </script>
-  <script src="../js/main.js" type="module">
-  </script>
+
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
 </body>
 
 </html>

@@ -144,15 +144,15 @@ const initNavSearch = () => {
 };
 
 const clickSound = new Audio("/stardew-valley-journal/assets/audio/ui-click.mp3");
-clickSound.volume = 0.15;
+clickSound.volume = 0.25;
 
 document.addEventListener("click", (event) => {
-  const interactive = event.target.closest("button, .button, [role='button'], summary, .nav-link");
+  const interactive = event.target.closest("button, a, [role='button'], .nav-link");
 
   if (!interactive) return;
 
   clickSound.currentTime = 0;
-  clickSound.play().catch(() => {});
+  clickSound.play().catch(() => { });
 });
 
 initHeader();
@@ -163,11 +163,20 @@ initActiveLink();
 initImageFallback();
 initReveal();
 initNavSearch();
-
 const initContactForm = () => {
   const form = document.querySelector('[data-contact-form]');
 
   if (!form) return;
+
+  const successMessage = form.querySelector('[data-fs-success]');
+  const errorMessage = form.querySelector('[data-fs-error]');
+  const submitButton = form.querySelector('[data-fs-submit-btn]');
+
+  const submitSound = new Audio(
+    "/stardew-valley-journal/assets/audio/ui-submit.mp3"
+  );
+
+  submitSound.volume = 0.20;
 
   const fields = [
     ...form.querySelectorAll(
@@ -227,14 +236,12 @@ const initContactForm = () => {
       field.name === 'name' &&
       value.length < 2
     ) {
-      message =
-        'Ingresá al menos 2 caracteres.';
+      message = 'Ingresá al menos 2 caracteres.';
     } else if (
       field.name === 'email' &&
       field.validity.typeMismatch
     ) {
-      message =
-        'Ingresá un correo válido.';
+      message = 'Ingresá un correo válido.';
     } else if (
       field.name === 'message' &&
       value.length < 10
@@ -259,9 +266,7 @@ const initContactForm = () => {
     if (isInvalid) {
       field.setCustomValidity(message);
 
-      wrapper?.classList.add(
-        'has-error'
-      );
+      wrapper?.classList.add('has-error');
 
       if (error) {
         error.textContent = message;
@@ -306,38 +311,66 @@ const initContactForm = () => {
     });
   });
 
-  /*
-   * Validación propia.
-   *
-   * Formspree se ocupa del envío.
-   * Este listener solamente bloquea el envío
-   * cuando nuestra validación encuentra errores.
-   */
-  form.addEventListener('submit', (event) => {
-    const valid = fields.every(
-      validateField
-    );
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-    if (valid) {
+    successMessage.hidden = true;
+    errorMessage.hidden = true;
+
+    const valid = fields.every(validateField);
+
+    if (!valid) {
+      const firstInvalid = fields.find(
+        (field) =>
+          field.getAttribute('aria-invalid') === 'true'
+      );
+
+      firstInvalid?.focus();
       return;
     }
 
-    event.preventDefault();
+    submitButton.disabled = true;
+    submitButton.classList.add('is-loading');
+    submitButton.textContent = 'Enviando…';
 
-    const firstInvalid = fields.find(
-      (field) =>
-        field.getAttribute(
-          'aria-invalid'
-        ) === 'true'
-    );
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          Accept: 'application/json'
+        }
+      });
 
-    firstInvalid?.focus();
+      if (!response.ok) {
+        throw new Error(
+          'Error al enviar el formulario'
+        );
+      }
+
+      form.reset();
+      resetFieldStates();
+
+      successMessage.hidden = false;
+
+      submitSound.currentTime = 0;
+      submitSound.play().catch(() => {});
+
+    } catch (error) {
+      console.error(error);
+
+      errorMessage.textContent =
+        'No pudimos enviar el mensaje. Intentá nuevamente.';
+
+      errorMessage.hidden = false;
+
+    } finally {
+      submitButton.disabled = false;
+      submitButton.classList.remove('is-loading');
+      submitButton.textContent = 'Enviar mensaje';
+    }
   });
 
-  /*
-   * Formspree resetea el formulario
-   * después de un envío exitoso.
-   */
   form.addEventListener('reset', () => {
     window.setTimeout(() => {
       resetFieldStates();

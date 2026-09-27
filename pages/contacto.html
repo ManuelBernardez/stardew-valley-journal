@@ -387,55 +387,6 @@
   </div>
   <script defer="" src="../js/menu.js"></script>
   <script src="../js/main.js" type="module"></script>
-  <script defer src="../js/menu.js"></script>
-
-  <script>
-    window.formspree =
-      window.formspree ||
-      function () {
-        (formspree.q = formspree.q || []).push(arguments);
-      };
-
-    formspree('initForm', {
-      formElement: '#contact-form',
-      formId: 'mwlprypy',
-
-      disable: ({ form }) => {
-        form.classList.add('is-submitting');
-
-        const submit =
-          form.querySelector('[data-fs-submit-btn]');
-
-        if (submit) {
-          submit.classList.add('is-loading');
-          submit.dataset.originalText =
-            submit.textContent;
-          submit.textContent = 'Enviando…';
-        }
-      },
-
-      enable: ({ form }) => {
-        form.classList.remove('is-submitting');
-
-        const submit =
-          form.querySelector('[data-fs-submit-btn]');
-
-        if (submit) {
-          submit.classList.remove('is-loading');
-
-          if (submit.dataset.originalText) {
-            submit.textContent =
-              submit.dataset.originalText;
-
-            delete submit.dataset.originalText;
-          }
-        }
-      }
-    });
-  </script>
-
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-
 </body>
 
 </html>

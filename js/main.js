@@ -143,6 +143,18 @@ const initNavSearch = () => {
   });
 };
 
+const clickSound = new Audio("/stardew-valley-journal/assets/audio/ui-click.mp3");
+clickSound.volume = 0.15;
+
+document.addEventListener("click", (event) => {
+  const interactive = event.target.closest("button, .button, [role='button'], summary, .nav-link");
+
+  if (!interactive) return;
+
+  clickSound.currentTime = 0;
+  clickSound.play().catch(() => {});
+});
+
 initHeader();
 const bootMenu = () => { if (typeof initMenu === 'function') initMenu(); };
 if (typeof initMenu === 'function') bootMenu();

@@ -302,6 +302,17 @@
   display: none;
 }
 
+.contact-mail {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.contact-mail img {
+  min-width: 10rem;
+  height: auto;
+  image-rendering: pixelated;
+}
 
 
 /* Accesibilidad: menos movimiento */

@@ -297,7 +297,6 @@
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
-  transform: translateY(-50%);
   box-shadow: 0 3px 8px rgba(62, 48, 31, .12);
   transition:
     color .2s ease,
